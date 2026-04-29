@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO & Security Meta -->
+  <meta name="description" content="Muhammad Athalla Bagaskara – Computer Science Student & Aspiring Full-Stack Web Developer based in Yogyakarta, Indonesia." />
+  <meta name="author" content="Muhammad Athalla Bagaskara" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Athalla Bagaskara – Portfolio" />
+  <meta property="og:description" content="Computer Science Student & Aspiring Full-Stack Web Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="PP.jpg" />
+
+  <!-- Security Headers via meta (backup for server headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <title>Muhammad Athalla Bagaskara | Portfolio</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo" aria-label="Go to home">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">athalla</span>
+        <span class="logo-dot">.</span>
+        <span class="logo-bracket">}</span>
+      </a>
+
+      <nav id="mainNav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+        <a href="#project" class="nav-link">Projects</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#video" class="nav-link">Video</a>
+        <a href="#apple-music" class="nav-link">Music</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="nav-indicator" aria-hidden="true"></div>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#project" class="mobile-nav-link">Projects</a>
+    <a href="#resume" class="mobile-nav-link">Resume</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#video" class="mobile-nav-link">Video</a>
+    <a href="#apple-music" class="mobile-nav-link">Music</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow glow-1" aria-hidden="true"></div>
+    <div class="hero-glow glow-2" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left" data-aos="fade-right" data-aos-duration="900">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Muhammad</span>
+          <span class="title-line accent-name">Athalla</span>
+          <span class="title-line">Bagaskara</span>
+        </h1>
+        <p class="hero-role">
+          <span class="role-tag">Full-Stack Dev</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">CS Student</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">Content Creator</span>
+        </p>
+        <p class="hero-bio">
+          18-year-old Computer Science student at UPN Veteran Yogyakarta, passionate about building dynamic web applications and writing clean, efficient code. Exploring full-stack development, algorithms, network security, and creating YouTube content as <em>"alCaps"</em>.
+        </p>
+        <div class="hero-actions">
+          <a href="#project" class="btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:iamathaalla@gmail.com" class="btn-ghost">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>4+</strong>
+            <span>Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Certificates</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>11+</strong>
+            <span>Languages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <div class="profile-frame">
+          <div class="profile-ring ring-1" aria-hidden="true"></div>
+          <div class="profile-ring ring-2" aria-hidden="true"></div>
+          <div class="profile-ring ring-3" aria-hidden="true"></div>
+          <img src="PP.jpg" alt="Muhammad Athalla Bagaskara – Profile Photo" class="profile-img" />
+          <div class="profile-badge-float">
+            <i class="fas fa-code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="project" class="section">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 01</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Things I've built from scratch</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-number" aria-hidden="true">01</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-book" aria-hidden="true"></i></div>
+            <h3>Library System in C++</h3>
+            <p>A CLI program as a final semester project to manage book data and library borrowing transactions efficiently using data structures.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>C++</span>
+              <span>Data Structures</span>
+              <span>CLI</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="ProjectPerpusFix.cpp" download class="btn-card" aria-label="Download Library System C++ source code">
+              <i class="fas fa-download" aria-hidden="true"></i> Source Code
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="card-number" aria-hidden="true">02</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-globe" aria-hidden="true"></i></div>
+            <h3>Soetoredjo Family Website</h3>
+            <p>Managed a large family website as a full-stack developer — full responsibility for UI/UX design, database architecture, and core functionality.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>Full-Stack</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>HTML/CSS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="http://soetoredjo.com" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View Soetoredjo website live demo">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="card-number" aria-hidden="true">03</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
+            <h3>Yogyakarta Routes – Johnson's Algorithm</h3>
+            <p>Implemented Johnson's algorithm in C to find shortest paths between sub-districts in Yogyakarta. Demonstrates advanced graph theory and algorithm optimization.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>C</span>
+              <span>Graph Theory</span>
+              <span>Algorithms</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="johnson.c" download class="btn-card" aria-label="Download Johnson algorithm C source code">
+              <i class="fas fa-download" aria-hidden="true"></i> Source Code
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="card-number" aria-hidden="true">04</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+            <h3>"PerpusPintar" Smart Library</h3>
+            <p>Full-stack web app for a client — comprehensive smart library system managing book inventories, borrowing tracking, and digital library experience.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>Full-Stack</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://perpuspintar.soetoredjo.com/" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View PerpusPintar live demo">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME SECTION ===== -->
+  <section id="resume" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 02</span>
+        <h2 class="section-title">Resume</h2>
+        <p class="section-subtitle">Education, experience & certifications</p>
+      </div>
+
+      <!-- Education -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+          <h3>Education</h3>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Universitas Pembangunan Nasional Veteran Yogyakarta</h4>
+                <span class="timeline-badge">Current</span>
+              </div>
+              <p class="timeline-sub">Bachelor of Technology – Computer Science (Informatics)</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 2024 – Jan 2028 · Yogyakarta, Indonesia</p>
+              <p class="timeline-desc">Pursuing a Bachelor's degree focusing on software development, algorithms, databases, and computer networks. Passionate about building real-world solutions and constantly exploring new technologies.</p>
+              <div class="timeline-tags"><span>Algorithms</span><span>Databases</span><span>Networking</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>SMAN 5 Magelang</h4>
+              <p class="timeline-sub">Science Major – MIPA</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2021 – May 2024 · Magelang, Central Java</p>
+              <p class="timeline-desc">Studied general sciences with strong interest in technology and creative media. Actively participated in school events and organizations.</p>
+              <div class="timeline-tags"><span>Science</span><span>Social Media</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
+          <h3>Experience</h3>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Full-Stack Web Developer</h4>
+                <span class="timeline-badge">Internship</span>
+              </div>
+              <p class="timeline-sub">Soetoredjo Family</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2024 – Present · Remote</p>
+              <p class="timeline-desc">Developed and maintained soetoredjo.com, focusing on clean design, data management, and usability. Responsible for building and updating features, ensuring smooth performance, and managing content.</p>
+              <div class="timeline-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Participant – GEMASTIK XVIII 2025</h4>
+                <span class="timeline-badge">Achievement</span>
+              </div>
+              <p class="timeline-sub">Kemdiktisaintek · Competitive Programming</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2025 – Aug 2025 · Remote</p>
+              <p class="timeline-desc">Qualified for the national-level GEMASTIK competition in the Competitive Programming category — a prestigious national student technology competition.</p>
+              <div class="timeline-tags"><span>C++</span><span>Competitive Programming</span><span>Algorithms</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Staff – Equipment & Logistics, PKK IF 2025</h4>
+                <span class="timeline-badge">Organization</span>
+              </div>
+              <p class="timeline-sub">HIMATIF UPN "Veteran" Yogyakarta</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jun 2025 – Sep 2025 · On-site</p>
+              <p class="timeline-desc">Supported operational flow by managing equipment needs, coordinating logistics distribution, and ensuring materials were delivered on time. Developed strong team leadership, organization, and problem-solving skills.</p>
+              <div class="timeline-tags"><span>Team Leadership</span><span>Logistics</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="120">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Bootcamp Participant</h4>
+              <p class="timeline-sub">Dicoding Indonesia · Part-time</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 2024 – Present · Remote</p>
+              <p class="timeline-desc">Learning software development through structured, industry-standard courses. Gaining hands-on experience in web and mobile development using modern technologies.</p>
+              <div class="timeline-tags"><span>JavaScript</span><span>Python</span><span>Java</span><span>C++</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="140">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Social Media Coordinator</h4>
+              <p class="timeline-sub">IPMA – SMAN 5 Magelang</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jun 2022 – Jul 2023 · On-site</p>
+              <p class="timeline-desc">Managed school event promotions on Instagram and platforms. Created content, scheduled posts, and increased student engagement online.</p>
+              <div class="timeline-tags"><span>Social Media</span><span>Content Creation</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="160">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Robotics Specialist</h4>
+              <p class="timeline-sub">Spero Robotic – SMPN 2 Magelang</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 2018 – May 2020 · On-site</p>
+              <p class="timeline-desc">Developed and programmed autonomous robots for competitions. Worked with Arduino, sensors, and basic mechanical systems — sparked my passion for coding and innovation.</p>
+              <div class="timeline-tags"><span>Arduino</span><span>Robotics</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <h3>Licenses & Certifications</h3>
+        </div>
+
+        <div class="certs-grid">
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+            <img src="Sertifikat_C.png" alt="C Programming Certificate from Dicoding Indonesia" loading="lazy" />
+            <div class="cert-info">
+              <h4>C Programming</h4>
+              <p>Dicoding Indonesia</p>
+              <span class="cert-date">Apr 2025 · Exp Apr 2028</span>
+              <span class="cert-id">ID: MEPJQO61JX3V</span>
+              <a href="https://www.dicoding.com/dicodingassets/coursecertificate/7456566bc0c3d40d2018ce69e6af8920f6ddebd7/view" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View C Programming certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="Sertifikat_Java.png" alt="Java Programming Certificate from Dicoding Indonesia" loading="lazy" />
+            <div class="cert-info">
+              <h4>Java Programming</h4>
+              <p>Dicoding Indonesia</p>
+              <span class="cert-date">Apr 2025 · Exp Apr 2028</span>
+              <span class="cert-id">ID: L4PQELK02PO1</span>
+              <a href="https://www.dicoding.com/dicodingassets/coursecertificate/985417bdfc71adefcae676ef64027042eaf123da/view" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Java Programming certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="Sertifikat_C_Sharp.png" alt="C# Basic Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>C# (Basic)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Sep 2025</span>
+              <span class="cert-id">ID: 0F44C5F2F00A</span>
+              <a href="https://www.hackerrank.com/certificates/0F44C5F2F00A" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View C# Basic certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="130">
+            <img src="Sertifikat_JavaScript.png" alt="JavaScript Basic Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>JavaScript (Basic)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Sep 2025</span>
+              <span class="cert-id">ID: ACCA1ACC610E</span>
+              <a href="https://www.hackerrank.com/certificates/ACCA1ACC610E" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View JavaScript Basic certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="160">
+            <img src="Sertifikat_CSS.png" alt="CSS Basic Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>CSS (Basic)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Oct 2025</span>
+              <span class="cert-id">ID: 5FF6EBAD0B38</span>
+              <a href="https://www.hackerrank.com/certificates/5FF6EBAD0B38" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View CSS Basic certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="190">
+            <img src="Sertifikat_Python.png" alt="Python Basic Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>Python (Basic)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Oct 2025</span>
+              <span class="cert-id">ID: 6CB01512E203</span>
+              <a href="https://www.hackerrank.com/certificates/6CB01512E203" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Python Basic certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="220">
+            <img src="Sertifikat_SQL_Basic.png" alt="SQL Basic Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>SQL (Basic)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Nov 2025</span>
+              <span class="cert-id">ID: 3A66A9BC69DB</span>
+              <a href="https://www.hackerrank.com/certificates/3A66A9BC69DB" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View SQL Basic certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
+            <img src="Sertifikat_SQL_Advanced.png" alt="SQL Advanced Certificate from HackerRank" loading="lazy" />
+            <div class="cert-info">
+              <h4>SQL (Advanced)</h4>
+              <p>HackerRank</p>
+              <span class="cert-date">Nov 2025</span>
+              <span class="cert-id">ID: DED1FC114A41</span>
+              <a href="https://www.hackerrank.com/certificates/DED1FC114A41" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View SQL Advanced certificate credential">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 03</span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+
+      <div class="skills-wrapper">
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" loading="lazy" />
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+              <img src="hhttps://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy" />
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" loading="lazy" />
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" loading="lazy" />
+              <span>Bootstrap</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" loading="lazy" />
+              <span>Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
+          <h3 class="skill-cat-title">Backend & Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" loading="lazy" />
+              <span>PHP</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" />
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" loading="lazy" />
+              <span>C++</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://raw.githubusercontent.com/github/explore/main/topics/csharp/csharp.png" alt="C#" loading="lazy" />
+              <span>C#</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="Java" loading="lazy" />
+              <span>Java</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="160">
+          <h3 class="skill-cat-title">Database & Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" loading="lazy" />
+              <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" loading="lazy" />
+              <span>GitHub</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/arduino/00979D" alt="Arduino" loading="lazy" />
+              <span>Arduino</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO SECTION ===== -->
+  <section id="video" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 04</span>
+        <h2 class="section-title">Latest Video</h2>
+        <p class="section-subtitle">Creating content as <em>"alCaps"</em> on YouTube</p>
+      </div>
+
+      <div class="video-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/bUT_viyO42c?si=zzj-3Fn6_l_c7RgM"
+            title="Latest YouTube video by alCaps"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="video-cta" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span>Subscribe on YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPLE MUSIC SECTION ===== -->
+  <section id="apple-music" class="section">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 05</span>
+        <h2 class="section-title">
+          <span class="music-icon" aria-hidden="true">🎧</span> Music
+        </h2>
+        <p class="section-subtitle">What do you want to listen to today?</p>
+      </div>
+
+      <div class="music-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="music-search">
+          <div class="search-input-group">
+            <i class="fas fa-music search-icon" aria-hidden="true"></i>
+            <input
+              type="url"
+              id="appleMusicInput"
+              placeholder="Paste Apple Music track / playlist URL here..."
+              class="music-input"
+              aria-label="Apple Music URL input"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button onclick="updateAppleMusicEmbed()" class="music-btn" aria-label="Load Apple Music track">
+              <i class="fas fa-play" aria-hidden="true"></i>
+              <span>Load</span>
+            </button>
+          </div>
+          <p class="music-hint">Paste any Apple Music link – track, album, or playlist</p>
+        </div>
+
+        <div class="music-player-wrapper">
+          <iframe
+            id="appleMusicEmbed"
+            src="https://embed.music.apple.com/id/playlist/juicy-luicy-adrian-khalif/pl.u-AkAmPlyUlxBd7qJ"
+            width="100%"
+            height="450"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Apple Music Player"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            style="display: block; border: none; border-radius: 12px;"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 06</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to new opportunities and collaborations</p>
+      </div>
+
+      <div class="contact-inner" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:iamathaalla@gmail.com" class="contact-email-link" aria-label="Send email to Muhammad Athalla">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>iamathaalla@gmail.com</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+
+        <div class="socials" role="list" aria-label="Social media links">
+          <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube channel" role="listitem">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram profile" role="listitem">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhmdathallaa" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profile" role="listitem">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://open.spotify.com/user/4a6jucio36o3j2fuda4jtkgkl" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Spotify profile" role="listitem">
+            <i class="fab fa-spotify" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:iamathaalla@gmail.com" class="social-icon" aria-label="Email" role="listitem">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <span>Designed & Built by <strong>Muhammad Athalla Bagaskara</strong></span>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <span>© <span id="footerYear"></span></span>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <span>Yogyakarta, Indonesia</span>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEeFTHJFtbOROIfPAVp7Ueg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>
