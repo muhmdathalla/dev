@@ -15,10 +15,10 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 7724 >>
+<< /Length 8066 >>
 stream
 BT
-/F2 18.00 Tf
+/F2 18.50 Tf
 0.08 g
 1 0 0 1 50.00 790.00 Tm
 (MUHAMMAD ATHALLA BAGASKARA) Tj
@@ -35,359 +35,383 @@ BT
 1 0 0 1 50.00 760.00 Tm
 (github.com/muhmdathalla  *  muhmdathalla.github.io/dev  *  linkedin.com/in/muhmdathallaa) Tj
 ET
-0.75 G 1.00 w 50.00 750.00 m 545.00 750.00 l S
+0.75 G 1.00 w 50.00 751.00 m 545.00 751.00 l S
 BT
-/F2 9.60 Tf
+/F2 9.40 Tf
 0.08 g
-1 0 0 1 50.00 736.00 Tm
+1 0 0 1 50.00 739.50 Tm
 (PROFESSIONAL SUMMARY) Tj
 ET
-0.25 G 0.85 w 50.00 733.00 m 545.00 733.00 l S
+0.25 G 0.85 w 50.00 736.70 m 545.00 736.70 l S
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 50.00 722.00 Tm
+1 0 0 1 50.00 729.00 Tm
 (Results-driven Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 50.00 710.00 Tm
+1 0 0 1 50.00 717.50 Tm
 (Automation. Proven experience optimizing high-traffic e-commerce portals, managing database administration, and building reliable ETL) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 50.00 698.00 Tm
+1 0 0 1 50.00 706.00 Tm
 (pipelines for international clients across the US, Australia, and Southeast Asia. Passionate about AI-integrated developer tools.) Tj
 ET
 BT
-/F2 9.60 Tf
+/F2 9.40 Tf
 0.08 g
 1 0 0 1 50.00 681.00 Tm
-(SKILLS & EXPERTISE) Tj
+(TECHNICAL SKILLS & EXPERTISE) Tj
 ET
-0.25 G 0.85 w 50.00 678.00 m 545.00 678.00 l S
+0.25 G 0.85 w 50.00 678.20 m 545.00 678.20 l S
 BT
 /F2 8.60 Tf
 0.10 g
-1 0 0 1 50.00 667.00 Tm
+1 0 0 1 50.00 670.50 Tm
 (Languages:) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 125.00 667.00 Tm
+1 0 0 1 125.00 670.50 Tm
 (Python, JavaScript, TypeScript, Java, C++, C#, SQL, PHP, Kotlin, C) Tj
 ET
 BT
 /F2 8.60 Tf
 0.10 g
-1 0 0 1 50.00 654.80 Tm
+1 0 0 1 50.00 659.00 Tm
 (Frontend:) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 125.00 654.80 Tm
+1 0 0 1 125.00 659.00 Tm
 (React.js, Next.js, Tailwind CSS, Bootstrap, HTML5, CSS3, Responsive UI/UX) Tj
 ET
 BT
 /F2 8.60 Tf
 0.10 g
-1 0 0 1 50.00 642.60 Tm
+1 0 0 1 50.00 647.50 Tm
 (Backend & DB:) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 125.00 642.60 Tm
+1 0 0 1 125.00 647.50 Tm
 (FastAPI, Node.js, Express.js, Laravel, PostgreSQL, MongoDB, MySQL, Data Pipelines / ETL) Tj
 ET
 BT
 /F2 8.60 Tf
 0.10 g
-1 0 0 1 50.00 630.40 Tm
+1 0 0 1 50.00 636.00 Tm
 (Tools & Infra:) Tj
 ET
 BT
 /F1 8.60 Tf
 0.20 g
-1 0 0 1 125.00 630.40 Tm
+1 0 0 1 125.00 636.00 Tm
 (Git, GitHub, Docker, Playwright, Linux, MediaPipe AI, SSE, Postman, Google Earth Engine) Tj
 ET
 BT
-/F2 9.60 Tf
+/F2 9.40 Tf
 0.08 g
-1 0 0 1 50.00 613.20 Tm
+1 0 0 1 50.00 611.00 Tm
 (PROFESSIONAL EXPERIENCE) Tj
 ET
-0.25 G 0.85 w 50.00 610.20 m 545.00 610.20 l S
+0.25 G 0.85 w 50.00 608.20 m 545.00 608.20 l S
 BT
 /F2 8.80 Tf
 0.08 g
-1 0 0 1 50.00 599.20 Tm
+1 0 0 1 50.00 600.50 Tm
 (Contract Web Application Developer) Tj
 ET
 BT
-/F1 8.30 Tf
-0.30 g
-1 0 0 1 215.00 599.20 Tm
-(Joe Coffee Company | New York, US \(Remote\)) Tj
-ET
-BT
 /F2 8.30 Tf
 0.20 g
-1 0 0 1 465.00 599.20 Tm
+1 0 0 1 455.00 600.50 Tm
 (Sep 2026 - Present) Tj
 ET
 BT
-/F1 8.20 Tf
-0.22 g
-1 0 0 1 56.00 588.20 Tm
-(- Managed and optimized company e-commerce website to improve customer online ordering and coffee subscription setup.) Tj
+/F1 8.30 Tf
+0.35 g
+1 0 0 1 50.00 590.30 Tm
+(Joe Coffee Company  *  New York, United States \(Remote\)) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 577.70 Tm
-(- Handled frontend layout updates, resolved technical bugs, and ensured smooth mobile responsiveness for the digital storefront.) Tj
+1 0 0 1 54.00 580.50 Tm
+(- Managed and optimized company e-commerce website to improve customer online ordering and recurring coffee) Tj
+ET
+BT
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 569.70 Tm
+(  subscription setup.) Tj
+ET
+BT
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 558.90 Tm
+(- Handled frontend layout updates, resolved technical bugs, and ensured smooth mobile responsiveness for) Tj
+ET
+BT
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 548.10 Tm
+(  the digital storefront.) Tj
 ET
 BT
 /F2 8.80 Tf
 0.08 g
-1 0 0 1 50.00 569.20 Tm
+1 0 0 1 50.00 532.80 Tm
 (Freelance Database Administration & Analytics) Tj
 ET
 BT
-/F1 8.30 Tf
-0.30 g
-1 0 0 1 245.00 569.20 Tm
-(Fiverr | Australia \(Remote\)) Tj
-ET
-BT
 /F2 8.30 Tf
 0.20 g
-1 0 0 1 465.00 569.20 Tm
+1 0 0 1 455.00 532.80 Tm
 (Sep 2026 - Present) Tj
 ET
 BT
+/F1 8.30 Tf
+0.35 g
+1 0 0 1 50.00 522.60 Tm
+(Fiverr  *  Australia \(Remote\)) Tj
+ET
+BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 558.20 Tm
-(- Delivered remote data analytics; cleaned raw datasets, performed EDA, and built KPI dashboards to optimize storefront decisions.) Tj
+1 0 0 1 54.00 512.80 Tm
+(- Delivered remote data analytics services to global clients; cleaned raw datasets, performed EDA, and) Tj
+ET
+BT
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 502.00 Tm
+(  built KPI dashboards to optimize storefront decisions.) Tj
 ET
 BT
 /F2 8.80 Tf
 0.08 g
-1 0 0 1 50.00 549.70 Tm
+1 0 0 1 50.00 486.70 Tm
 (Freelance Web Developer) Tj
 ET
 BT
-/F1 8.30 Tf
-0.30 g
-1 0 0 1 168.00 549.70 Tm
-(Fiverr & JobStreet | Remote) Tj
-ET
-BT
 /F2 8.30 Tf
 0.20 g
-1 0 0 1 455.00 549.70 Tm
+1 0 0 1 455.00 486.70 Tm
 (May 2026 - Sep 2026) Tj
 ET
 BT
+/F1 8.30 Tf
+0.35 g
+1 0 0 1 50.00 476.50 Tm
+(Fiverr & JobStreet  *  Jakarta, Indonesia \(Remote\)) Tj
+ET
+BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 538.70 Tm
-(- Built responsive, modern portfolio and business web applications focused on clean UI, performance speed, and technical SEO.) Tj
+1 0 0 1 54.00 466.70 Tm
+(- Built responsive, modern portfolio and business web applications focused on clean UI, performance speed,) Tj
+ET
+BT
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 455.90 Tm
+(  and technical SEO.) Tj
 ET
 BT
 /F2 8.80 Tf
 0.08 g
-1 0 0 1 50.00 530.20 Tm
+1 0 0 1 50.00 440.60 Tm
 (Freelance Data Engineer \(Data Infrastructure\)) Tj
-ET
-BT
-/F1 8.30 Tf
-0.30 g
-1 0 0 1 245.00 530.20 Tm
-(Fiverr | Malaysia \(Remote\)) Tj
 ET
 BT
 /F2 8.30 Tf
 0.20 g
-1 0 0 1 455.00 530.20 Tm
+1 0 0 1 455.00 440.60 Tm
 (Jun 2026 - Aug 2026) Tj
 ET
 BT
-/F1 8.20 Tf
-0.22 g
-1 0 0 1 56.00 519.20 Tm
-(- Designed and automated ETL workflows, data collection, and schema migration procedures to ensure reliable data pipelines.) Tj
-ET
-BT
-/F2 9.60 Tf
-0.08 g
-1 0 0 1 50.00 509.20 Tm
-(TECHNICAL PROJECTS) Tj
-ET
-0.25 G 0.85 w 50.00 506.20 m 545.00 506.20 l S
-BT
-/F2 8.60 Tf
-0.08 g
-1 0 0 1 50.00 495.20 Tm
-(NativeCopy \(Live Remote VS Code, File Injection & AI AirMotion Controller\)) Tj
-ET
-BT
-/F1 7.80 Tf
+/F1 8.30 Tf
 0.35 g
-1 0 0 1 391.00 495.20 Tm
-([TypeScript, Python, FastAPI, MediaPipe AI, SSE]) Tj
+1 0 0 1 50.00 430.40 Tm
+(Fiverr  *  Malaysia \(Remote\)) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 484.70 Tm
-(- High-speed developer tool enabling live typing into VS Code from mobile, direct project file injection, code teleportation,) Tj
+1 0 0 1 54.00 420.60 Tm
+(- Designed and automated ETL workflows, data collection, and schema migration procedures across MySQL) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 474.90 Tm
-(  and MediaPipe AI computer vision hand gestures to navigate host OS mouse cursor without external hardware.) Tj
+1 0 0 1 54.00 409.80 Tm
+(  databases to ensure reliable data pipelines.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 9.40 Tf
 0.08 g
-1 0 0 1 50.00 467.40 Tm
-(SPADA UPNYK Auto-Presence \(University Attendance Automation Engine\)) Tj
+1 0 0 1 50.00 382.00 Tm
+(FEATURED TECHNICAL PROJECTS) Tj
+ET
+0.25 G 0.85 w 50.00 379.20 m 545.00 379.20 l S
+BT
+/F2 8.70 Tf
+0.08 g
+1 0 0 1 50.00 371.50 Tm
+(NativeCopy - Cross-Device Live VS Code, File Injection & AI AirMotion Controller) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 8.00 Tf
 0.35 g
-1 0 0 1 359.50 467.40 Tm
-([Python, Playwright, Telegram Bot, GitHub Actions]) Tj
+1 0 0 1 50.00 361.30 Tm
+(Tech Stack: TypeScript, Python, FastAPI, MediaPipe AI Computer Vision, Server-Sent Events \(SSE\)) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 456.90 Tm
-(- Autonomous attendance bot for university portal \(spada.upnyk.ac.id\) with multi-course scheduling, verification screenshot) Tj
+1 0 0 1 54.00 351.50 Tm
+(- High-speed developer tool enabling live typing into VS Code from mobile, direct project file injection,) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 447.10 Tm
-(  delivery via Telegram Bot API, and 24/7 cloud cron execution via GitHub Actions workflows.) Tj
+1 0 0 1 54.00 340.70 Tm
+(  and code teleportation.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 329.90 Tm
+(- Integrated MediaPipe AI hand gestures to navigate host OS mouse cursor without external hardware.) Tj
+ET
+BT
+/F2 8.70 Tf
 0.08 g
-1 0 0 1 50.00 439.60 Tm
-(PerpusPintar \(Smart Library Management System\)) Tj
+1 0 0 1 50.00 314.60 Tm
+(SPADA UPNYK Auto-Presence - University Attendance Automation Engine) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 8.00 Tf
 0.35 g
-1 0 0 1 265.00 439.60 Tm
-([PHP, MySQL, Tailwind CSS, Full-Stack]) Tj
+1 0 0 1 50.00 304.40 Tm
+(Tech Stack: Python, Playwright, Telegram Bot API, GitHub Actions Cloud Cron) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 429.10 Tm
-(- Spearheaded development of a smart library system featuring digital access control, advanced database indexing,) Tj
+1 0 0 1 54.00 294.60 Tm
+(- Autonomous attendance bot for university portal \(spada.upnyk.ac.id\) with multi-course scheduling,) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 419.30 Tm
-(  interactive search, and production server deployment.) Tj
+1 0 0 1 54.00 283.80 Tm
+(  verification screenshot delivery via Telegram Bot API, and 24/7 cloud cron execution via GitHub Actions) Tj
 ET
 BT
-/F2 8.60 Tf
+/F1 8.20 Tf
+0.22 g
+1 0 0 1 54.00 273.00 Tm
+(  workflows.) Tj
+ET
+BT
+/F2 8.70 Tf
 0.08 g
-1 0 0 1 50.00 411.80 Tm
-(Dutch Colony Singapore Website) Tj
+1 0 0 1 50.00 257.70 Tm
+(PerpusPintar - Smart Library Management System) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 8.00 Tf
 0.35 g
-1 0 0 1 193.00 411.80 Tm
-([React.js, UI/UX, Performance Optimization, SEO]) Tj
+1 0 0 1 50.00 247.50 Tm
+(Tech Stack: PHP, MySQL, Tailwind CSS, Full-Stack Architecture, Production Deployment) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 401.30 Tm
-(- Constructed lightning-fast responsive UI components and maintained complex database schematics to improve loading) Tj
+1 0 0 1 54.00 237.70 Tm
+(- Spearheaded development of a smart library system featuring digital access control, advanced database) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 391.50 Tm
-(  speeds and optimize transaction flows for an international corporate client.) Tj
+1 0 0 1 54.00 226.90 Tm
+(  indexing, interactive search, and production server deployment.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 8.70 Tf
 0.08 g
-1 0 0 1 50.00 384.00 Tm
-(NDVI Magelang Satellite Data Analysis) Tj
+1 0 0 1 50.00 211.60 Tm
+(Dutch Colony Singapore Commercial Portal) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 8.00 Tf
 0.35 g
-1 0 0 1 224.50 384.00 Tm
-([JavaScript, Google Earth Engine, Geospatial GIS]) Tj
+1 0 0 1 50.00 201.40 Tm
+(Tech Stack: React.js, UI/UX Engineering, Database Schema Optimization, Technical SEO) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 373.50 Tm
-(- Authored precise JavaScript programs in Google Earth Engine to process massive raster datasets, producing actionable) Tj
+1 0 0 1 54.00 191.60 Tm
+(- Constructed responsive UI components and optimized database schemas to increase loading speeds and) Tj
 ET
 BT
 /F1 8.20 Tf
 0.22 g
-1 0 0 1 56.00 363.70 Tm
-(  vegetation index \(NDVI\) models and ecological land analysis.) Tj
+1 0 0 1 54.00 180.80 Tm
+(  transaction flows for an international corporate client.) Tj
 ET
 BT
-/F2 9.60 Tf
+/F2 9.40 Tf
 0.08 g
-1 0 0 1 50.00 352.20 Tm
-(EDUCATION & ACHIEVEMENTS) Tj
+1 0 0 1 50.00 153.00 Tm
+(EDUCATION & CREDENTIALS) Tj
 ET
-0.25 G 0.85 w 50.00 349.20 m 545.00 349.20 l S
+0.25 G 0.85 w 50.00 150.20 m 545.00 150.20 l S
 BT
 /F2 8.80 Tf
 0.08 g
-1 0 0 1 50.00 338.20 Tm
+1 0 0 1 50.00 142.50 Tm
 (Universitas Pembangunan Nasional "Veteran" Yogyakarta) Tj
 ET
 BT
 /F2 8.30 Tf
 0.20 g
-1 0 0 1 415.00 338.20 Tm
+1 0 0 1 415.00 142.50 Tm
 (Jan 2024 - May 2028 \(Expected\)) Tj
 ET
 BT
-/F1 8.40 Tf
+/F1 8.30 Tf
 0.22 g
-1 0 0 1 50.00 327.20 Tm
-(Bachelor of Technology \(BTech\) in Computer Science \(Informatics\)) Tj
+1 0 0 1 50.00 131.70 Tm
+(Bachelor of Technology \(BTech\) in Computer Science \(Informatics\)  *  Yogyakarta, Indonesia) Tj
 ET
 BT
 /F1 8.10 Tf
 0.35 g
-1 0 0 1 50.00 316.70 Tm
+1 0 0 1 50.00 121.30 Tm
 (Core Coursework: Data Structures & Algorithms, Database Management, Software Engineering, Networks.) Tj
 ET
 BT
 /F1 8.10 Tf
 0.35 g
-1 0 0 1 50.00 306.20 Tm
+1 0 0 1 50.00 110.90 Tm
 (Key Achievements: GEMASTIK XVIII 2025 Participant \(Competitive Programming\) * Google Developer Group Bootcamp.) Tj
+ET
+BT
+/F1 8.10 Tf
+0.35 g
+1 0 0 1 50.00 100.50 Tm
+(Licenses & Certifications: HackerRank \(SQL, Python, JavaScript, CSS, C#\) * Dicoding Indonesia \(C, Java Programming\).) Tj
 ET
 0.85 G 0.50 w 50.00 42.00 m 545.00 42.00 l S
 BT
@@ -416,5 +440,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-8232
+8574
 %%EOF
