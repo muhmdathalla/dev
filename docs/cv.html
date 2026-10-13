@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Muhammad Athalla Bagaskara – Curriculum Vitae</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --text-muted: #64748b;
+      --border-color: #cbd5e1;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--primary);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      background: white;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      padding: 18mm 20mm;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        width: 100%;
+        min-height: 100%;
+        padding: 15mm 18mm;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .print-bar {
+      position: sticky;
+      top: 0;
+      background: #1e293b;
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .print-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .print-btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .contact-info {
+      font-size: 8.5pt;
+      color: var(--secondary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .contact-info a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .divider {
+      color: #94a3b8;
+    }
+
+    .header-sep {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 12px 0 16px 0;
+    }
+
+    /* Section */
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 2px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 9pt;
+      color: var(--secondary);
+      text-align: justify;
+      line-height: 1.45;
+    }
+
+    /* Skills Table / Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 4px 10px;
+      font-size: 8.8pt;
+      margin-bottom: 6px;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .skill-value {
+      color: var(--secondary);
+    }
+
+    /* Experience & Projects */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 8px;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .item-company {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+
+    .item-date {
+      font-size: 8.5pt;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    ul.bullet-list {
+      margin-left: 16px;
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list li {
+      font-size: 8.8pt;
+      color: var(--secondary);
+      line-height: 1.4;
+      margin-bottom: 3px;
+    }
+
+    /* Project item */
+    .project-item {
+      margin-bottom: 7px;
+    }
+
+    .project-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .project-title a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .project-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .project-tags {
+      font-size: 8pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
+    .project-desc {
+      font-size: 8.8pt;
+      color: var(--secondary);
+      line-height: 1.38;
+      margin-top: 1px;
+    }
+
+    /* Cover letter specific */
+    .cl-date {
+      font-size: 9.5pt;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+
+    .cl-recipient {
+      font-size: 9.5pt;
+      color: var(--primary);
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .cl-salutation {
+      font-size: 9.5pt;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .cl-body p {
+      font-size: 9.2pt;
+      color: var(--secondary);
+      line-height: 1.55;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .cl-signoff {
+      margin-top: 24px;
+      font-size: 9.5pt;
+    }
+
+    .cl-name {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .page-footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #94a3b8;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <div><strong>Muhammad Athalla Bagaskara</strong> — Application Packet & CV</div>
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <!-- PAGE 1: COVER LETTER -->
+  <div class="page">
+    <header class="header">
+      <h1 class="name">MUHAMMAD ATHALLA BAGASKARA</h1>
+      <div class="contact-info">
+        <span>Sleman, Yogyakarta, Indonesia</span>
+        <span class="divider">•</span>
+        <span>+62 895-296-20940</span>
+        <span class="divider">•</span>
+        <a href="mailto:iamathaalla@gmail.com">iamathaalla@gmail.com</a>
+      </div>
+      <div class="contact-info" style="margin-top: 3px;">
+        <a href="https://github.com/muhmdathalla" target="_blank">github.com/muhmdathalla</a>
+        <span class="divider">•</span>
+        <a href="https://muhmdathalla.github.io/dev" target="_blank">muhmdathalla.github.io/dev</a>
+        <span class="divider">•</span>
+        <a href="https://linkedin.com/in/muhmdathallaa" target="_blank">linkedin.com/in/muhmdathallaa</a>
+      </div>
+    </header>
+
+    <div class="header-sep"></div>
+
+    <div class="cl-date">October 13, 2026</div>
+
+    <div class="cl-recipient">
+      <strong>Hiring Team</strong><br>
+      Software Engineering / AI Systems Roles<br>
+      Remote / Hybrid
+    </div>
+
+    <div class="cl-salutation">Dear Hiring Team,</div>
+
+    <div class="cl-body">
+      <p>
+        I am writing to express my strong interest in software engineering and developer opportunities with your team. My passion lies in architecting reliable full-stack applications, streamlining end-to-end data pipelines, and bridging developer workflows with state-of-the-art AI and automation.
+      </p>
+
+      <p>
+        As a Computer Science undergraduate at UPN "Veteran" Yogyakarta and an active freelance engineer, I cultivate an agile "builder" mindset. Through my recent projects, I developed <strong>NativeCopy</strong>—an ultra-low latency cross-device developer tool enabling live code injection directly into active VS Code sessions alongside MediaPipe AI computer vision hand gestures—and <strong>SPADA Auto-Presence</strong>, an autonomous university attendance engine powered by Playwright and Telegram verification bots running 24/7 via GitHub Actions.
+      </p>
+
+      <p>
+        In my professional freelance work for global clients on Fiverr and Singaporean companies, I have designed production ETL pipelines across MongoDB, PostgreSQL, and MySQL, significantly reducing latency and data transformation overhead. Furthermore, my hands-on background with React.js, Next.js, FastAPI, and Docker has trained me to construct robust, high-performance web systems while taking complete ownership of projects in autonomous, asynchronous work environments.
+      </p>
+
+      <p>
+        I bring positive energy, proactive communication, and a genuine drive to turn complex challenges into polished, intuitive software. I would welcome the opportunity to discuss how my technical skills, engineering discipline, and enthusiasm can contribute to your products and goals.
+      </p>
+
+      <p>
+        Thank you for your time and consideration. You are welcome to explore my live demos and open-source code repositories via my GitHub and portfolio website.
+      </p>
+    </div>
+
+    <div class="cl-signoff">Sincerely,</div>
+    <div class="cl-name">Muhammad Athalla Bagaskara</div>
+
+    <div class="page-footer">
+      <span>Application: Software Engineer / Full-Stack Developer</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: RESUME / CV -->
+  <div class="page">
+    <header class="header">
+      <h1 class="name">MUHAMMAD ATHALLA BAGASKARA</h1>
+      <div class="contact-info">
+        <span>Sleman, Yogyakarta, Indonesia</span>
+        <span class="divider">•</span>
+        <span>+62 895-296-20940</span>
+        <span class="divider">•</span>
+        <a href="mailto:iamathaalla@gmail.com">iamathaalla@gmail.com</a>
+      </div>
+      <div class="contact-info" style="margin-top: 3px;">
+        <a href="https://github.com/muhmdathalla" target="_blank">github.com/muhmdathalla</a>
+        <span class="divider">•</span>
+        <a href="https://muhmdathalla.github.io/dev" target="_blank">muhmdathalla.github.io/dev</a>
+        <span class="divider">•</span>
+        <a href="https://linkedin.com/in/muhmdathallaa" target="_blank">linkedin.com/in/muhmdathallaa</a>
+      </div>
+    </header>
+
+    <div class="header-sep"></div>
+
+    <!-- SUMMARY -->
+    <div class="section-title">Professional Summary</div>
+    <p class="summary-text">
+      Results-driven Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience automating high-throughput ETL pipelines and optimizing database architectures for international clients. Passionate about integrating AI capabilities, building low-latency developer tools, and delivering high-performance software engineering value in dynamic, asynchronous environments.
+    </p>
+
+    <!-- SKILLS -->
+    <div class="section-title">Skills & Expertise</div>
+    <div class="skills-grid">
+      <span class="skill-label">Languages:</span>
+      <span class="skill-value">Python, JavaScript, TypeScript, Java, C++, C#, SQL, PHP, Kotlin, C</span>
+
+      <span class="skill-label">Frontend:</span>
+      <span class="skill-value">React.js, Next.js, Tailwind CSS, Bootstrap, HTML5, CSS3, Responsive UI/UX</span>
+
+      <span class="skill-label">Backend & DB:</span>
+      <span class="skill-value">FastAPI, Node.js, Express.js, Laravel, PostgreSQL, MongoDB, MySQL, Data Pipelines / ETL</span>
+
+      <span class="skill-label">Tools & Infra:</span>
+      <span class="skill-value">Git, GitHub, Docker, Playwright, Linux, MediaPipe AI, Server-Sent Events (SSE), Postman, Google Earth Engine</span>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section-title">Professional Experience</div>
+
+    <div class="item-header">
+      <div>
+        <span class="item-title">Freelance Data Engineer</span> — <span class="item-company">Fiverr (Global Clients)</span>
+      </div>
+      <span class="item-date">Jun 2026 – Present | Remote</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Designed and optimized end-to-end ETL pipelines for handling structured and unstructured business intelligence data.</li>
+      <li>Architected cross-database migrations (MongoDB, PostgreSQL, MySQL) and automated cleaning procedures, reducing processing latency.</li>
+    </ul>
+
+    <div class="item-header">
+      <div>
+        <span class="item-title">Freelance Web Developer</span> — <span class="item-company">Fiverr & JobStreet Singapore</span>
+      </div>
+      <span class="item-date">May 2026 – Jun 2026 | Remote</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Engineered highly responsive UI/UX and enterprise-grade web applications tailored to the corporate requirements of international entities.</li>
+      <li>Optimized application architectures for mobile-first compatibility, performance speed, and comprehensive technical SEO.</li>
+    </ul>
+
+    <div class="item-header">
+      <div>
+        <span class="item-title">Full-Stack Web Developer</span> — <span class="item-company">Soetoredjo Family Portal</span>
+      </div>
+      <span class="item-date">Jul 2024 – Present | Remote</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Developed and maintained custom CMS portal with relational database schemas, secure authentication, and high availability.</li>
+    </ul>
+
+    <!-- TECHNICAL PROJECTS -->
+    <div class="section-title">Technical Projects</div>
+
+    <div class="project-item">
+      <span class="project-title">
+        <a href="https://github.com/muhmdathalla/nativecopy" target="_blank">NativeCopy – Cross-Device Live VS Code & AI Gesture Injection</a>
+      </span>
+      <span class="project-tags">[TypeScript, Python, FastAPI, MediaPipe AI, SSE]</span>
+      <p class="project-desc">
+        High-speed developer companion enabling live typing from smartphone into active VS Code cursor, direct workspace file injection, reverse code teleportation, and MediaPipe AI computer vision hand gestures to control OS mouse cursor without peripheral hardware.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <span class="project-title">
+        <a href="https://github.com/muhmdathalla/spada-presence" target="_blank">SPADA UPNYK Auto-Presence – University Attendance Automation Engine</a>
+      </span>
+      <span class="project-tags">[Python, Playwright, Telegram Bot API, GitHub Actions]</span>
+      <p class="project-desc">
+        Autonomous attendance bot for university e-learning portal (`spada.upnyk.ac.id`) managing multi-course scheduling, session authentication, verification screenshot delivery via Telegram, and 24/7 cloud cron execution.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <span class="project-title">
+        <a href="https://perpuspintar.soetoredjo.com/" target="_blank">PerpusPintas – Smart Library Management System</a>
+      </span>
+      <span class="project-tags">[PHP, MySQL, Tailwind CSS, Full-Stack]</span>
+      <p class="project-desc">
+        Spearheaded end-to-end development of a smart library system featuring digital access control, advanced database indexing, interactive catalog search, and production server deployment.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <span class="project-title">Dutch Colony Singapore Website</span>
+      <span class="project-tags">[React.js, UI/UX, Performance Optimization]</span>
+      <p class="project-desc">
+        Constructed lightning-fast responsive UI components and maintained complex database schematics to improve loading speeds and optimize transaction flows for an international corporate client.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <span class="project-title">NDVI Magelang Satellite Data Analysis</span>
+      <span class="project-tags">[JavaScript, Google Earth Engine, Geospatial GIS]</span>
+      <p class="project-desc">
+        Authored precise JavaScript programs in Google Earth Engine to process massive raster datasets, producing actionable vegetation index (NDVI) models and ecological land analysis.
+      </p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section-title">Education & Achievements</div>
+    <div class="item-header">
+      <div>
+        <span class="item-title">Universitas Pembangunan Nasional "Veteran" Yogyakarta</span>
+      </div>
+      <span class="item-date">Jan 2024 – May 2028 (Expected)</span>
+    </div>
+    <p style="font-size: 8.8pt; color: var(--secondary); margin-top: 1px;">
+      <strong>Bachelor of Technology (BTech) in Computer Science (Informatics)</strong><br>
+      Core Coursework: Data Structures & Advanced Algorithms, Database Management, Software Engineering, Computer Networks.<br>
+      Achievements: GEMASTIK XVIII 2025 Participant (Competitive Programming) • Google Developer Group Bootcamp.
+    </p>
+
+    <div class="page-footer">
+      <span>Curriculum Vitae — Muhammad Athalla Bagaskara</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

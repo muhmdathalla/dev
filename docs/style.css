@@ -794,6 +794,13 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .btn-card {
   display: inline-flex;
   align-items: center;
