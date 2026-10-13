@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Muhammad Athalla Bagaskara – Curriculum Vitae</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
       --primary: #0f172a;
@@ -12,7 +12,7 @@
       --accent: #2563eb;
       --text-muted: #64748b;
       --border-color: #cbd5e1;
-      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     * {
@@ -25,8 +25,8 @@
       font-family: var(--font-family);
       color: var(--primary);
       background-color: #f1f5f9;
-      line-height: 1.5;
-      font-size: 10pt;
+      line-height: 1.42;
+      font-size: 8.8pt;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -34,10 +34,12 @@
       background: white;
       width: 210mm;
       min-height: 297mm;
-      margin: 20px auto;
-      padding: 18mm 20mm;
+      max-height: 297mm;
+      margin: 18px auto;
+      padding: 14mm 18mm 12mm 18mm;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       position: relative;
+      overflow: hidden;
     }
 
     @media print {
@@ -49,8 +51,10 @@
         box-shadow: none;
         page-break-after: always;
         width: 100%;
-        min-height: 100%;
-        padding: 15mm 18mm;
+        height: 100%;
+        min-height: 297mm;
+        max-height: 297mm;
+        padding: 12mm 16mm 10mm 16mm;
       }
       .no-print {
         display: none !important;
@@ -62,7 +66,7 @@
       top: 0;
       background: #1e293b;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -73,34 +77,30 @@
       background: #2563eb;
       color: white;
       border: none;
-      padding: 8px 16px;
+      padding: 6px 16px;
       border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
-      font-size: 14px;
-      transition: background 0.2s;
-    }
-    .print-btn:hover {
-      background: #1d4ed8;
+      font-size: 13px;
     }
 
     /* Header */
     .header {
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .name {
-      font-size: 20pt;
+      font-size: 18pt;
       font-weight: 800;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: var(--primary);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .contact-info {
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       color: var(--secondary);
       display: flex;
       justify-content: center;
@@ -125,37 +125,37 @@
     .header-sep {
       height: 1px;
       background: #e2e8f0;
-      margin: 12px 0 16px 0;
+      margin: 8px 0 12px 0;
     }
 
     /* Section */
     .section-title {
-      font-size: 10.5pt;
+      font-size: 9.2pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       color: var(--primary);
-      border-bottom: 1.5px solid #0f172a;
-      padding-bottom: 2px;
-      margin-top: 14px;
-      margin-bottom: 8px;
+      border-bottom: 1.2px solid #0f172a;
+      padding-bottom: 1px;
+      margin-top: 10px;
+      margin-bottom: 5px;
     }
 
     /* Summary */
     .summary-text {
-      font-size: 9pt;
+      font-size: 8.2pt;
       color: var(--secondary);
       text-align: justify;
-      line-height: 1.45;
+      line-height: 1.36;
     }
 
     /* Skills Table / Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 4px 10px;
-      font-size: 8.8pt;
-      margin-bottom: 6px;
+      grid-template-columns: 100px 1fr;
+      gap: 2px 8px;
+      font-size: 8.1pt;
+      margin-bottom: 4px;
     }
 
     .skill-label {
@@ -167,54 +167,57 @@
       color: var(--secondary);
     }
 
-    /* Experience & Projects */
+    /* Experience */
+    .exp-item {
+      margin-bottom: 5px;
+    }
+
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 8px;
-      margin-bottom: 2px;
+      margin-top: 3px;
     }
 
     .item-title {
-      font-size: 9.5pt;
+      font-size: 8.6pt;
       font-weight: 700;
       color: var(--primary);
     }
 
     .item-company {
-      font-size: 9pt;
-      font-weight: 500;
+      font-size: 8.2pt;
+      font-weight: 600;
       color: var(--secondary);
     }
 
     .item-date {
-      font-size: 8.5pt;
+      font-size: 7.8pt;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
       white-space: nowrap;
     }
 
     ul.bullet-list {
-      margin-left: 16px;
-      margin-top: 3px;
-      margin-bottom: 6px;
+      margin-left: 14px;
+      margin-top: 1.5px;
+      margin-bottom: 3px;
     }
 
     ul.bullet-list li {
-      font-size: 8.8pt;
+      font-size: 8.0pt;
       color: var(--secondary);
-      line-height: 1.4;
-      margin-bottom: 3px;
+      line-height: 1.32;
+      margin-bottom: 1.5px;
     }
 
     /* Project item */
     .project-item {
-      margin-bottom: 7px;
+      margin-bottom: 4.5px;
     }
 
     .project-title {
-      font-size: 9pt;
+      font-size: 8.4pt;
       font-weight: 700;
       color: var(--primary);
     }
@@ -229,76 +232,76 @@
     }
 
     .project-tags {
-      font-size: 8pt;
+      font-size: 7.4pt;
       color: var(--accent);
       font-weight: 600;
-      margin-left: 4px;
+      margin-left: 3px;
     }
 
     .project-desc {
-      font-size: 8.8pt;
+      font-size: 7.9pt;
       color: var(--secondary);
-      line-height: 1.38;
+      line-height: 1.3;
       margin-top: 1px;
     }
 
     /* Cover letter specific */
     .cl-date {
-      font-size: 9.5pt;
+      font-size: 9pt;
       color: var(--secondary);
-      margin-bottom: 16px;
-    }
-
-    .cl-recipient {
-      font-size: 9.5pt;
-      color: var(--primary);
-      line-height: 1.4;
-      margin-bottom: 16px;
-    }
-
-    .cl-salutation {
-      font-size: 9.5pt;
-      font-weight: 600;
       margin-bottom: 14px;
     }
 
-    .cl-body p {
+    .cl-recipient {
+      font-size: 9pt;
+      color: var(--primary);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .cl-salutation {
       font-size: 9.2pt;
-      color: var(--secondary);
-      line-height: 1.55;
+      font-weight: 600;
       margin-bottom: 12px;
+    }
+
+    .cl-body p {
+      font-size: 8.8pt;
+      color: var(--secondary);
+      line-height: 1.5;
+      margin-bottom: 10px;
       text-align: justify;
     }
 
     .cl-signoff {
-      margin-top: 24px;
-      font-size: 9.5pt;
+      margin-top: 20px;
+      font-size: 9pt;
     }
 
     .cl-name {
-      margin-top: 32px;
+      margin-top: 26px;
       font-weight: 700;
-      font-size: 10pt;
+      font-size: 9.8pt;
     }
 
     .page-footer {
       position: absolute;
-      bottom: 12mm;
-      left: 20mm;
-      right: 20mm;
+      bottom: 8mm;
+      left: 18mm;
+      right: 18mm;
       display: flex;
       justify-content: space-between;
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #94a3b8;
       border-top: 1px solid #f1f5f9;
-      padding-top: 6px;
+      padding-top: 4px;
     }
   </style>
 </head>
 <body>
 
   <div class="print-bar no-print">
-    <div><strong>Muhammad Athalla Bagaskara</strong> — Application Packet & CV</div>
+    <div><strong>Muhammad Athalla Bagaskara</strong> — Application Packet (2 Pages Strict)</div>
     <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
   </div>
 
@@ -313,7 +316,7 @@
         <span class="divider">•</span>
         <a href="mailto:iamathaalla@gmail.com">iamathaalla@gmail.com</a>
       </div>
-      <div class="contact-info" style="margin-top: 3px;">
+      <div class="contact-info" style="margin-top: 2px;">
         <a href="https://github.com/muhmdathalla" target="_blank">github.com/muhmdathalla</a>
         <span class="divider">•</span>
         <a href="https://muhmdathalla.github.io/dev" target="_blank">muhmdathalla.github.io/dev</a>
@@ -327,8 +330,8 @@
     <div class="cl-date">October 13, 2026</div>
 
     <div class="cl-recipient">
-      <strong>Hiring Team</strong><br>
-      Software Engineering / AI Systems Roles<br>
+      <strong>Hiring Team & Technical Leaders</strong><br>
+      Software Engineering, Web Application & Data Systems<br>
       Remote / Hybrid
     </div>
 
@@ -336,23 +339,23 @@
 
     <div class="cl-body">
       <p>
-        I am writing to express my strong interest in software engineering and developer opportunities with your team. My passion lies in architecting reliable full-stack applications, streamlining end-to-end data pipelines, and bridging developer workflows with state-of-the-art AI and automation.
+        I am writing to express my strong enthusiasm for software engineering and web application developer opportunities with your organization. My passion centers on engineering robust full-stack applications, optimizing data infrastructure and analytics pipelines, and building low-latency developer utilities empowered by modern web and AI technologies.
       </p>
 
       <p>
-        As a Computer Science undergraduate at UPN "Veteran" Yogyakarta and an active freelance engineer, I cultivate an agile "builder" mindset. Through my recent projects, I developed <strong>NativeCopy</strong>—an ultra-low latency cross-device developer tool enabling live code injection directly into active VS Code sessions alongside MediaPipe AI computer vision hand gestures—and <strong>SPADA Auto-Presence</strong>, an autonomous university attendance engine powered by Playwright and Telegram verification bots running 24/7 via GitHub Actions.
+        As a Computer Science undergraduate at UPN "Veteran" Yogyakarta and an active international freelance engineer, I have built a strong track record across both client-facing products and internal tools. Recently, as a <strong>Contract Web Application Developer for Joe Coffee Company (New York, US)</strong>, I managed and optimized their e-commerce digital storefront—enhancing the online ordering flow, upgrading customer coffee subscription systems, and troubleshooting frontend technical bugs to ensure seamless mobile responsiveness.
       </p>
 
       <p>
-        In my professional freelance work for global clients on Fiverr and Singaporean companies, I have designed production ETL pipelines across MongoDB, PostgreSQL, and MySQL, significantly reducing latency and data transformation overhead. Furthermore, my hands-on background with React.js, Next.js, FastAPI, and Docker has trained me to construct robust, high-performance web systems while taking complete ownership of projects in autonomous, asynchronous work environments.
+        Concurrently, through my freelance practice on <strong>Fiverr</strong>, I have delivered end-to-end data analytics and database administration for global clients (including Australia and Malaysia), translating complex datasets into actionable business dashboards and automating data cleaning and ETL pipelines across MongoDB, PostgreSQL, and MySQL. Furthermore, I developed modern, responsive web applications for international clients with a steadfast emphasis on clean UI, performance, and technical SEO.
       </p>
 
       <p>
-        I bring positive energy, proactive communication, and a genuine drive to turn complex challenges into polished, intuitive software. I would welcome the opportunity to discuss how my technical skills, engineering discipline, and enthusiasm can contribute to your products and goals.
+        My technical exploration is reflected in my open-source projects: <strong>NativeCopy</strong>, a high-speed cross-device developer tool enabling live remote code injection directly into active VS Code sessions alongside MediaPipe AI computer vision hand gesture tracking, and <strong>SPADA Auto-Presence</strong>, an autonomous university attendance engine leveraging Python, Playwright, and Telegram verification bots deployed on 24/7 GitHub Actions cloud cron schedules.
       </p>
 
       <p>
-        Thank you for your time and consideration. You are welcome to explore my live demos and open-source code repositories via my GitHub and portfolio website.
+        I bring high energy, proactive asynchronous communication, and disciplined software craftsmanship. I welcome the opportunity to discuss how my web development, database administration, and problem-solving skills can contribute to your engineering goals. Thank you for your time and consideration.
       </p>
     </div>
 
@@ -360,7 +363,7 @@
     <div class="cl-name">Muhammad Athalla Bagaskara</div>
 
     <div class="page-footer">
-      <span>Application: Software Engineer / Full-Stack Developer</span>
+      <span>Application Packet — Software Engineering & Full-Stack</span>
       <span>Page 1 of 2</span>
     </div>
   </div>
@@ -376,7 +379,7 @@
         <span class="divider">•</span>
         <a href="mailto:iamathaalla@gmail.com">iamathaalla@gmail.com</a>
       </div>
-      <div class="contact-info" style="margin-top: 3px;">
+      <div class="contact-info" style="margin-top: 2px;">
         <a href="https://github.com/muhmdathalla" target="_blank">github.com/muhmdathalla</a>
         <span class="divider">•</span>
         <a href="https://muhmdathalla.github.io/dev" target="_blank">muhmdathalla.github.io/dev</a>
@@ -390,7 +393,7 @@
     <!-- SUMMARY -->
     <div class="section-title">Professional Summary</div>
     <p class="summary-text">
-      Results-driven Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience automating high-throughput ETL pipelines and optimizing database architectures for international clients. Passionate about integrating AI capabilities, building low-latency developer tools, and delivering high-performance software engineering value in dynamic, asynchronous environments.
+      Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience optimizing e-commerce web applications, managing database administration, and building automated data pipelines for international clients across the US, Australia, and Southeast Asia. Passionate about AI-integrated developer tools and delivering robust software engineering value.
     </p>
 
     <!-- SKILLS -->
@@ -406,43 +409,73 @@
       <span class="skill-value">FastAPI, Node.js, Express.js, Laravel, PostgreSQL, MongoDB, MySQL, Data Pipelines / ETL</span>
 
       <span class="skill-label">Tools & Infra:</span>
-      <span class="skill-value">Git, GitHub, Docker, Playwright, Linux, MediaPipe AI, Server-Sent Events (SSE), Postman, Google Earth Engine</span>
+      <span class="skill-value">Git, GitHub, Docker, Playwright, Linux, MediaPipe AI, SSE, Postman, Google Earth Engine</span>
     </div>
 
     <!-- EXPERIENCE -->
     <div class="section-title">Professional Experience</div>
 
-    <div class="item-header">
-      <div>
-        <span class="item-title">Freelance Data Engineer</span> — <span class="item-company">Fiverr (Global Clients)</span>
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Contract Web Application Developer</span> — <span class="item-company">Joe Coffee Company</span>
+        </div>
+        <span class="item-date">Sep 2026 – Present | New York, US · Remote</span>
       </div>
-      <span class="item-date">Jun 2026 – Present | Remote</span>
+      <ul class="bullet-list">
+        <li>Managed and optimized e-commerce website to improve customer online ordering and recurring coffee subscription setups.</li>
+        <li>Handled front-end layout updates, resolved technical bugs, and ensured smooth mobile responsiveness for the digital storefront.</li>
+      </ul>
     </div>
-    <ul class="bullet-list">
-      <li>Designed and optimized end-to-end ETL pipelines for handling structured and unstructured business intelligence data.</li>
-      <li>Architected cross-database migrations (MongoDB, PostgreSQL, MySQL) and automated cleaning procedures, reducing processing latency.</li>
-    </ul>
 
-    <div class="item-header">
-      <div>
-        <span class="item-title">Freelance Web Developer</span> — <span class="item-company">Fiverr & JobStreet Singapore</span>
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Freelance Database Administration & Analytics</span> — <span class="item-company">Fiverr</span>
+        </div>
+        <span class="item-date">Sep 2026 – Present | Australia · Remote</span>
       </div>
-      <span class="item-date">May 2026 – Jun 2026 | Remote</span>
+      <ul class="bullet-list">
+        <li>Delivered remote data analytics to global clients; cleaned raw datasets, performed EDA, and built KPI tracking dashboards.</li>
+        <li>Identified operational market trends to help digital storefronts make informed, data-driven decisions.</li>
+      </ul>
     </div>
-    <ul class="bullet-list">
-      <li>Engineered highly responsive UI/UX and enterprise-grade web applications tailored to the corporate requirements of international entities.</li>
-      <li>Optimized application architectures for mobile-first compatibility, performance speed, and comprehensive technical SEO.</li>
-    </ul>
 
-    <div class="item-header">
-      <div>
-        <span class="item-title">Full-Stack Web Developer</span> — <span class="item-company">Soetoredjo Family Portal</span>
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Freelance Web Developer</span> — <span class="item-company">Fiverr & JobStreet</span>
+        </div>
+        <span class="item-date">May 2026 – Sep 2026 | Remote</span>
       </div>
-      <span class="item-date">Jul 2024 – Present | Remote</span>
+      <ul class="bullet-list">
+        <li>Built modern, responsive websites, landing pages, and custom web applications with high performance and technical SEO.</li>
+      </ul>
     </div>
-    <ul class="bullet-list">
-      <li>Developed and maintained custom CMS portal with relational database schemas, secure authentication, and high availability.</li>
-    </ul>
+
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Freelance Data Engineer (Data Infrastructure)</span> — <span class="item-company">Fiverr</span>
+        </div>
+        <span class="item-date">Jun 2026 – Aug 2026 | Malaysia · Remote</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Designed, built, and automated ETL pipelines, data collection, and transformation procedures across relational databases.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Full-Stack Web Developer</span> — <span class="item-company">Soetoredjo Family Portal</span>
+        </div>
+        <span class="item-date">Jul 2024 – Present | Remote</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Architected custom CMS portal with relational database schemas, secure authentication, and high availability.</li>
+      </ul>
+    </div>
 
     <!-- TECHNICAL PROJECTS -->
     <div class="section-title">Technical Projects</div>
@@ -453,7 +486,7 @@
       </span>
       <span class="project-tags">[TypeScript, Python, FastAPI, MediaPipe AI, SSE]</span>
       <p class="project-desc">
-        High-speed developer companion enabling live typing from smartphone into active VS Code cursor, direct workspace file injection, reverse code teleportation, and MediaPipe AI computer vision hand gestures to control OS mouse cursor without peripheral hardware.
+        High-speed developer companion enabling live typing from smartphone into active VS Code cursor, direct project file injection, reverse code teleportation, and MediaPipe AI computer vision hand gestures to navigate host OS mouse cursor without external hardware.
       </p>
     </div>
 
@@ -463,7 +496,7 @@
       </span>
       <span class="project-tags">[Python, Playwright, Telegram Bot API, GitHub Actions]</span>
       <p class="project-desc">
-        Autonomous attendance bot for university e-learning portal (`spada.upnyk.ac.id`) managing multi-course scheduling, session authentication, verification screenshot delivery via Telegram, and 24/7 cloud cron execution.
+        Autonomous attendance bot for university portal (`spada.upnyk.ac.id`) managing multi-course scheduling, session authentication, verification screenshot delivery via Telegram, and 24/7 cloud cron execution.
       </p>
     </div>
 
@@ -479,7 +512,7 @@
 
     <div class="project-item">
       <span class="project-title">Dutch Colony Singapore Website</span>
-      <span class="project-tags">[React.js, UI/UX, Performance Optimization]</span>
+      <span class="project-tags">[React.js, UI/UX, Performance Optimization, SEO]</span>
       <p class="project-desc">
         Constructed lightning-fast responsive UI components and maintained complex database schematics to improve loading speeds and optimize transaction flows for an international corporate client.
       </p>
@@ -501,9 +534,9 @@
       </div>
       <span class="item-date">Jan 2024 – May 2028 (Expected)</span>
     </div>
-    <p style="font-size: 8.8pt; color: var(--secondary); margin-top: 1px;">
+    <p style="font-size: 8.0pt; color: var(--secondary); margin-top: 1px;">
       <strong>Bachelor of Technology (BTech) in Computer Science (Informatics)</strong><br>
-      Core Coursework: Data Structures & Advanced Algorithms, Database Management, Software Engineering, Computer Networks.<br>
+      Core Coursework: Data Structures & Algorithms, Database Management, Software Engineering, Networks.<br>
       Achievements: GEMASTIK XVIII 2025 Participant (Competitive Programming) • Google Developer Group Bootcamp.
     </p>
 

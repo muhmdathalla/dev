@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Muhammad Athalla Bagaskara – Resume (1-Page)</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
       --primary: #0f172a;
@@ -20,8 +20,8 @@
       font-family: var(--font-family);
       color: var(--primary);
       background-color: #f1f5f9;
-      line-height: 1.4;
-      font-size: 8.8pt;
+      line-height: 1.35;
+      font-size: 8.4pt;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -29,10 +29,12 @@
       background: white;
       width: 210mm;
       min-height: 297mm;
+      max-height: 297mm;
       margin: 15px auto;
-      padding: 12mm 15mm;
+      padding: 10mm 14mm;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       position: relative;
+      overflow: hidden;
     }
 
     @media print {
@@ -41,8 +43,10 @@
         margin: 0;
         box-shadow: none;
         width: 100%;
-        min-height: 100%;
-        padding: 10mm 12mm;
+        height: 100%;
+        min-height: 297mm;
+        max-height: 297mm;
+        padding: 8mm 12mm;
       }
       .no-print { display: none !important; }
     }
@@ -52,7 +56,7 @@
       top: 0;
       background: #1e293b;
       color: white;
-      padding: 10px 20px;
+      padding: 8px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -62,21 +66,21 @@
       background: #2563eb;
       color: white;
       border: none;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    .header { text-align: center; margin-bottom: 10px; }
-    .name { font-size: 17pt; font-weight: 800; text-transform: uppercase; color: var(--primary); }
+    .header { text-align: center; margin-bottom: 6px; }
+    .name { font-size: 16pt; font-weight: 800; text-transform: uppercase; color: var(--primary); }
     .contact-info {
-      font-size: 8pt;
+      font-size: 7.8pt;
       color: var(--secondary);
       display: flex;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       align-items: center;
       margin-top: 2px;
     }
@@ -85,24 +89,24 @@
     .divider { color: #94a3b8; }
 
     .section-title {
-      font-size: 9.2pt;
+      font-size: 8.8pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.5px;
       color: var(--primary);
       border-bottom: 1.2px solid #0f172a;
       padding-bottom: 1px;
-      margin-top: 8px;
-      margin-bottom: 5px;
+      margin-top: 6px;
+      margin-bottom: 4px;
     }
 
-    .summary-text { font-size: 8.2pt; color: var(--secondary); text-align: justify; line-height: 1.35; }
+    .summary-text { font-size: 7.9pt; color: var(--secondary); text-align: justify; line-height: 1.32; }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: 95px 1fr;
-      gap: 2px 8px;
-      font-size: 8pt;
+      grid-template-columns: 90px 1fr;
+      gap: 2px 6px;
+      font-size: 7.8pt;
     }
     .skill-label { font-weight: 700; color: var(--primary); }
     .skill-value { color: var(--secondary); }
@@ -111,21 +115,21 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 5px;
+      margin-top: 4px;
     }
-    .item-title { font-size: 8.6pt; font-weight: 700; color: var(--primary); }
-    .item-company { font-size: 8.2pt; font-weight: 500; color: var(--secondary); }
-    .item-date { font-size: 7.8pt; color: var(--text-muted); font-weight: 600; }
+    .item-title { font-size: 8.2pt; font-weight: 700; color: var(--primary); }
+    .item-company { font-size: 7.9pt; font-weight: 600; color: var(--secondary); }
+    .item-date { font-size: 7.5pt; color: var(--text-muted); font-weight: 600; }
 
-    ul.bullet-list { margin-left: 14px; margin-top: 2px; margin-bottom: 4px; }
-    ul.bullet-list li { font-size: 8pt; color: var(--secondary); line-height: 1.3; margin-bottom: 1.5px; }
+    ul.bullet-list { margin-left: 14px; margin-top: 1px; margin-bottom: 3px; }
+    ul.bullet-list li { font-size: 7.8pt; color: var(--secondary); line-height: 1.28; margin-bottom: 1px; }
 
-    .project-item { margin-bottom: 5px; }
-    .project-title { font-size: 8.4pt; font-weight: 700; color: var(--primary); }
+    .project-item { margin-bottom: 3.5px; }
+    .project-title { font-size: 8.1pt; font-weight: 700; color: var(--primary); }
     .project-title a { color: var(--primary); text-decoration: none; }
     .project-title a:hover { color: var(--accent); text-decoration: underline; }
-    .project-tags { font-size: 7.4pt; color: var(--accent); font-weight: 600; }
-    .project-desc { font-size: 8pt; color: var(--secondary); line-height: 1.3; margin-top: 1px; }
+    .project-tags { font-size: 7.1pt; color: var(--accent); font-weight: 600; }
+    .project-desc { font-size: 7.7pt; color: var(--secondary); line-height: 1.28; margin-top: 0.5px; }
   </style>
 </head>
 <body>
@@ -157,7 +161,7 @@
     <!-- SUMMARY -->
     <div class="section-title">Professional Summary</div>
     <p class="summary-text">
-      Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience automating high-throughput ETL pipelines and optimizing databases for international clients. Passionate about developing low-latency developer tools, AI integration, and delivering robust software engineering value.
+      Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience optimizing e-commerce web applications, managing database administration, and building automated data pipelines for international clients across the US, Australia, and Southeast Asia. Passionate about AI-integrated developer tools and delivering robust software engineering value.
     </p>
 
     <!-- SKILLS -->
@@ -181,34 +185,42 @@
 
     <div class="item-header">
       <div>
-        <span class="item-title">Freelance Data Engineer</span> — <span class="item-company">Fiverr (Global Clients)</span>
+        <span class="item-title">Contract Web Application Developer</span> — <span class="item-company">Joe Coffee Company</span>
       </div>
-      <span class="item-date">Jun 2026 – Present | Remote</span>
+      <span class="item-date">Sep 2026 – Present | New York, US · Remote</span>
     </div>
     <ul class="bullet-list">
-      <li>Designed and optimized end-to-end ETL pipelines for handling structured and unstructured business intelligence data.</li>
-      <li>Architected cross-database migrations (MongoDB, PostgreSQL, MySQL) and automated cleaning procedures, reducing latency.</li>
+      <li>Managed and optimized e-commerce website to improve customer online ordering and coffee subscription setup; resolved bugs and enhanced mobile UI.</li>
     </ul>
 
     <div class="item-header">
       <div>
-        <span class="item-title">Freelance Web Developer</span> — <span class="item-company">Fiverr & JobStreet Singapore</span>
+        <span class="item-title">Freelance Database Administration & Analytics</span> — <span class="item-company">Fiverr</span>
       </div>
-      <span class="item-date">May 2026 – Jun 2026 | Remote</span>
+      <span class="item-date">Sep 2026 – Present | Australia · Remote</span>
     </div>
     <ul class="bullet-list">
-      <li>Engineered highly responsive UI/UX and enterprise-grade web applications tailored to corporate requirements of international entities.</li>
-      <li>Optimized application architectures for mobile-first compatibility, performance speed, and comprehensive technical SEO.</li>
+      <li>Delivered remote data analytics to global clients; cleaned raw datasets, performed EDA, and built KPI dashboards to optimize storefront decisions.</li>
     </ul>
 
     <div class="item-header">
       <div>
-        <span class="item-title">Full-Stack Web Developer</span> — <span class="item-company">Soetoredjo Family Portal</span>
+        <span class="item-title">Freelance Web Developer</span> — <span class="item-company">Fiverr & JobStreet</span>
       </div>
-      <span class="item-date">Jul 2024 – Present | Remote</span>
+      <span class="item-date">May 2026 – Sep 2026 | Remote</span>
     </div>
     <ul class="bullet-list">
-      <li>Developed custom CMS portal with relational database schemas, secure authentication, and high availability.</li>
+      <li>Built responsive, modern portfolio and business web applications focused on clean UI, performance speed, and technical SEO.</li>
+    </ul>
+
+    <div class="item-header">
+      <div>
+        <span class="item-title">Freelance Data Engineer (Data Infrastructure)</span> — <span class="item-company">Fiverr</span>
+      </div>
+      <span class="item-date">Jun 2026 – Aug 2026 | Malaysia · Remote</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Designed and automated ETL workflows, data collection, and schema migration procedures to ensure reliable data pipelines.</li>
     </ul>
 
     <!-- TECHNICAL PROJECTS -->
@@ -230,7 +242,7 @@
       </span>
       <span class="project-tags">[Python, Playwright, Telegram Bot API, GitHub Actions]</span>
       <p class="project-desc">
-        Autonomous attendance bot for university e-learning portal (`spada.upnyk.ac.id`) managing multi-course scheduling, session authentication, verification screenshot delivery via Telegram, and 24/7 cloud cron execution.
+        Autonomous attendance bot for university portal (`spada.upnyk.ac.id`) managing multi-course scheduling, session authentication, verification screenshot delivery via Telegram, and 24/7 cloud cron execution.
       </p>
     </div>
 
@@ -268,7 +280,7 @@
       </div>
       <span class="item-date">Jan 2024 – May 2028 (Expected)</span>
     </div>
-    <p style="font-size: 8pt; color: var(--secondary); margin-top: 1px;">
+    <p style="font-size: 7.7pt; color: var(--secondary); margin-top: 1px;">
       <strong>Bachelor of Technology (BTech) in Computer Science (Informatics)</strong><br>
       Core Coursework: Data Structures & Algorithms, Database Management, Software Engineering, Networks.<br>
       Achievements: GEMASTIK XVIII 2025 Participant (Competitive Programming) • Google Developer Group Bootcamp.

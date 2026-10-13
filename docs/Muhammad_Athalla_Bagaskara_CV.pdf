@@ -15,7 +15,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 3789 >>
+<< /Length 4154 >>
 stream
 BT
 /F2 18.00 Tf
@@ -46,13 +46,13 @@ BT
 /F2 9.50 Tf
 0.10 g
 1 0 0 1 50.00 700.00 Tm
-(Hiring Team) Tj
+(Hiring Team & Technical Leaders) Tj
 ET
 BT
 /F1 9.50 Tf
 0.25 g
 1 0 0 1 50.00 688.00 Tm
-(Software Engineering & AI Systems Roles) Tj
+(Software Engineering & Full-Stack Systems Roles) Tj
 ET
 BT
 /F1 9.50 Tf
@@ -67,123 +67,117 @@ BT
 (Dear Hiring Team,) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
 1 0 0 1 50.00 628.00 Tm
-(I am writing to express my strong interest in software engineering and developer opportunities with your) Tj
+(I am writing to express my strong enthusiasm for software engineering and web application developer opportunities with) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 614.50 Tm
-(team. My passion lies in architecting reliable full-stack applications, streamlining end-to-end data pipelines,) Tj
+1 0 0 1 50.00 615.00 Tm
+(your organization. My passion centers on engineering robust full-stack applications, optimizing data infrastructure and analytics) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 601.00 Tm
-(and bridging developer workflows with state-of-the-art AI and automation.) Tj
+1 0 0 1 50.00 602.00 Tm
+(pipelines, and building low-latency developer utilities empowered by modern web and AI technologies.) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 579.50 Tm
-(As a Computer Science undergraduate at UPN "Veteran" Yogyakarta and an active freelance engineer, I) Tj
+1 0 0 1 50.00 581.00 Tm
+(As a Computer Science undergraduate at UPN "Veteran" Yogyakarta and an active international freelance engineer, I have) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 566.00 Tm
-(cultivate an agile "builder" mindset. Through my recent projects, I developed NativeCopy-an ultra-low) Tj
+1 0 0 1 50.00 568.00 Tm
+(built a strong track record across client-facing products and software systems. Recently, as a Contract Web Application) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 552.50 Tm
-(latency cross-device developer tool enabling live code injection directly into active VS Code sessions) Tj
+1 0 0 1 50.00 555.00 Tm
+(Developer for Joe Coffee Company \(New York, US\), I managed and optimized their digital storefront-enhancing the customer) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 539.00 Tm
-(alongside MediaPipe AI computer vision hand gestures-and SPADA Auto-Presence, an autonomous university) Tj
+1 0 0 1 50.00 542.00 Tm
+(online ordering flow, upgrading recurring coffee subscription systems, resolving technical bugs, and ensuring smooth mobile UI.) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 525.50 Tm
-(attendance engine powered by Playwright and Telegram verification bots running 24/7 via GitHub Actions.) Tj
+1 0 0 1 50.00 521.00 Tm
+(Concurrently, through my freelance practice on Fiverr, I have delivered remote data analytics and database administration for) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 504.00 Tm
-(In my professional freelance work for global clients on Fiverr and Singaporean companies, I have designed) Tj
+1 0 0 1 50.00 508.00 Tm
+(global clients \(including Australia and Malaysia\), translating complex datasets into actionable business dashboards and automating) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 490.50 Tm
-(production ETL pipelines across MongoDB, PostgreSQL, and MySQL, significantly reducing latency and data) Tj
+1 0 0 1 50.00 495.00 Tm
+(data cleaning and ETL pipelines across MongoDB, PostgreSQL, and MySQL. Furthermore, I built modern, responsive web applications) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 477.00 Tm
-(transformation overhead. Furthermore, my hands-on background with React.js, Next.js, FastAPI, and Docker has) Tj
+1 0 0 1 50.00 482.00 Tm
+(for international clients with a steadfast emphasis on clean UI, performance speed, and comprehensive SEO.) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 463.50 Tm
-(trained me to construct robust, high-performance web systems while taking complete ownership of projects in) Tj
+1 0 0 1 50.00 461.00 Tm
+(My technical curiosity is reflected in my recent open-source systems: NativeCopy-a high-speed cross-device developer tool enabling) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 450.00 Tm
-(autonomous, asynchronous work environments.) Tj
+1 0 0 1 50.00 448.00 Tm
+(live remote code injection directly into active VS Code sessions alongside MediaPipe AI computer vision hand gestures-and SPADA) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 428.50 Tm
-(I bring positive energy, proactive communication, and a genuine drive to turn complex challenges into polished,) Tj
+1 0 0 1 50.00 435.00 Tm
+(Auto-Presence, an autonomous university attendance engine powered by Playwright and Telegram bots deployed 24/7 on GitHub Actions.) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 415.00 Tm
-(intuitive software. I would welcome the opportunity to discuss how my technical skills, engineering discipline,) Tj
+1 0 0 1 50.00 414.00 Tm
+(I bring high energy, proactive asynchronous communication, and disciplined software craftsmanship. I welcome the opportunity to) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
-1 0 0 1 50.00 401.50 Tm
-(and enthusiasm can contribute to your products and goals.) Tj
+1 0 0 1 50.00 401.00 Tm
+(discuss how my web development, database administration, and problem-solving skills can contribute to your engineering goals.) Tj
 ET
 BT
-/F1 9.20 Tf
+/F1 8.90 Tf
 0.20 g
 1 0 0 1 50.00 380.00 Tm
-(Thank you for your time and consideration. You are welcome to explore my live demos and open-source code) Tj
-ET
-BT
-/F1 9.20 Tf
-0.20 g
-1 0 0 1 50.00 366.50 Tm
-(repositories via my GitHub and portfolio website.) Tj
+(Thank you for your time and consideration. You are welcome to explore my live projects via my GitHub and portfolio website.) Tj
 ET
 BT
 /F1 9.50 Tf
 0.10 g
-1 0 0 1 50.00 341.00 Tm
+1 0 0 1 50.00 355.00 Tm
 (Sincerely,) Tj
 ET
 BT
 /F2 10.00 Tf
 0.08 g
-1 0 0 1 50.00 313.00 Tm
+1 0 0 1 50.00 329.00 Tm
 (Muhammad Athalla Bagaskara) Tj
 ET
 0.85 G 0.50 w 50.00 45.00 m 545.00 45.00 l S
@@ -205,355 +199,391 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 7070 >>
+<< /Length 7752 >>
 stream
 BT
-/F2 18.00 Tf
+/F2 17.00 Tf
 0.08 g
-1 0 0 1 50.00 785.00 Tm
+1 0 0 1 50.00 788.00 Tm
 (MUHAMMAD ATHALLA BAGASKARA) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.20 Tf
 0.35 g
-1 0 0 1 50.00 768.00 Tm
+1 0 0 1 50.00 772.00 Tm
 (Sleman, Yogyakarta, Indonesia  *  +62 895-296-20940  *  iamathaalla@gmail.com) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.20 Tf
 0.35 g
-1 0 0 1 50.00 756.00 Tm
+1 0 0 1 50.00 761.00 Tm
 (github.com/muhmdathalla  *  muhmdathalla.github.io/dev  *  linkedin.com/in/muhmdathallaa) Tj
 ET
-0.75 G 1.00 w 50.00 746.00 m 545.00 746.00 l S
+0.75 G 0.80 w 50.00 752.00 m 545.00 752.00 l S
 BT
-/F2 9.80 Tf
+/F2 9.20 Tf
 0.08 g
-1 0 0 1 50.00 732.00 Tm
+1 0 0 1 50.00 739.00 Tm
 (PROFESSIONAL SUMMARY) Tj
 ET
-0.30 G 1.00 w 50.00 729.00 m 545.00 729.00 l S
+0.30 G 0.80 w 50.00 736.50 m 545.00 736.50 l S
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 50.00 718.00 Tm
-(Results-driven Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering,) Tj
+1 0 0 1 50.00 727.00 Tm
+(Computer Science undergraduate specializing in Full-Stack Web Development, Data Engineering, and Scalable Automation. Proven experience) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 50.00 706.50 Tm
-(and Scalable Automation. Proven experience automating high-throughput ETL pipelines and optimizing database) Tj
+1 0 0 1 50.00 716.50 Tm
+(optimizing e-commerce web applications, managing database administration, and building automated data pipelines for international clients across) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 50.00 695.00 Tm
-(architectures for international clients. Passionate about integrating AI capabilities, building low-latency developer) Tj
+1 0 0 1 50.00 706.00 Tm
+(the US, Australia, and Southeast Asia. Passionate about AI-integrated developer tools and delivering robust software engineering value.) Tj
 ET
 BT
-/F1 8.50 Tf
-0.20 g
-1 0 0 1 50.00 683.50 Tm
-(tools, and delivering high-performance software engineering value in dynamic, asynchronous environments.) Tj
-ET
-BT
-/F2 9.80 Tf
+/F2 9.20 Tf
 0.08 g
-1 0 0 1 50.00 668.00 Tm
+1 0 0 1 50.00 693.50 Tm
 (SKILLS & EXPERTISE) Tj
 ET
-0.30 G 1.00 w 50.00 665.00 m 545.00 665.00 l S
+0.30 G 0.80 w 50.00 691.00 m 545.00 691.00 l S
 BT
-/F2 8.50 Tf
+/F2 8.00 Tf
 0.10 g
-1 0 0 1 50.00 654.00 Tm
+1 0 0 1 50.00 681.50 Tm
 (Languages:) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 125.00 654.00 Tm
+1 0 0 1 120.00 681.50 Tm
 (Python, JavaScript, TypeScript, Java, C++, C#, SQL, PHP, Kotlin, C) Tj
 ET
 BT
-/F2 8.50 Tf
+/F2 8.00 Tf
 0.10 g
-1 0 0 1 50.00 642.50 Tm
+1 0 0 1 50.00 671.30 Tm
 (Frontend:) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 125.00 642.50 Tm
+1 0 0 1 120.00 671.30 Tm
 (React.js, Next.js, Tailwind CSS, Bootstrap, HTML5, CSS3, Responsive UI/UX) Tj
 ET
 BT
-/F2 8.50 Tf
+/F2 8.00 Tf
 0.10 g
-1 0 0 1 50.00 631.00 Tm
+1 0 0 1 50.00 661.10 Tm
 (Backend & DB:) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 125.00 631.00 Tm
-(FastAPI, Node.js, Express.js, Laravel, PostgreSQL, MongoDB, MySQL, ETL Pipelines) Tj
+1 0 0 1 120.00 661.10 Tm
+(FastAPI, Node.js, Express.js, Laravel, PostgreSQL, MongoDB, MySQL, Data Pipelines / ETL) Tj
 ET
 BT
-/F2 8.50 Tf
+/F2 8.00 Tf
 0.10 g
-1 0 0 1 50.00 619.50 Tm
+1 0 0 1 50.00 650.90 Tm
 (Tools & Infra:) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.20 g
-1 0 0 1 125.00 619.50 Tm
+1 0 0 1 120.00 650.90 Tm
 (Git, GitHub, Docker, Playwright, Linux, MediaPipe AI, SSE, Postman, Google Earth Engine) Tj
 ET
 BT
-/F2 9.80 Tf
+/F2 9.20 Tf
 0.08 g
-1 0 0 1 50.00 604.00 Tm
+1 0 0 1 50.00 637.70 Tm
 (PROFESSIONAL EXPERIENCE) Tj
 ET
-0.30 G 1.00 w 50.00 601.00 m 545.00 601.00 l S
+0.30 G 0.80 w 50.00 635.20 m 545.00 635.20 l S
 BT
-/F2 9.00 Tf
+/F2 8.50 Tf
 0.08 g
-1 0 0 1 50.00 590.00 Tm
-(Freelance Data Engineer) Tj
+1 0 0 1 50.00 625.70 Tm
+(Contract Web Application Developer) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.30 g
-1 0 0 1 165.00 590.00 Tm
-(Fiverr \(Global Clients\) | Remote) Tj
+1 0 0 1 205.00 625.70 Tm
+(Joe Coffee Company | New York, US \(Remote\)) Tj
+ET
+BT
+/F2 8.00 Tf
+0.20 g
+1 0 0 1 465.00 625.70 Tm
+(Sep 2026 - Present) Tj
+ET
+BT
+/F1 7.80 Tf
+0.22 g
+1 0 0 1 56.00 616.20 Tm
+(- Managed and optimized company e-commerce website to improve customer online ordering and coffee subscription setup.) Tj
+ET
+BT
+/F1 7.80 Tf
+0.22 g
+1 0 0 1 56.00 607.20 Tm
+(- Handled frontend layout updates, resolved technical bugs, and ensured smooth mobile responsiveness for the digital storefront.) Tj
 ET
 BT
 /F2 8.50 Tf
-0.20 g
-1 0 0 1 460.00 590.00 Tm
-(Jun 2026 - Present) Tj
-ET
-BT
-/F1 8.30 Tf
-0.22 g
-1 0 0 1 58.00 579.00 Tm
-(- Designed and optimized end-to-end ETL pipelines for handling structured and unstructured business intelligence data.) Tj
-ET
-BT
-/F1 8.30 Tf
-0.22 g
-1 0 0 1 58.00 569.00 Tm
-(- Architected cross-database migrations \(MongoDB, PostgreSQL, MySQL\) and automated cleaning, reducing latency.) Tj
-ET
-BT
-/F2 9.00 Tf
 0.08 g
-1 0 0 1 50.00 556.00 Tm
+1 0 0 1 50.00 595.70 Tm
+(Freelance Database Administration & Analytics) Tj
+ET
+BT
+/F1 8.00 Tf
+0.30 g
+1 0 0 1 235.00 595.70 Tm
+(Fiverr | Australia \(Remote\)) Tj
+ET
+BT
+/F2 8.00 Tf
+0.20 g
+1 0 0 1 465.00 595.70 Tm
+(Sep 2026 - Present) Tj
+ET
+BT
+/F1 7.80 Tf
+0.22 g
+1 0 0 1 56.00 586.20 Tm
+(- Delivered remote data analytics; cleaned raw datasets, performed EDA, and built KPI dashboards to optimize storefront decisions.) Tj
+ET
+BT
+/F2 8.50 Tf
+0.08 g
+1 0 0 1 50.00 574.70 Tm
 (Freelance Web Developer) Tj
 ET
 BT
-/F1 8.50 Tf
+/F1 8.00 Tf
 0.30 g
-1 0 0 1 170.00 556.00 Tm
-(Fiverr & JobStreet Singapore | Remote) Tj
+1 0 0 1 160.00 574.70 Tm
+(Fiverr & JobStreet | Remote) Tj
+ET
+BT
+/F2 8.00 Tf
+0.20 g
+1 0 0 1 455.00 574.70 Tm
+(May 2026 - Sep 2026) Tj
+ET
+BT
+/F1 7.80 Tf
+0.22 g
+1 0 0 1 56.00 565.20 Tm
+(- Built responsive, modern portfolio and business web applications focused on clean UI, performance speed, and technical SEO.) Tj
 ET
 BT
 /F2 8.50 Tf
-0.20 g
-1 0 0 1 450.00 556.00 Tm
-(May 2026 - Jun 2026) Tj
-ET
-BT
-/F1 8.30 Tf
-0.22 g
-1 0 0 1 58.00 545.00 Tm
-(- Engineered responsive UI/UX and enterprise-grade web applications tailored to international corporate requirements.) Tj
-ET
-BT
-/F1 8.30 Tf
-0.22 g
-1 0 0 1 58.00 535.00 Tm
-(- Optimized application architectures for mobile-first compatibility, performance speed, and comprehensive SEO.) Tj
-ET
-BT
-/F2 9.80 Tf
 0.08 g
-1 0 0 1 50.00 520.00 Tm
+1 0 0 1 50.00 553.70 Tm
+(Freelance Data Engineer \(Data Infrastructure\)) Tj
+ET
+BT
+/F1 8.00 Tf
+0.30 g
+1 0 0 1 235.00 553.70 Tm
+(Fiverr | Malaysia \(Remote\)) Tj
+ET
+BT
+/F2 8.00 Tf
+0.20 g
+1 0 0 1 455.00 553.70 Tm
+(Jun 2026 - Aug 2026) Tj
+ET
+BT
+/F1 7.80 Tf
+0.22 g
+1 0 0 1 56.00 544.20 Tm
+(- Designed and automated ETL workflows, data collection, and schema migration procedures to ensure reliable data pipelines.) Tj
+ET
+BT
+/F2 9.20 Tf
+0.08 g
+1 0 0 1 50.00 531.20 Tm
 (TECHNICAL PROJECTS) Tj
 ET
-0.30 G 1.00 w 50.00 517.00 m 545.00 517.00 l S
+0.30 G 0.80 w 50.00 528.70 m 545.00 528.70 l S
 BT
-/F2 8.60 Tf
+/F2 8.20 Tf
 0.08 g
-1 0 0 1 50.00 506.00 Tm
+1 0 0 1 50.00 519.20 Tm
 (NativeCopy \(Live Remote VS Code, File Injection & AI AirMotion Controller\)) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 7.40 Tf
 0.35 g
-1 0 0 1 413.20 506.00 Tm
+1 0 0 1 381.60 519.20 Tm
 ([TypeScript, Python, FastAPI, MediaPipe AI, SSE]) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 496.00 Tm
+1 0 0 1 56.00 510.20 Tm
 (- High-speed developer tool enabling live typing into VS Code from mobile, direct project file injection, code teleportation,) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 486.50 Tm
+1 0 0 1 56.00 501.70 Tm
 (  and MediaPipe AI computer vision hand gestures to navigate host OS mouse cursor without external hardware.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 8.20 Tf
 0.08 g
-1 0 0 1 50.00 475.00 Tm
+1 0 0 1 50.00 491.50 Tm
 (SPADA UPNYK Auto-Presence \(University Attendance Automation Engine\)) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 7.40 Tf
 0.35 g
-1 0 0 1 379.60 475.00 Tm
+1 0 0 1 350.80 491.50 Tm
 ([Python, Playwright, Telegram Bot, GitHub Actions]) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 465.00 Tm
+1 0 0 1 56.00 482.50 Tm
 (- Autonomous attendance bot for university portal \(spada.upnyk.ac.id\) with multi-course scheduling, verification screenshot) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 455.50 Tm
+1 0 0 1 56.00 474.00 Tm
 (  delivery via Telegram Bot API, and 24/7 cloud cron execution via GitHub Actions workflows.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 8.20 Tf
 0.08 g
-1 0 0 1 50.00 444.00 Tm
+1 0 0 1 50.00 463.80 Tm
 (PerpusPintas \(Smart Library Management System\)) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 7.40 Tf
 0.35 g
-1 0 0 1 278.80 444.00 Tm
+1 0 0 1 258.40 463.80 Tm
 ([PHP, MySQL, Tailwind CSS, Full-Stack]) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 434.00 Tm
+1 0 0 1 56.00 454.80 Tm
 (- Spearheaded development of a smart library system featuring digital access control, advanced database indexing,) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 424.50 Tm
+1 0 0 1 56.00 446.30 Tm
 (  interactive search, and production server deployment.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 8.20 Tf
 0.08 g
-1 0 0 1 50.00 413.00 Tm
+1 0 0 1 50.00 436.10 Tm
 (Dutch Colony Singapore Website) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 7.40 Tf
 0.35 g
-1 0 0 1 202.00 413.00 Tm
+1 0 0 1 188.00 436.10 Tm
 ([React.js, UI/UX, Performance Optimization, SEO]) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 403.00 Tm
+1 0 0 1 56.00 427.10 Tm
 (- Constructed lightning-fast responsive UI components and maintained complex database schematics to improve loading) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 393.50 Tm
+1 0 0 1 56.00 418.60 Tm
 (  speeds and optimize transaction flows for an international corporate client.) Tj
 ET
 BT
-/F2 8.60 Tf
+/F2 8.20 Tf
 0.08 g
-1 0 0 1 50.00 382.00 Tm
+1 0 0 1 50.00 408.40 Tm
 (NDVI Magelang Satellite Data Analysis) Tj
 ET
 BT
-/F1 7.80 Tf
+/F1 7.40 Tf
 0.35 g
-1 0 0 1 235.60 382.00 Tm
+1 0 0 1 218.80 408.40 Tm
 ([JavaScript, Google Earth Engine, Geospatial GIS]) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 372.00 Tm
+1 0 0 1 56.00 399.40 Tm
 (- Authored precise JavaScript programs in Google Earth Engine to process massive raster datasets, producing actionable) Tj
 ET
 BT
-/F1 8.20 Tf
+/F1 7.80 Tf
 0.22 g
-1 0 0 1 58.00 362.50 Tm
+1 0 0 1 56.00 390.90 Tm
 (  vegetation index \(NDVI\) models and ecological land analysis.) Tj
 ET
 BT
-/F2 9.80 Tf
+/F2 9.20 Tf
 0.08 g
-1 0 0 1 50.00 351.00 Tm
+1 0 0 1 50.00 378.70 Tm
 (EDUCATION & ACHIEVEMENTS) Tj
 ET
-0.30 G 1.00 w 50.00 348.00 m 545.00 348.00 l S
+0.30 G 0.80 w 50.00 376.20 m 545.00 376.20 l S
 BT
-/F2 8.80 Tf
+/F2 8.40 Tf
 0.08 g
-1 0 0 1 50.00 337.00 Tm
+1 0 0 1 50.00 366.70 Tm
 (Universitas Pembangunan Nasional "Veteran" Yogyakarta) Tj
 ET
 BT
-/F2 8.50 Tf
+/F2 8.00 Tf
 0.20 g
-1 0 0 1 415.00 337.00 Tm
+1 0 0 1 415.00 366.70 Tm
 (Jan 2024 - May 2028 \(Expected\)) Tj
 ET
 BT
-/F1 8.40 Tf
+/F1 8.00 Tf
 0.22 g
-1 0 0 1 50.00 327.00 Tm
+1 0 0 1 50.00 357.20 Tm
 (Bachelor of Technology \(BTech\) in Computer Science \(Informatics\)) Tj
 ET
 BT
-/F1 8.00 Tf
+/F1 7.70 Tf
 0.35 g
-1 0 0 1 50.00 317.50 Tm
+1 0 0 1 50.00 348.20 Tm
 (Core Coursework: Data Structures & Algorithms, Database Management, Software Engineering, Networks.) Tj
 ET
 BT
-/F1 8.00 Tf
+/F1 7.70 Tf
 0.35 g
-1 0 0 1 50.00 308.00 Tm
+1 0 0 1 50.00 339.20 Tm
 (Achievements: GEMASTIK XVIII 2025 Participant \(Competitive Programming\) * Google Developer Group Bootcamp.) Tj
 ET
-0.85 G 0.50 w 50.00 45.00 m 545.00 45.00 l S
+0.85 G 0.50 w 50.00 42.00 m 545.00 42.00 l S
 BT
-/F1 7.50 Tf
+/F1 7.20 Tf
 0.50 g
-1 0 0 1 50.00 32.00 Tm
+1 0 0 1 50.00 30.00 Tm
 (Curriculum Vitae - Muhammad Athalla Bagaskara) Tj
 ET
 BT
-/F1 7.50 Tf
+/F1 7.20 Tf
 0.50 g
-1 0 0 1 505.00 32.00 Tm
+1 0 0 1 505.00 30.00 Tm
 (Page 2 of 2) Tj
 ET
 endstream
@@ -567,10 +597,10 @@ xref
 0000000218 00000 n 
 0000000320 00000 n 
 0000000462 00000 n 
-0000004303 00000 n 
-0000004445 00000 n 
+0000004668 00000 n 
+0000004810 00000 n 
 trailer
 << /Size 9 /Root 1 0 R >>
 startxref
-11567
+12614
 %%EOF
