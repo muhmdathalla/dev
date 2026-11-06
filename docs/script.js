@@ -575,7 +575,7 @@ function initWeatherWidget() {
       const weatherInfo = parseWeatherCode(c.weather_code, isDay);
 
       if (miniIcon) miniIcon.innerHTML = `<i class="fas ${weatherInfo.icon}"></i>`;
-      if (miniTemp) miniTemp.textContent = `${tempRound}°C`;
+      if (triggerBtn) triggerBtn.setAttribute('title', `Cuaca: ${weatherInfo.label} (${tempRound}°C) · Klik untuk detail`);
       if (heroTemp) heroTemp.textContent = `${tempRound}°`;
       if (condText) condText.textContent = weatherInfo.label;
       if (humidity) humidity.textContent = `${c.relative_humidity_2m}%`;

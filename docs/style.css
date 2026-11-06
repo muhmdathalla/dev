@@ -234,51 +234,41 @@ body:has(button:hover) .cursor-ring {
   font-size: 0.65rem;
 }
 
-/* Weather Mini Pill Button */
+/* Weather Mini Icon Button (Clean Real-Time Weather Icon Only) */
 .weather-widget-wrap {
   position: relative;
 }
 
-.weather-pill-btn {
+.weather-icon-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-primary);
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.74rem;
-  font-weight: 600;
+  border-radius: 50%;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s var(--ease-out);
 }
 
-.weather-pill-btn:hover {
+.weather-icon-btn:hover,
+.weather-widget-wrap.open .weather-icon-btn {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
+  color: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  transform: scale(1.06);
 }
 
 .weather-mini-icon {
-  font-size: 0.85rem;
-  color: var(--text-primary);
+  font-size: 0.88rem;
+  color: inherit;
   display: inline-flex;
   align-items: center;
-}
-
-.weather-mini-temp {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-weight: 700;
-}
-
-.weather-arrow {
-  font-size: 0.6rem;
-  color: var(--text-muted);
-  transition: transform 0.25s var(--ease-out);
-}
-
-.weather-widget-wrap.open .weather-arrow {
-  transform: rotate(180deg);
+  justify-content: center;
 }
 
 /* Weather Dropdown Card */
