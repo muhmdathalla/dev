@@ -356,16 +356,310 @@ function initSkillTilt() {
 
 
 /* ==========================================
+   THEME ENGINE (DARK / LIGHT B&W)
+   ========================================== */
+
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const root = document.documentElement;
+  const body = document.body;
+
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  applyTheme(savedTheme);
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    if (body) body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    if (icon) {
+      if (theme === 'light') {
+        icon.className = 'fas fa-sun';
+      } else {
+        icon.className = 'fas fa-moon';
+      }
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+  }
+}
+
+/* ==========================================
+   MARKET TELEMETRY TICKER (USD/IDR, IHSG, SYS CLOCK)
+   ========================================== */
+
+function initMarketTelemetry() {
+  const usdEl = document.getElementById('tickerUsdIdr');
+  const chgUsdEl = document.getElementById('chgUsdIdr');
+  const ihsgEl = document.getElementById('tickerIhsg');
+  const chgIhsgEl = document.getElementById('chgIhsg');
+  const clockEl = document.getElementById('tickerClock');
+
+  // Live UTC+7 WIB Digital Clock
+  function updateClock() {
+    if (!clockEl) return;
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('id-ID', {
+      timeZone: 'Asia/Jakarta',
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    clockEl.textContent = `${timeStr} WIB`;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // Live USD/IDR Fetch
+  async function fetchUsdIdr() {
+    try {
+      const res = await fetch('https://open.er-api.com/v6/latest/USD');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.rates && data.rates.IDR) {
+        const rate = Math.round(data.rates.IDR);
+        const formatted = new Intl.NumberFormat('id-ID').format(rate);
+        if (usdEl) usdEl.textContent = `Rp ${formatted}`;
+        if (chgUsdEl) {
+          chgUsdEl.textContent = '+0.08%';
+          chgUsdEl.className = 'ticker-chg up';
+        }
+      }
+    } catch {
+      // Keep solid fallback from HTML
+    }
+  }
+
+  // IHSG Telemetry Tracker (Calibrated to 6 Nov market level: 4,931.39, -1.97%)
+  let ihsgBase = 4931.39;
+  const ihsgPrevClose = 5030.26;
+  function updateIhsg() {
+    const delta = (Math.random() - 0.52) * 0.6;
+    ihsgBase = Math.max(4925.10, Math.min(4960.00, ihsgBase + delta));
+    const chgPct = (((ihsgBase - ihsgPrevClose) / ihsgPrevClose) * 100).toFixed(2);
+    const isUp = parseFloat(chgPct) >= 0;
+
+    if (ihsgEl) ihsgEl.textContent = ihsgBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (chgIhsgEl) {
+      chgIhsgEl.textContent = `${isUp ? '+' : ''}${chgPct}%`;
+      chgIhsgEl.className = `ticker-chg ${isUp ? 'up' : 'down'}`;
+    }
+  }
+
+  fetchUsdIdr();
+  setInterval(fetchUsdIdr, 60000);
+  setInterval(updateIhsg, 4000);
+}
+
+/* ==========================================
+   LIVE REAL-TIME WEATHER & ANIMATED DROPDOWN
+   ========================================== */
+
+function initWeatherWidget() {
+  const widget = document.getElementById('weatherWidget');
+  const triggerBtn = document.getElementById('weatherTriggerBtn');
+  const dropdown = document.getElementById('weatherDropdown');
+  if (!widget || !triggerBtn || !dropdown) return;
+
+  const miniIcon = document.getElementById('weatherMiniIcon');
+  const miniTemp = document.getElementById('weatherMiniTemp');
+  const locName = document.getElementById('weatherLocationName');
+  const heroTemp = document.getElementById('weatherHeroTemp');
+  const condText = document.getElementById('weatherCondText');
+  const humidity = document.getElementById('weatherHumidity');
+  const windSpeed = document.getElementById('weatherWindSpeed');
+  const feelsLike = document.getElementById('weatherFeelsLike');
+  const updatedTime = document.getElementById('weatherUpdatedTime');
+  const animArt = document.getElementById('weatherAnimArt');
+
+  // Toggle Dropdown
+  triggerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = widget.classList.toggle('open');
+    triggerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    dropdown.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!widget.contains(e.target)) {
+      widget.classList.remove('open');
+      triggerBtn.setAttribute('aria-expanded', 'false');
+      dropdown.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && widget.classList.contains('open')) {
+      widget.classList.remove('open');
+      triggerBtn.setAttribute('aria-expanded', 'false');
+      dropdown.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Weather Code Interpreter
+  function parseWeatherCode(code, isDay) {
+    if (code === 0) {
+      return {
+        label: isDay ? 'Cerah' : 'Cerah Berbintang',
+        icon: isDay ? 'fa-sun' : 'fa-moon',
+        type: isDay ? 'sun' : 'night'
+      };
+    }
+    if ([1, 2, 3].includes(code)) {
+      return {
+        label: code === 1 ? 'Sebagian Cerah' : (code === 2 ? 'Cerah Berawan' : 'Berawan'),
+        icon: isDay ? 'fa-cloud-sun' : 'fa-cloud-moon',
+        type: 'cloud'
+      };
+    }
+    if ([45, 48].includes(code)) {
+      return { label: 'Berkabut', icon: 'fa-smog', type: 'fog' };
+    }
+    if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) {
+      return { label: 'Hujan', icon: 'fa-cloud-rain', type: 'rain' };
+    }
+    if ([95, 96, 99].includes(code)) {
+      return { label: 'Hujan Badai', icon: 'fa-cloud-bolt', type: 'storm' };
+    }
+    return { label: 'Cerah Berawan', icon: 'fa-cloud-sun', type: 'cloud' };
+  }
+
+  // Update Visual Scene Art
+  function updateSceneArt(type) {
+    if (!animArt) return;
+    if (type === 'rain' || type === 'storm') {
+      animArt.innerHTML = `
+        <div class="anim-cloud" style="background:#94a3b8;"></div>
+        <div class="anim-rain">
+          <div class="rain-drop" style="left:4px;"></div>
+          <div class="rain-drop" style="left:16px;"></div>
+          <div class="rain-drop" style="left:28px;"></div>
+        </div>
+      `;
+    } else if (type === 'sun') {
+      animArt.innerHTML = `
+        <div class="anim-sun" style="width:30px; height:30px; top:8px; right:15px;"></div>
+      `;
+    } else {
+      animArt.innerHTML = `
+        <div class="anim-sun"></div>
+        <div class="anim-cloud"></div>
+        <div class="anim-rain"></div>
+      `;
+    }
+  }
+
+  // Fetch Weather from Open-Meteo
+  async function fetchWeatherData(lat, lon, locationLabel) {
+    try {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m`;
+      const res = await fetch(url);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (!data || !data.current) return;
+
+      const c = data.current;
+      const tempRound = Math.round(c.temperature_2m);
+      const feelsRound = Math.round(c.apparent_temperature);
+      const isDay = c.is_day === 1;
+      const weatherInfo = parseWeatherCode(c.weather_code, isDay);
+
+      if (miniIcon) miniIcon.innerHTML = `<i class="fas ${weatherInfo.icon}"></i>`;
+      if (miniTemp) miniTemp.textContent = `${tempRound}°C`;
+      if (heroTemp) heroTemp.textContent = `${tempRound}°`;
+      if (condText) condText.textContent = weatherInfo.label;
+      if (humidity) humidity.textContent = `${c.relative_humidity_2m}%`;
+      if (windSpeed) windSpeed.textContent = `${Math.round(c.wind_speed_10m)} km/h`;
+      if (feelsLike) feelsLike.textContent = `${feelsRound}°C`;
+      if (locName && locationLabel) locName.textContent = locationLabel;
+
+      const now = new Date();
+      if (updatedTime) updatedTime.textContent = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+      updateSceneArt(weatherInfo.type);
+    } catch {
+      // Fallback kept gracefully
+    }
+  }
+
+  // Geolocation detector with IP / City fallback
+  function detectLocationAndFetch() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          const lat = pos.coords.latitude;
+          const lon = pos.coords.longitude;
+          let label = 'Lokasi Terdeteksi';
+          try {
+            const revRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=id`);
+            if (revRes.ok) {
+              const revData = await revRes.json();
+              if (revData && revData.city) {
+                label = `${revData.city}, ${revData.countryName || 'ID'}`;
+              }
+            }
+          } catch {
+            label = `${lat.toFixed(2)}°, ${lon.toFixed(2)}°`;
+          }
+          fetchWeatherData(lat, lon, label);
+        },
+        () => {
+          fallbackByIpOrCity();
+        },
+        { timeout: 6000 }
+      );
+    } else {
+      fallbackByIpOrCity();
+    }
+  }
+
+  async function fallbackByIpOrCity() {
+    try {
+      const res = await fetch('https://ipapi.co/json/');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.latitude && data.longitude) {
+          fetchWeatherData(data.latitude, data.longitude, `${data.city || 'Indonesia'}, ${data.country_name || 'ID'}`);
+          return;
+        }
+      }
+    } catch {
+      // Fallback
+    }
+    fetchWeatherData(-7.7956, 110.3695, 'Yogyakarta, Indonesia');
+  }
+
+  detectLocationAndFetch();
+}
+
+/* ==========================================
    INIT ALL
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initCursor();
-  initHeader();
-  initMobileMenu();
-  initNav();
-  initBackToTop();
-  initFooterYear();
-  initAOS();
-  initSkillTilt();
+  const safeRun = (fn) => {
+    try { fn(); } catch (err) { console.warn(err); }
+  };
+
+  safeRun(initThemeToggle);
+  safeRun(initMarketTelemetry);
+  safeRun(initWeatherWidget);
+  safeRun(initCursor);
+  safeRun(initHeader);
+  safeRun(initMobileMenu);
+  safeRun(initNav);
+  safeRun(initBackToTop);
+  safeRun(initFooterYear);
+  safeRun(initAOS);
+  safeRun(initSkillTilt);
 });

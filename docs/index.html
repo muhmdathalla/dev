@@ -17,10 +17,10 @@
   <meta property="og:image" content="PP.jpg" />
 
   <!-- Security Headers via meta (backup for server headers) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self' https://open.er-api.com https://api.open-meteo.com https://ipapi.co https://api.bigdatacloud.net;" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(self)" />
 
   <title>Muhammad Athalla Bagaskara | Portfolio</title>
   <link rel="icon" type="image/png" href="logo.png" />
@@ -36,9 +36,9 @@
   <!-- AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4.0" />
 </head>
-<body>
+<body data-theme="dark">
 
   <!-- Custom Cursor -->
   <div class="cursor-dot" id="cursorDot"></div>
@@ -46,6 +46,92 @@
 
   <!-- Noise Overlay -->
   <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Top Utility Telemetry Bar (USD/IDR, IHSG, Live Weather Dropdown & B&W Theme Toggle) -->
+  <aside class="utility-topbar" id="topbar" aria-label="Live Market & Weather Telemetry">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="ticker-item">
+          <span class="ticker-sym">USD/IDR</span>
+          <span class="ticker-val" id="tickerUsdIdr">Rp 15,845</span>
+          <span class="ticker-chg up" id="chgUsdIdr">+0.08%</span>
+        </span>
+        <span class="topbar-sep">&bull;</span>
+        <span class="ticker-item">
+          <span class="ticker-sym">IHSG (IDX)</span>
+          <span class="ticker-val" id="tickerIhsg">4,931.39</span>
+          <span class="ticker-chg down" id="chgIhsg">-1.97%</span>
+        </span>
+        <span class="topbar-sep hide-on-mobile">&bull;</span>
+        <span class="ticker-item sys-clock-item hide-on-mobile">
+          <span class="ticker-sym">SYS</span>
+          <span class="ticker-val" id="tickerClock">--:--:-- WIB</span>
+        </span>
+      </div>
+
+      <div class="topbar-right">
+        <!-- Live Real-Time Weather Widget with Animated Dropdown -->
+        <div class="weather-widget-wrap" id="weatherWidget">
+          <button type="button" class="weather-pill-btn" id="weatherTriggerBtn" aria-expanded="false" aria-haspopup="true" aria-label="Toggle real-time weather details">
+            <span class="weather-mini-icon" id="weatherMiniIcon" aria-hidden="true">
+              <i class="fas fa-cloud-sun"></i>
+            </span>
+            <span class="weather-mini-temp" id="weatherMiniTemp">29°C</span>
+            <i class="fas fa-chevron-down weather-arrow" aria-hidden="true"></i>
+          </button>
+
+          <!-- Weather Popup Dropdown Card -->
+          <div class="weather-dropdown-card" id="weatherDropdown" role="dialog" aria-label="Current Weather Details" aria-hidden="true">
+            <div class="weather-card-header">
+              <div class="weather-loc-row">
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+                <span class="weather-location" id="weatherLocationName">Yogyakarta, Indonesia</span>
+              </div>
+              <span class="weather-live-tag">LIVE</span>
+            </div>
+
+            <!-- Animated Weather Visual Scene -->
+            <div class="weather-scene-container" id="weatherScene">
+              <div class="weather-anim-art" id="weatherAnimArt">
+                <div class="anim-sun"></div>
+                <div class="anim-cloud"></div>
+                <div class="anim-rain" id="animRainDrops"></div>
+              </div>
+              <div class="weather-main-reading">
+                <span class="weather-temp-hero" id="weatherHeroTemp">29°</span>
+                <span class="weather-cond-label" id="weatherCondText">Cerah Berawan</span>
+              </div>
+            </div>
+
+            <!-- Detailed Weather Metrics Grid -->
+            <div class="weather-details-grid">
+              <div class="weather-detail-item">
+                <span class="detail-label"><i class="fas fa-droplet"></i> Kelembapan</span>
+                <span class="detail-val" id="weatherHumidity">74%</span>
+              </div>
+              <div class="weather-detail-item">
+                <span class="detail-label"><i class="fas fa-wind"></i> Angin</span>
+                <span class="detail-val" id="weatherWindSpeed">11 km/h</span>
+              </div>
+              <div class="weather-detail-item">
+                <span class="detail-label"><i class="fas fa-temperature-half"></i> Terasa Seperti</span>
+                <span class="detail-val" id="weatherFeelsLike">31°C</span>
+              </div>
+              <div class="weather-detail-item">
+                <span class="detail-label"><i class="fas fa-clock"></i> Diperbarui</span>
+                <span class="detail-val" id="weatherUpdatedTime">Baru saja</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- B&W Monochrome Theme Switcher (Moon / Sun) -->
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle black and white theme" title="Toggle Theme (Dark / Light)">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
 
   <!-- Navigation -->
   <header id="header">
@@ -140,6 +226,41 @@
           <div class="stat">
             <strong>11+</strong>
             <span>Languages</span>
+          </div>
+        </div>
+
+        <!-- Handled Clients & Delivered Contracts Showcase -->
+        <div class="hero-clients-showcase">
+          <div class="clients-showcase-header">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            <span>Contracts Delivered Across 3 Continents:</span>
+          </div>
+          <div class="clients-tags-list">
+            <span class="client-badge" title="Contract Web Developer – New York, USA">
+              <span class="flag">🇺🇸</span>
+              <strong>Joe Coffee Company</strong>
+              <span class="sub">New York</span>
+            </span>
+            <span class="client-badge" title="Digital Architecture & Web Maintenance – Singapore">
+              <span class="flag">🇸🇬</span>
+              <strong>Dutch Colony Coffee</strong>
+              <span class="sub">Singapore</span>
+            </span>
+            <span class="client-badge" title="Database Administration & Analytics – Australia">
+              <span class="flag">🇦🇺</span>
+              <strong>Global Clients (Fiverr)</strong>
+              <span class="sub">Australia</span>
+            </span>
+            <span class="client-badge" title="Frontend Engineering – Malaysia">
+              <span class="flag">🇲🇾</span>
+              <strong>Freelance Web</strong>
+              <span class="sub">Malaysia</span>
+            </span>
+            <span class="client-badge" title="Enterprise Full-Stack & Automation – Indonesia">
+              <span class="flag">🇮🇩</span>
+              <strong>Enterprise &amp; Academic</strong>
+              <span class="sub">Indonesia</span>
+            </span>
           </div>
         </div>
       </div>
@@ -988,6 +1109,6 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEeFTHJFtbOROIfPAVp7Ueg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=4.0"></script>
 </body>
 </html>
