@@ -1,675 +1,619 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- SEO & Engineering Metadata -->
-  <meta name="description" content="Muhammad Athalla Bagaskara – Software Engineer & CS Undergraduate at UPN 'Veteran' Yogyakarta. Specializing in Full-Stack Web Architecture, Distributed Systems, and Developer Tools." />
+  <!-- SEO & Security Meta -->
+  <meta name="description" content="Muhammad Athalla Bagaskara – Computer Science Undergraduate, Full-Stack Web Developer & Data Engineer based in Yogyakarta, Indonesia." />
   <meta name="author" content="Muhammad Athalla Bagaskara" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Muhammad Athalla Bagaskara – Software Engineer & Systems Builder" />
-  <meta property="og:description" content="Computer Science Undergraduate, Full-Stack Systems Engineer & Developer Tools Builder based in Yogyakarta, Indonesia." />
+  <meta property="og:title" content="Muhammad Athalla Bagaskara – Portfolio" />
+  <meta property="og:description" content="Computer Science Undergraduate, Full-Stack Web Developer & Data Engineer" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="PP.jpg" />
 
-  <!-- Security Headers via meta -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self' https://open.er-api.com https://api.binance.com https://api.coingecko.com;" />
+  <!-- Security Headers via meta (backup for server headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self';" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
 
-  <title>Muhammad Athalla Bagaskara | Software Engineer & Systems Builder</title>
+  <title>Muhammad Athalla Bagaskara | Portfolio</title>
   <link rel="icon" type="image/png" href="logo.png" />
 
-  <!-- High-Legibility Typography -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- AOS Animation -->
+  <!-- AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Main Style Sheet with Cache Buster -->
-  <link rel="stylesheet" href="style.css?v=3.5" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Precision Custom Cursor -->
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- Subtle Film Grain Overlay -->
+  <!-- Noise Overlay -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- Live Financial & Market Telemetry Topbar -->
-  <aside class="market-ticker-bar" id="marketTicker" aria-label="Live Market Telemetry">
-    <div class="ticker-inner">
-      <div class="ticker-badge">
-        <span class="ticker-pulse" aria-hidden="true"></span>
-        <span>MARKET TELEMETRY</span>
-      </div>
-      <div class="ticker-content" id="tickerContent">
-        <span class="ticker-stat">
-          <span class="sym">USD/IDR</span>
-          <span class="val" id="tickerUsdIdr">Rp 15,845</span>
-          <span class="chg up" id="chgUsdIdr">+0.08%</span>
-        </span>
-        <span class="ticker-divider">&bull;</span>
-        <span class="ticker-stat">
-          <span class="sym">IHSG (IDX)</span>
-          <span class="val" id="tickerIhsg">4,931.39</span>
-          <span class="chg down" id="chgIhsg">-1.97%</span>
-        </span>
-        <span class="ticker-divider">&bull;</span>
-        <span class="ticker-stat">
-          <span class="sym">BTC/USD</span>
-          <span class="val" id="tickerBtc">$76,210</span>
-          <span class="chg up" id="chgBtc">+1.24%</span>
-        </span>
-        <span class="ticker-divider">&bull;</span>
-        <span class="ticker-stat">
-          <span class="sym">SYS CLOCK</span>
-          <span class="val" id="tickerTime">--:--:-- WIB</span>
-        </span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <header id="header">
     <div class="header-inner">
-      <a href="#home" class="logo" aria-label="Muhammad Athalla Bagaskara Home">
-        <span class="logo-symbol">&lt;/&gt;</span>
-        <span class="logo-text">athalla.dev</span>
+      <a href="#home" class="logo" aria-label="Go to home">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">athalla</span>
+        <span class="logo-dot">.</span>
+        <span class="logo-bracket">}</span>
       </a>
 
       <nav id="mainNav" role="navigation" aria-label="Main navigation">
-        <a href="#home" class="nav-link active" aria-current="page">Overview</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+        <a href="#project" class="nav-link">Projects</a>
+        <a href="#resume" class="nav-link">Resume</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#media" class="nav-link">Media</a>
+        <a href="#video" class="nav-link">Video</a>
         <a href="#apple-music" class="nav-link">Music</a>
         <a href="#contact" class="nav-link">Contact</a>
         <div class="nav-indicator" aria-hidden="true"></div>
       </nav>
 
-      <div class="header-actions">
-        <!-- Theme Switcher (Dark / Light) -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
-          <i class="fas fa-moon" id="themeIcon"></i>
-        </button>
-
-        <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-cv-header">
-          <i class="fas fa-file-pdf" aria-hidden="true"></i>
-          <span>Resume (PDF)</span>
-        </a>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
+  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="#home" class="mobile-nav-link">Overview</a>
-    <a href="#projects" class="mobile-nav-link">Projects</a>
-    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#project" class="mobile-nav-link">Projects</a>
+    <a href="#resume" class="mobile-nav-link">Resume</a>
     <a href="#skills" class="mobile-nav-link">Skills</a>
-    <a href="#media" class="mobile-nav-link">Media</a>
+    <a href="#video" class="mobile-nav-link">Video</a>
     <a href="#apple-music" class="mobile-nav-link">Music</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
-    <div class="mobile-menu-actions">
-      <button class="theme-toggle" id="mobileThemeToggle" style="width:100%; justify-content:center; padding:10px; border-radius:8px; border:1px solid var(--border-medium); margin-bottom:10px;">
-        <i class="fas fa-moon"></i> <span>Toggle Color Theme</span>
-      </button>
-      <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-primary" style="width:100%; justify-content:center;">
-        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-        <span>Download Complete CV</span>
-      </a>
-    </div>
   </div>
 
-  <!-- ===== HERO SECTION (COSMOS STUDIO EDITORIAL TYPOGRAPHY & INTEGRATED 3D) ===== -->
-  <section id="home" class="section hero-editorial-section">
-    <!-- Ambient Animated Background with Running Particles Canvas -->
-    <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1;"></canvas>
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow glow-1" aria-hidden="true"></div>
+    <div class="hero-glow glow-2" aria-hidden="true"></div>
 
-    <div class="hero-editorial-inner">
-      <!-- Top Architectural Status Line -->
-      <div class="editorial-status-bar">
-        <div class="editorial-badge">
-          <span class="editorial-pulse"></span>
-          <span>AVAILABLE &middot; SOFTWARE SYSTEMS & FULL-STACK ENG &middot; 2026/2027</span>
+    <div class="hero-inner">
+      <div class="hero-left" data-aos="fade-right" data-aos-duration="900">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
         </div>
-        <div class="editorial-coords">
-          <span>YOGYAKARTA, ID [UTC+7]</span>
-          <span class="sep">&bull;</span>
-          <span>UPN "VETERAN" YOGYAKARTA</span>
-        </div>
-      </div>
-
-      <!-- Main Massive Statement Headline -->
-      <div class="editorial-hero-statement">
-        <h1 class="statement-display">
-          MUHAMMAD ATHALLA<br>
-          <span class="statement-muted">BAGASKARA &mdash; SYSTEMS BUILDER.</span>
+        <h1 class="hero-title">
+          <span class="title-line">Muhammad</span>
+          <span class="title-line accent-name">Athalla</span>
+          <span class="title-line">Bagaskara</span>
         </h1>
-      </div>
-
-      <!-- Asymmetrical Editorial Sub-Grid -->
-      <div class="editorial-hero-grid">
-        <div class="editorial-bio-block">
-          <p class="editorial-lead">
-            Computer science student and software engineer focusing on high-throughput web architecture, developer tooling, and automated data pipelines. National competitor in <strong>GEMASTIK XVIII</strong>. Proven track record delivering production contracts for engineering teams across New York, Singapore, and Australia.
-          </p>
-
-          <div class="editorial-taxonomy-row">
-            <span class="editorial-tax-item">01 / Systems Tooling</span>
-            <span class="editorial-tax-item">02 / Distributed Web</span>
-            <span class="editorial-tax-item">03 / Data Engineering</span>
-          </div>
-
-          <div class="editorial-actions-row">
-            <a href="#projects" class="btn-editorial-solid">
-              <span>Selected Works</span>
-              <i class="fas fa-arrow-down" aria-hidden="true"></i>
-            </a>
-            <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-editorial-outline">
-              <i class="fas fa-file-pdf" aria-hidden="true"></i>
-              <span>Curriculum Vitae</span>
-            </a>
-            <a href="https://github.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost">
-              <i class="fab fa-github" aria-hidden="true"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
+        <p class="hero-role">
+          <span class="role-tag">Full-Stack Dev</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">Data Engineer</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">AI & Automation</span>
+        </p>
+        <p class="hero-bio">
+          Computer Science undergraduate at UPN "Veteran" Yogyakarta specializing in Full-Stack Web Development, Data Engineering, and AI-powered automation. Experienced in architecting scalable web applications, cross-device developer utilities, and high-throughput data pipelines for international clients.
+        </p>
+        <div class="hero-actions">
+          <a href="#project" class="btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-ghost">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="mailto:iamathaalla@gmail.com" class="btn-ghost">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact Me</span>
+          </a>
         </div>
-
-        <!-- Architectural Profile Card with Photo & Interactive 3D Mesh Toggle -->
-        <div class="editorial-visual-block">
-          <div class="profile-card">
-            <div class="profile-card-header">
-              <span class="profile-card-title">ATHALLA.DEV &middot; PORTRAIT</span>
-              <div class="profile-view-toggle" role="tablist" aria-label="Profile View Switcher">
-                <button type="button" class="view-toggle-btn active" id="btnViewPhoto" role="tab" aria-selected="true" aria-controls="profilePhotoImg">Portrait</button>
-                <button type="button" class="view-toggle-btn" id="btnView3D" role="tab" aria-selected="false" aria-controls="sculptureContainer">3D Mesh</button>
-              </div>
-            </div>
-            <div class="profile-card-body">
-              <div class="profile-media-viewport">
-                <img src="PP.jpg" alt="Muhammad Athalla Bagaskara – Profile" class="profile-photo" id="profilePhotoImg" />
-                <div class="sculpture-organic-wrap" id="sculptureContainer" style="display: none;">
-                  <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
-                  <div class="sculpture-caption">
-                    <span class="caption-index">[3D MESH]</span>
-                    <span>DRAG TO ROTATE</span>
-                  </div>
-                </div>
-              </div>
-              <div class="profile-meta">
-                <div class="meta-row">
-                  <span class="meta-key">Degree:</span>
-                  <span class="meta-val">B.Tech in Computer Science</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-key">Institution:</span>
-                  <span class="meta-val">UPN "Veteran" Yogyakarta</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-key">Honors:</span>
-                  <span class="meta-val">GEMASTIK XVIII Finalist</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-key">Focus:</span>
-                  <span class="meta-val">Distributed Systems &amp; Web</span>
-                </div>
-              </div>
-            </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>9+</strong>
+            <span>Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Certificates</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>11+</strong>
+            <span>Languages</span>
           </div>
         </div>
       </div>
 
-      <!-- Full-Width Horizontal Metric Ledger (Anti-Card) -->
-      <div class="editorial-ledger">
-        <div class="ledger-cell">
-          <span class="ledger-index">01</span>
-          <span class="ledger-value">GEMASTIK XVIII</span>
-          <span class="ledger-label">National Competitive Programming Finalist</span>
-        </div>
-        <div class="ledger-cell">
-          <span class="ledger-index">02</span>
-          <span class="ledger-value">3 Continents</span>
-          <span class="ledger-label">Contracts Delivered across US, SG & AU</span>
-        </div>
-        <div class="ledger-cell">
-          <span class="ledger-index">03</span>
-          <span class="ledger-value">8+ Certified</span>
-          <span class="ledger-label">HackerRank & Dicoding Technical Registries</span>
-        </div>
-        <div class="ledger-cell">
-          <span class="ledger-index">04</span>
-          <span class="ledger-value">B.Tech CS</span>
-          <span class="ledger-label">UPN "Veteran" Yogyakarta &middot; 2024-2028</span>
+      <div class="hero-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <div class="profile-frame">
+          <div class="profile-ring ring-1" aria-hidden="true"></div>
+          <div class="profile-ring ring-2" aria-hidden="true"></div>
+          <div class="profile-ring ring-3" aria-hidden="true"></div>
+          <img src="PP.jpg" alt="Muhammad Athalla Bagaskara – Profile Photo" class="profile-img" />
+          <div class="profile-badge-float">
+            <i class="fas fa-code" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== PROJECTS SECTION (COSMOS STUDIO EDITORIAL WORK LEDGER) ===== -->
-  <section id="projects" class="section editorial-projects-section">
-    <div class="section-inner">
-      <div class="section-header-editorial" data-aos="fade-up">
-        <div class="header-pre-editorial">SELECTED WORKS</div>
-        <h2 class="section-title-editorial">Production Engineering &amp; Distributed Systems</h2>
-        <p class="section-subtitle-editorial">Systems deployed in production, high-throughput developer utilities, and algorithmic foundations.</p>
-      </div>
-
-      <!-- Editorial Master Works List -->
-      <div class="editorial-works-list">
-
-        <!-- 01: NativeCopy -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">01</span>
-            <span class="work-type">SYSTEMS TOOL</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">NativeCopy &mdash; Cross-Device Developer Bridge</h3>
-              <span class="work-year">2026 &middot; Production</span>
-            </div>
-            <p class="work-description">
-              High-speed developer bridge enabling real-time keystroke streaming from mobile devices directly into active VS Code editor instances via Server-Sent Events (SSE). Incorporates MediaPipe AI computer-vision pipelines for sub-millisecond touchless OS cursor navigation.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>TypeScript</span>
-                <span>Python</span>
-                <span>VS Code API</span>
-                <span>MediaPipe AI</span>
-                <span>SSE Protocol</span>
-              </div>
-              <div class="work-links">
-                <a href="https://github.com/muhmdathalla/nativecopy" target="_blank" rel="noopener noreferrer" class="link-editorial">
-                  <span>Repository</span> <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-                <a href="https://github.com/muhmdathalla/nativecopy#readme" target="_blank" rel="noopener noreferrer" class="link-editorial">
-                  <span>Architecture</span> <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 02: SPADA Presence -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">02</span>
-            <span class="work-type">AUTOMATION & BOT</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">SPADA Presence &mdash; Autonomous University Attendance Engine</h3>
-              <span class="work-year">2026 &middot; CI/CD Cron</span>
-            </div>
-            <p class="work-description">
-              Resilient headless browser workflow executing scheduled university portal authentication, multi-course schedule tracking, and photographic verification audit captures with instant Telegram Bot webhook dispatches.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>Python</span>
-                <span>Playwright</span>
-                <span>GitHub Actions Cron</span>
-                <span>Telegram API</span>
-              </div>
-              <div class="work-links">
-                <a href="https://github.com/muhmdathalla/spada-presence" target="_blank" rel="noopener noreferrer" class="link-editorial">
-                  <span>Repository</span> <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 03: Joe Coffee -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">03</span>
-            <span class="work-type">CONTRACT &middot; US</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">Joe Coffee Company &mdash; E-Commerce Web Infrastructure</h3>
-              <span class="work-year">2026 &middot; New York, US</span>
-            </div>
-            <p class="work-description">
-              Maintained checkout pipelines and subscription onboarding flows for a prominent New York specialty coffee brand. Resolved mobile responsive rendering bottlenecks and boosted conversion funnel retention.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>E-Commerce UX</span>
-                <span>JavaScript</span>
-                <span>Checkout Pipelines</span>
-                <span>Mobile UI</span>
-              </div>
-              <div class="work-links">
-                <span class="link-editorial-status"><i class="fas fa-check-circle"></i> International Production Deployment</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 04: Dutch Colony Singapore -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">04</span>
-            <span class="work-type">CLIENT &middot; SG</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">Dutch Colony Coffee &mdash; Singapore Digital Portal</h3>
-              <span class="work-year">2026 &middot; Singapore</span>
-            </div>
-            <p class="work-description">
-              Engineered modular, high-speed frontend systems using React.js and restructured relational database query schemas, driving measurable enhancements in Core Web Vitals and technical SEO rankings.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>React.js</span>
-                <span>Database Tuning</span>
-                <span>Core Web Vitals</span>
-                <span>SEO Architecture</span>
-              </div>
-              <div class="work-links">
-                <span class="link-editorial-status"><i class="fas fa-check-circle"></i> Verified Production Delivery</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 05: Johnson's Algorithm in C -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">05</span>
-            <span class="work-type">ALGORITHMS & C</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">Johnson's Algorithm &mdash; Sparse Graph Routing Engine</h3>
-              <span class="work-year">2025 &middot; Core C</span>
-            </div>
-            <p class="work-description">
-              High-performance C implementation of Johnson's all-pairs shortest paths algorithm for geographic networks across Yogyakarta. Combines Bellman-Ford reweighting with Dijkstra binary heaps to eliminate negative weight cycles.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>C (Pure)</span>
-                <span>Graph Theory</span>
-                <span>Bellman-Ford</span>
-                <span>Dijkstra Heap</span>
-              </div>
-              <div class="work-links">
-                <a href="johnson.c" download class="link-editorial">
-                  <span>Source Code (.c)</span> <i class="fas fa-download"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 06: PerpusPintar Smart Library -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">06</span>
-            <span class="work-type">FULL-STACK APP</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">PerpusPintar &mdash; Information Architecture & Management System</h3>
-              <span class="work-year">2025 &middot; Live Production</span>
-            </div>
-            <p class="work-description">
-              Relational library information management platform supporting membership role authorization, catalog indexing, and real-time borrowing transaction state machines deployed on live infrastructure.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Tailwind CSS</span>
-                <span>REST API</span>
-              </div>
-              <div class="work-links">
-                <a href="https://perpuspintar.soetoredjo.com/" target="_blank" rel="noopener noreferrer" class="link-editorial">
-                  <span>Live System</span> <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 07: Google Earth Engine NDVI Satellite Telemetry -->
-        <article class="work-row" data-aos="fade-up">
-          <div class="work-index-col">
-            <span class="work-num">07</span>
-            <span class="work-type">GEOSPATIAL DATA</span>
-          </div>
-          <div class="work-body-col">
-            <div class="work-headline-row">
-              <h3 class="work-title">NDVI Satellite Modeling &mdash; Geospatial Telemetry Pipeline</h3>
-              <span class="work-year">2025 &middot; Earth Engine</span>
-            </div>
-            <p class="work-description">
-              Geospatial computation pipelines on Google Earth Engine computing Normalized Difference Vegetation Index (NDVI) models from multi-spectral satellite raster bands to produce verifiable environmental telemetry.
-            </p>
-            <div class="work-meta-row">
-              <div class="work-tags">
-                <span>Google Earth Engine</span>
-                <span>JavaScript</span>
-                <span>Raster Processing</span>
-                <span>GIS Analytics</span>
-              </div>
-              <div class="work-links">
-                <span class="link-editorial-status"><i class="fas fa-satellite"></i> Geospatial Telemetry Model</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ===== EXPERIENCE & EDUCATION SECTION ===== -->
-  <section id="experience" class="section section-alt">
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="project" class="section">
     <div class="section-inner">
       <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">EXPERIENCE &middot; ACADEMIC FOUNDATION</div>
-        <h2 class="section-title">Production Track Record</h2>
-        <p class="section-subtitle">Real-world production engineering, international contracting, and competitive programming.</p>
+        <span class="section-label">// 01</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Things I've built from scratch</p>
       </div>
 
-      <div class="experience-layout">
-        <!-- Professional Work -->
-        <div class="exp-column" data-aos="fade-up">
-          <div class="exp-column-header">
-            <i class="fas fa-briefcase"></i>
-            <h3>Production & Engineering Experience</h3>
+      <div class="projects-grid">
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-number" aria-hidden="true">01</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+            <h3>NativeCopy</h3>
+            <p>High-speed cross-device clipboard & live code injection utility. Type directly into VS Code from your mobile device, inject files into project folders, and control OS cursor gestures via MediaPipe AI Computer Vision.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>TypeScript</span>
+              <span>Python</span>
+              <span>VS Code Extension</span>
+              <span>MediaPipe AI</span>
+              <span>SSE</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/muhmdathalla/nativecopy" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View NativeCopy GitHub repository">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+            <a href="https://github.com/muhmdathalla/nativecopy#readme" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View NativeCopy documentation">
+              <i class="fas fa-book-open" aria-hidden="true"></i> Readme
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="card-number" aria-hidden="true">02</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+            <h3>SPADA Auto-Presence</h3>
+            <p>Automated university attendance bot for SPADA UPN "Veteran" Yogyakarta using Python & Playwright. Features multi-course schedule tracking, verification photo proofs sent to Telegram, and 24/7 cloud cron execution via GitHub Actions.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>Python</span>
+              <span>Playwright</span>
+              <span>Telegram Bot API</span>
+              <span>GitHub Actions</span>
+              <span>Automation</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/muhmdathalla/spada-presence" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View SPADA Auto-Presence GitHub repository">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="90">
+          <div class="card-number" aria-hidden="true">03</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-mug-hot" aria-hidden="true"></i></div>
+            <h3>Joe Coffee E-Commerce Portal</h3>
+            <p>Managed and optimized online store and subscription customer flows for New York-based specialty coffee company. Resolved responsive front-end layout bugs, improved checkout UX, and supported daily web operations.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>E-Commerce</span>
+              <span>Web Maintenance</span>
+              <span>Mobile UI</span>
+              <span>JavaScript</span>
+              <span>Shopify / CMS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <span class="btn-card" style="opacity: 0.85; cursor: default;">
+              <i class="fas fa-coffee" aria-hidden="true"></i> Contract · New York
+            </span>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="card-number" aria-hidden="true">04</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+            <h3>"PerpusPintar" Smart Library</h3>
+            <p>Full-stack smart library management system with digital access control, advanced catalog indexing, borrowing transactions, and interactive search interface deployed for production.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>Full-Stack</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://perpuspintar.soetoredjo.com/" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View PerpusPintar live demo">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="180">
+          <div class="card-number" aria-hidden="true">05</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-store" aria-hidden="true"></i></div>
+            <h3>Dutch Colony Singapore Website</h3>
+            <p>Constructed lightning-fast responsive UI components and maintained complex database schematics for an international client to improve loading speeds, technical SEO, and transaction flows.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>React.js</span>
+              <span>UI/UX</span>
+              <span>Database Optimization</span>
+              <span>SEO</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <span class="btn-card" style="opacity: 0.85; cursor: default;">
+              <i class="fas fa-globe" aria-hidden="true"></i> Client Project
+            </span>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="card-number" aria-hidden="true">06</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-globe" aria-hidden="true"></i></div>
+            <h3>Soetoredjo Family Website</h3>
+            <p>Managed a comprehensive family portal as full-stack developer — complete responsibility for UI/UX design, custom CMS architecture, MySQL databases, and reliable user authentication.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>Full-Stack</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>HTML/CSS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="http://soetoredjo.com" target="_blank" rel="noopener noreferrer" class="btn-card" aria-label="View Soetoredjo website live demo">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-number" aria-hidden="true">07</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-satellite" aria-hidden="true"></i></div>
+            <h3>NDVI Magelang Satellite Analysis</h3>
+            <p>Authored precise JavaScript programs in Google Earth Engine to process massive raster datasets, producing actionable vegetation index (NDVI) models and ecological land analysis.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>JavaScript</span>
+              <span>Google Earth Engine</span>
+              <span>Data Analysis</span>
+              <span>GIS</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <span class="btn-card" style="opacity: 0.85; cursor: default;">
+              <i class="fas fa-chart-area" aria-hidden="true"></i> Geospatial Model
+            </span>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="360">
+          <div class="card-number" aria-hidden="true">08</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
+            <h3>Yogyakarta Routes – Johnson's Algorithm</h3>
+            <p>Implemented Johnson's algorithm in C to find shortest paths between sub-districts in Yogyakarta. Demonstrates advanced graph theory, sparse graphs, and algorithm optimization.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>C</span>
+              <span>Graph Theory</span>
+              <span>Algorithms</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="johnson.c" download class="btn-card" aria-label="Download Johnson algorithm C source code">
+              <i class="fas fa-download" aria-hidden="true"></i> Source Code
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="420">
+          <div class="card-number" aria-hidden="true">09</div>
+          <div class="card-content">
+            <div class="card-icon"><i class="fas fa-book" aria-hidden="true"></i></div>
+            <h3>Library System in C++</h3>
+            <p>A CLI program as a final semester project to manage book data and library borrowing transactions efficiently using custom data structures and file persistence.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span>C++</span>
+              <span>Data Structures</span>
+              <span>CLI</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="ProjectPerpusFix.cpp" download class="btn-card" aria-label="Download Library System C++ source code">
+              <i class="fas fa-download" aria-hidden="true"></i> Source Code
+            </a>
+          </div>
+          <div class="card-glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME SECTION ===== -->
+  <section id="resume" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// 02</span>
+        <h2 class="section-title">Resume</h2>
+        <p class="section-subtitle">Education, experience & certifications</p>
+        <div style="margin-top: 14px;">
+          <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-card" style="display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Download Full Resume (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+          <h3>Education</h3>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Universitas Pembangunan Nasional "Veteran" Yogyakarta</h4>
+                <span class="timeline-badge">Expected May 2028</span>
+              </div>
+              <p class="timeline-sub">Bachelor of Technology (BTech) in Computer Science (Informatics)</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jan 2024 – May 2028 (Expected) · Yogyakarta, Indonesia</p>
+              <p class="timeline-desc">Specializing in Full-Stack Web Development, Data Engineering, and Scalable Systems. Core coursework: Data Structures & Advanced Algorithms, Database Management, Software Engineering, and Computer Networks.</p>
+              <div class="timeline-tags"><span>Algorithms</span><span>Database Management</span><span>Software Engineering</span><span>Networks</span></div>
+            </div>
           </div>
 
-          <div class="timeline">
-            <!-- Joe Coffee -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Sep 2026 – Present &middot; Contract (Remote)</span>
-                  <span class="timeline-tag">United States</span>
-                </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>SMAN 5 Magelang</h4>
+              <p class="timeline-sub">Science Major – MIPA</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2021 – May 2024 · Magelang, Central Java</p>
+              <p class="timeline-desc">Studied general sciences with strong interest in technology and creative media. Actively participated in school events and organizations.</p>
+              <div class="timeline-tags"><span>Science</span><span>Social Media</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
+          <h3>Experience</h3>
+        </div>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="20">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
                 <h4>Contract Web Application Developer</h4>
-                <div class="timeline-org">Joe Coffee Company &middot; New York, US</div>
-                <p>Architected responsive front-end fixes, optimized high-conversion checkout flows, and streamlined recurring subscription management pipelines for an established New York specialty beverage brand.</p>
-                <div class="timeline-tech">
-                  <span>E-Commerce</span><span>JavaScript</span><span>Mobile UX</span><span>Web Maintenance</span>
-                </div>
+                <span class="timeline-badge">Contract | Remote</span>
               </div>
-            </div>
-
-            <!-- Fiverr Australia -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Sep 2026 – Present &middot; Freelance (Remote)</span>
-                  <span class="timeline-tag">Australia</span>
-                </div>
-                <h4>Database Administration & Data Analytics</h4>
-                <div class="timeline-org">Global Clients via Fiverr &middot; Australia</div>
-                <p>Delivered enterprise database administration, SQL schema normalization, exploratory data analysis (EDA), and automated KPI telemetry dashboards for international clients to empower data-driven operational decisions.</p>
-                <div class="timeline-tech">
-                  <span>SQL Optimization</span><span>Python</span><span>Data Pipelines</span><span>KPI Telemetry</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fiverr Jakarta -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">May 2026 – Sep 2026 &middot; 5 mos</span>
-                  <span class="timeline-tag">Indonesia</span>
-                </div>
-                <h4>Full-Stack Web Engineer</h4>
-                <div class="timeline-org">Freelance Contracting &middot; Jakarta, ID</div>
-                <p>Constructed high-speed responsive web applications using React.js, Next.js, and Tailwind CSS. Tuned page-rendering cycles to achieve sub-second LCP scores and strict technical SEO standards.</p>
-                <div class="timeline-tech">
-                  <span>React.js</span><span>Next.js</span><span>Tailwind CSS</span><span>Core Web Vitals</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fiverr Malaysia -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Jun 2026 – Aug 2026 &middot; 3 mos</span>
-                  <span class="timeline-tag">Malaysia</span>
-                </div>
-                <h4>Data Infrastructure Engineer</h4>
-                <div class="timeline-org">Global Clients via Fiverr &middot; Malaysia</div>
-                <p>Engineered automated ETL pipelines, web data extraction agents, and MySQL schema migrations to support real-time reporting pipelines for e-commerce operators.</p>
-                <div class="timeline-tech">
-                  <span>ETL Engineering</span><span>Python</span><span>MySQL</span><span>Schema Migrations</span>
-                </div>
-              </div>
+              <p class="timeline-sub">Joe Coffee Company · New York, United States</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 2026 – Present · 2 mos</p>
+              <p class="timeline-desc">Managed and optimized e-commerce web applications to improve customer ordering flows and coffee subscription setups. Handled front-end layout updates, resolved technical coding bugs, and ensured smooth mobile responsiveness.</p>
+              <div class="timeline-tags"><span>E-Commerce</span><span>Web Maintenance</span><span>Software Construction</span><span>Mobile UI</span><span>JavaScript</span></div>
             </div>
           </div>
-        </div>
 
-        <!-- Academic & Honours -->
-        <div class="exp-column" data-aos="fade-up" data-aos-delay="100">
-          <div class="exp-column-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Education & Competitive Milestones</h3>
-          </div>
-
-          <div class="timeline">
-            <!-- GEMASTIK -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Jul 2025 – Aug 2025</span>
-                  <span class="timeline-tag">National Qualification</span>
-                </div>
-                <h4>Competitive Programming Finalist / Participant</h4>
-                <div class="timeline-org">GEMASTIK XVIII 2025 &middot; Kemdiktisaintek</div>
-                <p>Qualified for the national stage of GEMASTIK XVIII in the Competitive Programming category, solving complex algorithmic problems under strict runtime constraints using C++.</p>
-                <div class="timeline-tech">
-                  <span>C++</span><span>Graph Theory</span><span>Dynamic Programming</span><span>Algorithmic Optimization</span>
-                </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="40">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Freelance Database Administration & Data Analytics</h4>
+                <span class="timeline-badge">Freelance | Remote</span>
               </div>
-            </div>
-
-            <!-- University -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Jan 2024 – May 2028 (Expected)</span>
-                  <span class="timeline-tag">Undergraduate</span>
-                </div>
-                <h4>B.Tech in Computer Science (Informatics)</h4>
-                <div class="timeline-org">UPN "Veteran" Yogyakarta &middot; Indonesia</div>
-                <p>Focusing on Software Architecture, Distributed Systems, Database Management, and Networking. Active in department technical committees (HIMATIF).</p>
-                <div class="timeline-tech">
-                  <span>Data Structures</span><span>Operating Systems</span><span>Computer Networks</span><span>Software Engineering</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Developer Group -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Oct 2024 – Present</span>
-                  <span class="timeline-tag">Training</span>
-                </div>
-                <h4>Google Developer Group Bootcamp Fellow</h4>
-                <div class="timeline-org">Google Developer Group &middot; Remote</div>
-                <p>Hands-on intensive development covering Google Agent Development Kit (ADK), Gemini Interactions API, Machine Learning foundations, and Golang backend services.</p>
-                <div class="timeline-tech">
-                  <span>AI Agents</span><span>Golang</span><span>Google Cloud ADK</span><span>RESTful API</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- SMAN 5 Magelang -->
-            <div class="timeline-item">
-              <div class="timeline-node"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Jul 2021 – May 2024</span>
-                  <span class="timeline-tag">High School</span>
-                </div>
-                <h4>Natural Sciences & Mathematics (MIPA)</h4>
-                <div class="timeline-org">SMAN 5 Magelang &middot; Central Java</div>
-                <p>Graduated with strong foundations in mathematics and science. Coordinated technical social media communication and led student robotics initiatives.</p>
-              </div>
+              <p class="timeline-sub">Fiverr · Australia</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 2026 – Present · 2 mos</p>
+              <p class="timeline-desc">Delivered remote database administration and business intelligence services to global clients. Cleaned raw data, performed exploratory data analysis (EDA), and created KPI tracking dashboards to optimize storefront decisions.</p>
+              <div class="timeline-tags"><span>Database Administration</span><span>Data Analytics</span><span>EDA</span><span>KPI Dashboards</span><span>SQL</span><span>Python</span></div>
             </div>
           </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="60">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Freelance Web Developer</h4>
+                <span class="timeline-badge">Freelance | Remote</span>
+              </div>
+              <p class="timeline-sub">Fiverr & JobStreet · Jakarta, Indonesia</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> May 2026 – Sep 2026 · 5 mos</p>
+              <p class="timeline-desc">Engineered responsive UI/UX and web applications tailored to corporate requirements of international entities. Optimized application architectures for mobile-first compatibility, performance speed, and comprehensive technical SEO.</p>
+              <div class="timeline-tags"><span>React.js</span><span>Next.js</span><span>Tailwind CSS</span><span>Web Maintenance</span><span>Technical SEO</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Freelance Data Engineer (Data Infrastructure)</h4>
+                <span class="timeline-badge">Freelance | Remote</span>
+              </div>
+              <p class="timeline-sub">Fiverr · Malaysia</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jun 2026 – Aug 2026 · 3 mos</p>
+              <p class="timeline-desc">Designed, built, and automated ETL workflows, data collection, and schema migration procedures to ensure reliable data pipelines.</p>
+              <div class="timeline-tags"><span>Data Infrastructure</span><span>MySQL</span><span>ETL Pipelines</span><span>Automation</span><span>Python</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="70">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Full-Stack Web Developer</h4>
+                <span class="timeline-badge">Part-time | Contract</span>
+              </div>
+              <p class="timeline-sub">Soetoredjo Family</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2024 – Present · Remote</p>
+              <p class="timeline-desc">Developed and maintained soetoredjo.com, focusing on clean design, data management, and usability. Responsible for building and updating features, ensuring smooth performance, and managing content.</p>
+              <div class="timeline-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+           <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Full-Stack Web Developer</h4>
+                <span class="timeline-badge">Part-time | Contract</span>
+              </div>
+              <p class="timeline-sub">al.dev</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Dec 2023 – Present · Hybrid</p>
+              <p class="timeline-desc">Developed and maintained my portofolio websit, focusing on clean design, data management, and usability. Responsible for building and updating features, ensuring smooth performance, and managing content.</p>
+              <div class="timeline-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Participant – GEMASTIK XVIII 2025</h4>
+                <span class="timeline-badge">Achievement</span>
+              </div>
+              <p class="timeline-sub">Kemdiktisaintek · Competitive Programming</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 2025 – Aug 2025 · Remote</p>
+              <p class="timeline-desc">Qualified for the national-level GEMASTIK competition in the Competitive Programming category — a prestigious national student technology competition.</p>
+              <div class="timeline-tags"><span>C++</span><span>Competitive Programming</span><span>Algorithms</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="120">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Bootcamp Participant</h4>
+              <p class="timeline-sub">Google Developer Group · Part-time</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 2024 – Present · Remote</p>
+              <p class="timeline-desc">Learning software development through structured, industry-standard Google's courses. Gaining hands-on experience in web and mobile development using modern technologies. With using many apps or AI Agent from Google</p>
+              <div class="timeline-tags"><span>AI Agent</span><span>API Engineer</span><span>Machine Learning</span><span>Golang</span><span>Google ADK</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="120">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Bootcamp Participant</h4>
+              <p class="timeline-sub">HackerRank · Part-time</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sept 2025 – Present · Remote</p>
+              <p class="timeline-desc">Learning software development through structured, industry-standard courses. Gaining hands-on experience in web and mobile development using modern technologies.</p>
+              <div class="timeline-tags"><span>JavaScript</span><span>Python</span><span>Java</span><span>CSS</span><span>C#</span><span>Node.js</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Staff – Equipment & Logistics, PKK IF 2025</h4>
+                <span class="timeline-badge">Organization</span>
+              </div>
+              <p class="timeline-sub">HIMATIF UPN "Veteran" Yogyakarta</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jun 2025 – Sep 2025 · On-site</p>
+              <p class="timeline-desc">Supported operational flow by managing equipment needs, coordinating logistics distribution, and ensuring materials were delivered on time. Developed strong team leadership, organization, and problem-solving skills.</p>
+              <div class="timeline-tags"><span>Team Leadership</span><span>Logistics</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="120">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Bootcamp Participant</h4>
+              <p class="timeline-sub">Dicoding Indonesia · Part-time</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 2024 – Present · Remote</p>
+              <p class="timeline-desc">Learning software development through structured, industry-standard courses. Gaining hands-on experience in web and mobile development using modern technologies.</p>
+              <div class="timeline-tags"><span>JavaScript</span><span>Python</span><span>Java</span><span>C++</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="140">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Social Media Coordinator</h4>
+              <p class="timeline-sub">IPMA – SMAN 5 Magelang</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jun 2022 – Jul 2023 · On-site</p>
+              <p class="timeline-desc">Managed school event promotions on Instagram and platforms. Created content, scheduled posts, and increased student engagement online.</p>
+              <div class="timeline-tags"><span>Social Media</span><span>Content Creation</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="160">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <h4>Robotics Specialist</h4>
+              <p class="timeline-sub">Spero Robotic – SMPN 2 Magelang</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 2018 – May 2020 · On-site</p>
+              <p class="timeline-desc">Developed and programmed autonomous robots for competitions. Worked with Arduino, sensors, and basic mechanical systems — sparked my passion for coding and innovation.</p>
+              <div class="timeline-tags"><span>Arduino</span><span>Robotics</span></div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Verified Certifications Sub-block with Thumbnails -->
-      <div class="certs-section" data-aos="fade-up">
-        <div class="certs-header">
-          <div>
-            <h3>Verified Technical Certifications</h3>
-            <p>Every credential is authenticated with verifiable ID on official platform registries.</p>
-          </div>
+      <!-- Certifications -->
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-header">
+          <div class="resume-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <h3>Licenses & Certifications</h3>
         </div>
 
         <div class="certs-grid">
-          <!-- C Programming -->
+
           <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
             <img src="Sertifikat_C.png" alt="C Programming Certificate from Dicoding Indonesia" loading="lazy" />
             <div class="cert-info">
               <h4>C Programming</h4>
               <p>Dicoding Indonesia</p>
-              <span class="cert-date">Apr 2025 &middot; Exp Apr 2028</span>
+              <span class="cert-date">Apr 2025 · Exp Apr 2028</span>
               <span class="cert-id">ID: MEPJQO61JX3V</span>
               <a href="https://www.dicoding.com/dicodingassets/coursecertificate/7456566bc0c3d40d2018ce69e6af8920f6ddebd7/view" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View C Programming certificate credential">
                 <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
@@ -677,13 +621,12 @@
             </div>
           </div>
 
-          <!-- Java Programming -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
             <img src="Sertifikat_Java.png" alt="Java Programming Certificate from Dicoding Indonesia" loading="lazy" />
             <div class="cert-info">
               <h4>Java Programming</h4>
               <p>Dicoding Indonesia</p>
-              <span class="cert-date">Apr 2025 &middot; Exp Apr 2028</span>
+              <span class="cert-date">Apr 2025 · Exp Apr 2028</span>
               <span class="cert-id">ID: L4PQELK02PO1</span>
               <a href="https://www.dicoding.com/dicodingassets/coursecertificate/985417bdfc71adefcae676ef64027042eaf123da/view" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View Java Programming certificate credential">
                 <i class="fas fa-external-link-alt" aria-hidden="true"></i> Verify
@@ -691,7 +634,6 @@
             </div>
           </div>
 
-          <!-- C# Basic -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
             <img src="Sertifikat_C_Sharp.png" alt="C# Basic Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -705,7 +647,6 @@
             </div>
           </div>
 
-          <!-- JavaScript Basic -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="130">
             <img src="Sertifikat_JavaScript.png" alt="JavaScript Basic Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -719,7 +660,6 @@
             </div>
           </div>
 
-          <!-- CSS Basic -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="160">
             <img src="Sertifikat_CSS.png" alt="CSS Basic Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -733,7 +673,6 @@
             </div>
           </div>
 
-          <!-- Python Basic -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="190">
             <img src="Sertifikat_Python.png" alt="Python Basic Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -747,7 +686,6 @@
             </div>
           </div>
 
-          <!-- SQL Basic -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="220">
             <img src="Sertifikat_SQL_Basic.png" alt="SQL Basic Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -761,7 +699,6 @@
             </div>
           </div>
 
-          <!-- SQL Advanced -->
           <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
             <img src="Sertifikat_SQL_Advanced.png" alt="SQL Advanced Certificate from HackerRank" loading="lazy" />
             <div class="cert-info">
@@ -774,6 +711,7 @@
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -783,96 +721,163 @@
   <section id="skills" class="section">
     <div class="section-inner">
       <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">CAPABILITIES &middot; TOOLING</div>
-        <h2 class="section-title">Technical Capabilities &amp; Architecture</h2>
-        <p class="section-subtitle">Core languages, distributed web frameworks, and production developer tooling.</p>
+        <span class="section-label">// 03</span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies I work with</p>
       </div>
 
-      <div class="skills-grid" data-aos="fade-up">
-        <!-- Languages & Core -->
-        <div class="skill-category-card">
-          <div class="skill-cat-header">
-            <i class="fas fa-code"></i>
-            <h3>Languages & Runtimes</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" /> TypeScript</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" /> JavaScript (ESNext)</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" /> Python 3</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="" /> C++</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="" /> C</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="" /> Java</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/php/777BB4" alt="" /> PHP</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/go/00ADD8" alt="" /> Golang (Basics)</span>
+      <div class="skills-wrapper">
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" loading="lazy" />
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy" />
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" loading="lazy" />
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" loading="lazy" />
+              <span>TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" loading="lazy" />
+              <span>Bootstrap</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" loading="lazy" />
+              <span>Tailwind</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" loading="lazy" />
+              <span>React</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" loading="lazy" />
+              <span>Next.js</span>
+            </div>
           </div>
         </div>
 
-        <!-- Frontend Systems -->
-        <div class="skill-category-card">
-          <div class="skill-cat-header">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Web & Frontend Architecture</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" /> React.js</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="" /> Next.js</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" /> Tailwind CSS</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" /> Semantic HTML5</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/css/1572B6" alt="" /> Modern CSS / Grid</span>
-            <span class="skill-badge"><i class="fas fa-universal-access"></i> A11y (WCAG 2.1 AA)</span>
-            <span class="skill-badge"><i class="fas fa-gauge-high"></i> Core Web Vitals</span>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
+          <h3 class="skill-cat-title">Backend & Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" />
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" loading="lazy" />
+              <span>FastAPI</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" loading="lazy" />
+              <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/express/ffffff" alt="Express" loading="lazy" />
+              <span>Express</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" loading="lazy" />
+              <span>PHP</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" loading="lazy" />
+              <span>Laravel</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" loading="lazy" />
+              <span>C++</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://raw.githubusercontent.com/github/explore/main/topics/csharp/csharp.png" alt="C#" loading="lazy" />
+              <span>C#</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="Java" loading="lazy" />
+              <span>Java</span>
+            </div>
           </div>
         </div>
 
-        <!-- Backend, Data & Cloud -->
-        <div class="skill-category-card">
-          <div class="skill-cat-header">
-            <i class="fas fa-server"></i>
-            <h3>Backend, Databases & Cloud</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="" /> Node.js</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" /> FastAPI</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/express/ffffff" alt="" /> Express</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" /> MySQL / MariaDB</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" /> PostgreSQL</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" /> Docker</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/git/F05032" alt="" /> Git / Version Control</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" /> GitHub Actions CI/CD</span>
-            <span class="skill-badge"><img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="" /> Playwright Automation</span>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="160">
+          <h3 class="skill-cat-title">Database & Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" loading="lazy" />
+              <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" loading="lazy" />
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" loading="lazy" />
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" loading="lazy" />
+              <span>Docker</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" loading="lazy" />
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" loading="lazy" />
+              <span>GitHub</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="Playwright" loading="lazy" />
+              <span>Playwright</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" loading="lazy" />
+              <span>Postman</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.simpleicons.org/arduino/00979D" alt="Arduino" loading="lazy" />
+              <span>Arduino</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== VIDEO & MEDIA SECTION ===== -->
-  <section id="media" class="section">
+  <!-- ===== VIDEO SECTION ===== -->
+  <section id="video" class="section section-alt">
     <div class="section-inner">
       <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">ENGINEERING DISPATCHES</div>
-        <h2 class="section-title">Video Content &amp; Media</h2>
-        <p class="section-subtitle">Tech and developer content by <strong>alCaps</strong>.</p>
+        <span class="section-label">// 04</span>
+        <h2 class="section-title">Latest Video</h2>
+        <p class="section-subtitle">Creating content as <em>"alCaps"</em> on YouTube</p>
       </div>
 
-      <div class="video-container" data-aos="fade-up">
+      <div class="video-wrapper" data-aos="fade-up" data-aos-delay="100">
         <div class="video-frame">
           <iframe
             src="https://www.youtube.com/embed/bUT_viyO42c?si=zzj-3Fn6_l_c7RgM"
-            title="Latest Video by alCaps"
+            title="Latest YouTube video by alCaps"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
           ></iframe>
         </div>
-        <div class="video-side">
-          <h3>Channel: alCaps</h3>
-          <p>Sharing software workflows, developer insights, and technology setups. Building in public for an international audience of engineering students and creators.</p>
-          <div class="video-side-actions">
-            <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <i class="fab fa-youtube"></i> Visit YouTube Channel
-            </a>
-          </div>
+        <div class="video-cta" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span>Subscribe on YouTube</span>
+          </a>
         </div>
       </div>
     </div>
@@ -882,44 +887,46 @@
   <section id="apple-music" class="section">
     <div class="section-inner">
       <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">SOUNDTRACK &middot; FOCUS</div>
-        <h2 class="section-title">Music &amp; Acoustic Energy</h2>
-        <p class="section-subtitle">Curated playlist soundtrack for deep systems architecture and engineering flow state.</p>
+        <span class="section-label">// 05</span>
+        <h2 class="section-title">
+          <span class="music-icon" aria-hidden="true">🎧</span> Music
+        </h2>
+        <p class="section-subtitle">What do you want to listen to today?</p>
       </div>
 
-      <div class="music-editorial-container" data-aos="fade-up">
-        <div class="music-input-bar">
-          <div class="music-input-wrapper">
-            <i class="fas fa-compact-disc music-input-icon" aria-hidden="true"></i>
+      <div class="music-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="music-search">
+          <div class="search-input-group">
+            <i class="fas fa-music search-icon" aria-hidden="true"></i>
             <input
               type="url"
               id="appleMusicInput"
-              placeholder="Paste Apple Music album, playlist, or track link..."
+              placeholder="Paste Apple Music track / playlist URL here..."
               class="music-input"
-              aria-label="Apple Music URL"
+              aria-label="Apple Music URL input"
               autocomplete="off"
               spellcheck="false"
             />
-            <button onclick="updateAppleMusicEmbed()" class="music-action-btn" aria-label="Load Apple Music URL">
+            <button onclick="updateAppleMusicEmbed()" class="music-btn" aria-label="Load Apple Music track">
               <i class="fas fa-play" aria-hidden="true"></i>
-              <span>Play Track</span>
+              <span>Load</span>
             </button>
           </div>
-          <p class="music-hint">Supports direct tracks, albums, or public playlist URLs from Apple Music.</p>
+          <p class="music-hint">Paste any Apple Music link – track, album, or playlist</p>
         </div>
 
-        <div class="music-frame-container">
+        <div class="music-player-wrapper">
           <iframe
             id="appleMusicEmbed"
             src="https://embed.music.apple.com/id/playlist/juicy-luicy-adrian-khalif/pl.u-AkAmPlyUlxBd7qJ"
             width="100%"
             height="450"
             frameborder="0"
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
-            title="Apple Music Embedded Player"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-            style="display: block; width: 100%; border: none;"
+            title="Apple Music Player"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            style="display: block; border: none; border-radius: 12px;"
           ></iframe>
         </div>
       </div>
@@ -930,97 +937,57 @@
   <section id="contact" class="section section-alt">
     <div class="section-inner">
       <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">INQUIRIES &middot; COLLABORATION</div>
-        <h2 class="section-title">Direct Connection &amp; Opportunities</h2>
-        <p class="section-subtitle">Open for software engineering opportunities, systems contracts, and technical collaborations.</p>
+        <span class="section-label">// 06</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to new opportunities and collaborations</p>
       </div>
 
-      <div class="contact-box" data-aos="fade-up">
-        <div class="contact-cta">
-          <h3>Let's build reliable, performant software together.</h3>
-          <p>Response time is typically within 24 hours. Available for remote engineering across all time zones.</p>
+      <div class="contact-inner" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:iamathaalla@gmail.com" class="contact-email-link" aria-label="Send email to Muhammad Athalla">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>iamathaalla@gmail.com</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
 
-          <div class="email-clipboard-card">
-            <div class="email-details">
-              <i class="fas fa-envelope-open-text"></i>
-              <div>
-                <span class="email-label">Official Work Email</span>
-                <span class="email-address" id="emailText">iamathaalla@gmail.com</span>
-              </div>
-            </div>
-            <div class="email-btns">
-              <button class="btn-copy" id="btnCopyEmail" aria-label="Copy email address to clipboard">
-                <i class="fas fa-copy"></i> <span>Copy</span>
-              </button>
-              <a href="mailto:iamathaalla@gmail.com" class="btn-email-direct">
-                <i class="fas fa-paper-plane"></i> <span>Send Email</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-social-grid">
-          <a href="https://github.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="social-card">
-            <i class="fab fa-github"></i>
-            <div>
-              <strong>GitHub</strong>
-              <span>@muhmdathalla</span>
-            </div>
-            <i class="fas fa-arrow-up-right-from-square arrow-link"></i>
+        <div class="socials" role="list" aria-label="Social media links">
+          <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube channel" role="listitem">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
           </a>
-
-          <a href="https://www.linkedin.com/in/muhmdathallaa" target="_blank" rel="noopener noreferrer" class="social-card">
-            <i class="fab fa-linkedin"></i>
-            <div>
-              <strong>LinkedIn</strong>
-              <span>Muhammad Athalla</span>
-            </div>
-            <i class="fas fa-arrow-up-right-from-square arrow-link"></i>
+          <a href="https://www.instagram.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram profile" role="listitem">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
           </a>
-
-          <a href="https://www.youtube.com/keitnep" target="_blank" rel="noopener noreferrer" class="social-card">
-            <i class="fab fa-youtube"></i>
-            <div>
-              <strong>YouTube</strong>
-              <span>@keitnep (alCaps)</span>
-            </div>
-            <i class="fas fa-arrow-up-right-from-square arrow-link"></i>
+          <a href="https://www.linkedin.com/in/muhmdathallaa" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profile" role="listitem">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
           </a>
-
-          <a href="https://www.instagram.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="social-card">
-            <i class="fab fa-instagram"></i>
-            <div>
-              <strong>Instagram</strong>
-              <span>@muhmdathalla</span>
-            </div>
-            <i class="fas fa-arrow-up-right-from-square arrow-link"></i>
+          <a href="https://open.spotify.com/user/4a6jucio36o3j2fuda4jtkgkl" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Spotify profile" role="listitem">
+            <i class="fab fa-spotify" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:iamathaalla@gmail.com" class="social-icon" aria-label="Email" role="listitem">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modern Clean Engineering Footer -->
+  <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
-      <div class="footer-left">
-        <span class="footer-brand">Muhammad Athalla Bagaskara</span>
-        <span class="footer-sub">Software Systems &middot; Full-Stack Architecture &middot; Yogyakarta, Indonesia</span>
-      </div>
-      <div class="footer-right">
-        <span>&copy; <span id="footerYear"></span> All rights reserved</span>
-      </div>
+      <span>Designed & Built by <strong>Muhammad Athalla Bagaskara</strong></span>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <span>© <span id="footerYear"></span></span>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <span>Yogyakarta, Indonesia</span>
     </div>
   </footer>
 
-  <!-- Precision Back to Top Button -->
-  <button id="back-to-top" class="back-to-top" aria-label="Return to top of page">
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEeFTHJFtbOROIfPAVp7Ueg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js?v=3.5"></script>
+  <script src="script.js"></script>
 </body>
 </html>
