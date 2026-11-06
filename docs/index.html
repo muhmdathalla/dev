@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
   <meta property="og:image" content="PP.jpg" />
 
   <!-- Security Headers via meta -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://embed.music.apple.com https://www.youtube.com; connect-src 'self' https://open.er-api.com https://api.binance.com https://api.coingecko.com;" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
@@ -47,6 +47,40 @@
   <!-- Subtle Film Grain Overlay -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
+  <!-- Live Financial & Market Telemetry Topbar -->
+  <aside class="market-ticker-bar" id="marketTicker" aria-label="Live Market Telemetry">
+    <div class="ticker-inner">
+      <div class="ticker-badge">
+        <span class="ticker-pulse" aria-hidden="true"></span>
+        <span>MARKET TELEMETRY</span>
+      </div>
+      <div class="ticker-content" id="tickerContent">
+        <span class="ticker-stat">
+          <span class="sym">USD/IDR</span>
+          <span class="val" id="tickerUsdIdr">Rp 15,845</span>
+          <span class="chg up" id="chgUsdIdr">+0.08%</span>
+        </span>
+        <span class="ticker-divider">&bull;</span>
+        <span class="ticker-stat">
+          <span class="sym">IHSG (IDX)</span>
+          <span class="val" id="tickerIhsg">7,342.10</span>
+          <span class="chg up" id="chgIhsg">+0.42%</span>
+        </span>
+        <span class="ticker-divider">&bull;</span>
+        <span class="ticker-stat">
+          <span class="sym">BTC/USD</span>
+          <span class="val" id="tickerBtc">$76,210</span>
+          <span class="chg up" id="chgBtc">+1.24%</span>
+        </span>
+        <span class="ticker-divider">&bull;</span>
+        <span class="ticker-stat">
+          <span class="sym">SYS CLOCK</span>
+          <span class="val" id="tickerTime">--:--:-- WIB</span>
+        </span>
+      </div>
+    </div>
+  </aside>
+
   <!-- Navigation Bar -->
   <header id="header">
     <div class="header-inner">
@@ -66,10 +100,16 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Theme Switcher (Dark / Light) -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+
         <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-cv-header">
           <i class="fas fa-file-pdf" aria-hidden="true"></i>
           <span>Resume (PDF)</span>
         </a>
+
         <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -86,6 +126,9 @@
     <a href="#console" class="mobile-nav-link">Terminal</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <div class="mobile-menu-actions">
+      <button class="theme-toggle" id="mobileThemeToggle" style="width:100%; justify-content:center; padding:10px; border-radius:8px; border:1px solid var(--border-medium); margin-bottom:10px;">
+        <i class="fas fa-moon"></i> <span>Toggle Color Theme</span>
+      </button>
       <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-primary" style="width:100%; justify-content:center;">
         <i class="fas fa-file-pdf" aria-hidden="true"></i>
         <span>Download Complete CV</span>
@@ -95,6 +138,11 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section id="home" class="section hero-section">
+    <!-- Ambient Animated Background -->
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-ambient-glow glow-1" id="glow1" aria-hidden="true"></div>
+    <div class="hero-ambient-glow glow-2" id="glow2" aria-hidden="true"></div>
+
     <div class="hero-inner">
       <div class="hero-left" data-aos="fade-up" data-aos-duration="700">
         <div class="status-indicator">

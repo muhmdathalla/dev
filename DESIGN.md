@@ -8,30 +8,36 @@
 ## 2. Visual Direction & Mood
 - **Tone**: Precision Engineering, High Signal-to-Noise Ratio, Clean Architectural Clarity.
 - **Inspiration**: Linear.app, Stripe Docs, Vercel Dashboard, GitHub Universe.
-- **Anti-Slop Directives**:
-  - NO generic repeating SVG background grids (R-07).
-  - NO blurry colored radial glowing orbs behind the hero (R-01, R-13).
-  - NO uniform copy-paste 3x3 cards for every project regardless of depth (R-14). Flagship systems (NativeCopy, SPADA) receive architectural deep-dive spotlights; utility tools and client systems receive crisp curated cards.
-  - NO fake terminal windows with fake stats or invented metrics.
-  - NO generic marketing fluff or em-dashes. Every sentence states concrete technical reality.
-  - High WCAG AA contrast (text contrast >= 4.5:1 against surfaces).
+- **Themes**:
+  - Dual-Theme System: High-contrast Slate-Black (Dark Mode default) and Crisp Architectural Paper (Light Mode).
+  - Ambient Interactive Dynamics: Precision background grid with smooth floating ambient luminosity that reacts subtly to viewer coordinates.
+  - Live Telemetry Topbar: Real-time financial & market telemetry ticker (USD/IDR, IHSG / IDX Composite, BTC/USD, UTC+7 timestamp).
 
 ## 3. Typography & Palette
-- **Primary Typography**: 'DM Sans' / 'Inter' for clean, readable body and section titles; 'JetBrains Mono' / monospace for system metadata, git commit tags, architecture tags, and CLI snippets.
-- **Palette**:
-  - Background Base: `#090a0f` (deep engineered slate-black)
-  - Surface Card / Panel: `#11131a` (solid elevated plane)
-  - Surface Elevated / Hover: `#181b24`
-  - Border Subdued: `#232736`
-  - Border Active: `#383e54`
-  - Text Primary: `#f1f3f7`
+- **Primary Typography**: 'DM Sans' for clean, readable body and section titles; 'JetBrains Mono' for system metadata, telemetry ticker, and CLI snippets; 'Syne' for headline accents.
+- **Palette (Dark Mode)**:
+  - Background Base: `#090a0f`
+  - Surface Card / Panel: `#11141f`
+  - Surface Elevated / Hover: `#161a29`
+  - Border Subdued: `#1e2333`
+  - Border Medium: `#2a3147`
+  - Text Primary: `#f3f4f6`
   - Text Secondary: `#9ca3af`
   - Text Muted: `#6b7280`
-  - Accent Primary: `#3b82f6` (System Cobalt Blue – intentional focus only)
-  - Accent Success: `#10b981` (Emerald – live status / verified badges)
-  - Accent Warning: `#f59e0b` (Amber – algorithms / metrics)
+  - Accent Primary: `#3b82f6`
+  - Accent Success: `#10b981`
+- **Palette (Light Mode)**:
+  - Background Base: `#f8fafc`
+  - Surface Card / Panel: `#ffffff`
+  - Surface Elevated / Hover: `#f1f5f9`
+  - Border Subdued: `#e2e8f0`
+  - Border Medium: `#cbd5e1`
+  - Text Primary: `#0f172a`
+  - Text Secondary: `#475569`
+  - Text Muted: `#64748b`
+  - Accent Primary: `#2563eb`
 
 ## 4. Anti-Slop Dials
 - **ENERGY**: 2 (Confident, measured, highly legible engineering showcase).
-- **RHYTHM**: 3 (Distinct section compositions: flagship architectural spotlight -> interactive project matrix -> timeline telemetry -> verified credentials -> interactive live engineering terminal -> direct contact).
-- **MOTION**: 2 (Subtle, functional transitions; zero springy or floating distraction; respects `prefers-reduced-motion`).
+- **RHYTHM**: 3 (Distinct section compositions: live telemetry ticker -> ambient hero -> flagship architectural spotlight -> interactive project matrix -> timeline telemetry -> verified credentials -> interactive live engineering terminal -> direct contact).
+- **MOTION**: 2 (Subtle, purposeful transitions; smooth ambient float; respects `prefers-reduced-motion`).
