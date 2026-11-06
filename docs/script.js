@@ -135,6 +135,121 @@ function initMarketTicker() {
 }
 
 /* ==========================================
+   AMBIENT RUNNING PARTICLES CANVAS
+   ========================================== */
+
+function initHeroCanvas() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  // Respect reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  let width = (canvas.width = canvas.parentElement.offsetWidth);
+  let height = (canvas.height = canvas.parentElement.offsetHeight);
+
+  window.addEventListener('resize', () => {
+    if (!canvas.parentElement) return;
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight;
+  }, { passive: true });
+
+  const particleCount = Math.min(38, Math.floor((width * height) / 18000));
+  const particles = [];
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.45,
+      vy: (Math.random() - 0.5) * 0.45,
+      radius: Math.random() * 1.6 + 0.8,
+      alpha: Math.random() * 0.45 + 0.2
+    });
+  }
+
+  let mouseX = -9999;
+  let mouseY = -9999;
+  const hero = document.getElementById('home');
+  if (hero) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    }, { passive: true });
+    hero.addEventListener('mouseleave', () => {
+      mouseX = -9999;
+      mouseY = -9999;
+    }, { passive: true });
+  }
+
+  let animId;
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const baseColor = isDark ? '59, 130, 246' : '37, 99, 235';
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      // Draw particle dot
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${baseColor}, ${p.alpha * 0.7})`;
+      ctx.fill();
+
+      // Subtle constellation line connecting nearby nodes
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 110) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          const lineAlpha = (1 - dist / 110) * 0.14;
+          ctx.strokeStyle = `rgba(${baseColor}, ${lineAlpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+
+      // Proximity connection to mouse cursor
+      if (mouseX > 0 && mouseY > 0) {
+        const dmx = p.x - mouseX;
+        const dmy = p.y - mouseY;
+        const mDist = Math.hypot(dmx, dmy);
+        if (mDist < 140) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(mouseX, mouseY);
+          const mAlpha = (1 - mDist / 140) * 0.22;
+          ctx.strokeStyle = `rgba(${baseColor}, ${mAlpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    animId = requestAnimationFrame(render);
+  }
+
+  render();
+}
+
+/* ==========================================
    AMBIENT HERO MOUSE PARALLAX
    ========================================== */
 
@@ -587,6 +702,7 @@ function initAOS() {
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMarketTicker();
+  initHeroCanvas();
   initHeroAmbientParallax();
   initCursor();
   initHeaderAndNav();
