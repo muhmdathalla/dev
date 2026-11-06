@@ -949,6 +949,41 @@ function initAppleMusic() {
 }
 
 /* ==========================================
+   PROFILE VIEW TOGGLE (PHOTO / 3D MESH)
+   ========================================== */
+
+function initProfileToggle() {
+  const btnPhoto = document.getElementById('btnViewPhoto');
+  const btn3D = document.getElementById('btnView3D');
+  const photo = document.getElementById('profilePhotoImg');
+  const sculpture = document.getElementById('sculptureContainer');
+
+  if (!btnPhoto || !btn3D || !photo || !sculpture) return;
+
+  btnPhoto.addEventListener('click', () => {
+    btnPhoto.classList.add('active');
+    btnPhoto.setAttribute('aria-selected', 'true');
+    btn3D.classList.remove('active');
+    btn3D.setAttribute('aria-selected', 'false');
+
+    photo.style.display = 'block';
+    sculpture.style.display = 'none';
+  });
+
+  btn3D.addEventListener('click', () => {
+    btn3D.classList.add('active');
+    btn3D.setAttribute('aria-selected', 'true');
+    btnPhoto.classList.remove('active');
+    btnPhoto.setAttribute('aria-selected', 'false');
+
+    photo.style.display = 'none';
+    sculpture.style.display = 'block';
+
+    window.dispatchEvent(new Event('resize'));
+  });
+}
+
+/* ==========================================
    AOS ANIMATIONS
    ========================================== */
 
@@ -986,6 +1021,7 @@ document.addEventListener('DOMContentLoaded', () => {
   safeInit(initMobileMenu, 'MobileMenu');
   safeInit(initClipboard, 'Clipboard');
   safeInit(initBackToTop, 'BackToTop');
+  safeInit(initProfileToggle, 'ProfileToggle');
   safeInit(initAppleMusic, 'AppleMusic');
   safeInit(initAOS, 'AOS');
 });

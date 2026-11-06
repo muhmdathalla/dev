@@ -194,13 +194,48 @@
           </div>
         </div>
 
-        <!-- Organic Floating 3D Sculpture & Architectural Specs -->
+        <!-- Architectural Profile Card with Photo & Interactive 3D Mesh Toggle -->
         <div class="editorial-visual-block">
-          <div class="sculpture-organic-wrap" id="sculptureContainer">
-            <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
-            <div class="sculpture-caption">
-              <span class="caption-index">[3D MESH]</span>
-              <span>INTERACTIVE WEBLOGIC MESH &middot; DRAG TO ROTATE</span>
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="terminal-tag">athalla@upnvy:~/systems</span>
+              <div class="profile-view-toggle" role="tablist" aria-label="Profile View Switcher">
+                <button type="button" class="view-toggle-btn active" id="btnViewPhoto" role="tab" aria-selected="true" aria-controls="profilePhotoImg">Portrait</button>
+                <button type="button" class="view-toggle-btn" id="btnView3D" role="tab" aria-selected="false" aria-controls="sculptureContainer">3D Mesh</button>
+              </div>
+            </div>
+            <div class="profile-card-body">
+              <div class="profile-media-viewport">
+                <img src="PP.jpg" alt="Muhammad Athalla Bagaskara – Profile" class="profile-photo" id="profilePhotoImg" />
+                <div class="sculpture-organic-wrap" id="sculptureContainer" style="display: none;">
+                  <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
+                  <div class="sculpture-caption">
+                    <span class="caption-index">[3D MESH]</span>
+                    <span>DRAG TO ROTATE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-meta">
+                <div class="meta-row">
+                  <span class="meta-key">Degree:</span>
+                  <span class="meta-val">B.Tech in Computer Science</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Institution:</span>
+                  <span class="meta-val">UPN "Veteran" Yogyakarta</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Honors:</span>
+                  <span class="meta-val">GEMASTIK XVIII Finalist</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">Focus:</span>
+                  <span class="meta-val">Distributed Systems &amp; Web</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
