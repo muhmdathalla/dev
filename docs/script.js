@@ -112,12 +112,12 @@ function initMarketTicker() {
     }
   }
 
-  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Simulation
-  let ihsgBase = 7345.80;
+  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Tracking
+  let ihsgBase = 7142.50;
   function updateIhsg() {
-    const delta = (Math.random() - 0.48) * 1.8;
-    ihsgBase = Math.max(7280, Math.min(7420, ihsgBase + delta));
-    const chgPct = (((ihsgBase - 7312.40) / 7312.40) * 100).toFixed(2);
+    const delta = (Math.random() - 0.48) * 1.5;
+    ihsgBase = Math.max(7080, Math.min(7190, ihsgBase + delta));
+    const chgPct = (((ihsgBase - 7126.80) / 7126.80) * 100).toFixed(2);
     const isUp = parseFloat(chgPct) >= 0;
 
     if (ihsgEl) ihsgEl.textContent = ihsgBase.toFixed(2);
@@ -682,6 +682,196 @@ function initBackToTop() {
 }
 
 /* ==========================================
+   INTERACTIVE 3D WIREFRAME SCULPTURE (THREE.JS)
+   ========================================== */
+
+function initSculpture3D() {
+  const container = document.getElementById('sculptureContainer');
+  const canvas = document.getElementById('sculptureCanvas');
+  if (!container || !canvas || typeof THREE === 'undefined') return;
+
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  // Scene & Camera
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+  camera.position.z = 4.2;
+
+  // Renderer with antialias and alpha transparency
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    alpha: true,
+    antialias: true,
+    powerPreference: 'high-performance'
+  });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Geometry: Complex architectural Icosahedron wireframe with inner lattice
+  const group = new THREE.Group();
+
+  const outerGeo = new THREE.IcosahedronGeometry(1.4, 1);
+  const outerWire = new THREE.WireframeGeometry(outerGeo);
+  const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+  
+  const lineMaterial = new THREE.LineBasicMaterial({
+    color: isDark ? 0xffffff : 0x111111,
+    transparent: true,
+    opacity: 0.35,
+    linewidth: 1
+  });
+  const outerMesh = new THREE.LineSegments(outerWire, lineMaterial);
+  group.add(outerMesh);
+
+  // Inner geometric core
+  const innerGeo = new THREE.OctahedronGeometry(0.75, 0);
+  const innerWire = new THREE.WireframeGeometry(innerGeo);
+  const innerMat = new THREE.LineBasicMaterial({
+    color: isDark ? 0xffffff : 0x222222,
+    transparent: true,
+    opacity: 0.65
+  });
+  const innerMesh = new THREE.LineSegments(innerWire, innerMat);
+  group.add(innerMesh);
+
+  // Floating vertices particles
+  const pointsGeo = new THREE.BufferGeometry();
+  const pointsCount = outerGeo.attributes.position.count;
+  pointsGeo.setAttribute('position', outerGeo.attributes.position);
+  const pointsMat = new THREE.PointsMaterial({
+    color: isDark ? 0xffffff : 0x000000,
+    size: 0.045,
+    transparent: true,
+    opacity: 0.8
+  });
+  const points = new THREE.Points(pointsGeo, pointsMat);
+  group.add(points);
+
+  scene.add(group);
+
+  // Interaction tracking (drag & mouse move)
+  let isDragging = false;
+  let prevMouseX = 0;
+  let prevMouseY = 0;
+  let targetRotX = 0;
+  let targetRotY = 0;
+
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    prevMouseX = e.clientX;
+    prevMouseY = e.clientY;
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const deltaX = e.clientX - prevMouseX;
+      const deltaY = e.clientY - prevMouseY;
+      targetRotY += deltaX * 0.01;
+      targetRotX += deltaY * 0.01;
+      prevMouseX = e.clientX;
+      prevMouseY = e.clientY;
+    } else {
+      const rect = container.getBoundingClientRect();
+      const xPct = (e.clientX - rect.left) / rect.width - 0.5;
+      const yPct = (e.clientY - rect.top) / rect.height - 0.5;
+      targetRotY = xPct * 1.2;
+      targetRotX = yPct * 1.2;
+    }
+  });
+
+  // Touch support for mobile
+  container.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      prevMouseX = e.touches[0].clientX;
+      prevMouseY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  container.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 1) {
+      const deltaX = e.touches[0].clientX - prevMouseX;
+      const deltaY = e.touches[0].clientY - prevMouseY;
+      targetRotY += deltaX * 0.01;
+      targetRotX += deltaY * 0.01;
+      prevMouseX = e.touches[0].clientX;
+      prevMouseY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  // Update theme colors when theme toggle is clicked
+  const observer = new MutationObserver(() => {
+    const darkNow = document.documentElement.getAttribute('data-theme') !== 'light';
+    lineMaterial.color.setHex(darkNow ? 0xffffff : 0x111111);
+    innerMat.color.setHex(darkNow ? 0xffffff : 0x222222);
+    pointsMat.color.setHex(darkNow ? 0xffffff : 0x000000);
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    if (!container.parentElement) return;
+    const w = container.clientWidth;
+    const h = container.clientHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  }, { passive: true });
+
+  // Animation Loop
+  function animate() {
+    requestAnimationFrame(animate);
+
+    // Continuous baseline spin + dampened target rotation
+    group.rotation.y += 0.005;
+    group.rotation.x += (targetRotX - group.rotation.x) * 0.06;
+    group.rotation.y += (targetRotY - group.rotation.y) * 0.06;
+
+    innerMesh.rotation.y -= 0.008;
+    innerMesh.rotation.x -= 0.004;
+
+    renderer.render(scene, camera);
+  }
+  animate();
+}
+
+/* ==========================================
+   SCROLL-DRIVEN STICKY STACK CARDS (COSMOS STUDIO STYLE)
+   ========================================== */
+
+function initStickyStackCards() {
+  const cards = document.querySelectorAll('.sticky-stack-card');
+  if (!cards || cards.length === 0) return;
+
+  function updateStack() {
+    const vh = window.innerHeight;
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const topOffset = rect.top;
+
+      // If next cards scroll over this card, subtly scale down and drop opacity
+      if (topOffset <= 120) {
+        const scrolledPast = Math.max(0, 120 - topOffset);
+        const scaleVal = Math.max(0.92, 1 - (scrolledPast / (vh * 1.5)) * 0.1);
+        const opacityVal = Math.max(0.65, 1 - (scrolledPast / (vh * 1.2)) * 0.35);
+        card.style.transform = `scale(${scaleVal})`;
+        card.style.opacity = `${opacityVal}`;
+      } else {
+        card.style.transform = 'scale(1)';
+        card.style.opacity = '1';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateStack, { passive: true });
+  updateStack();
+}
+
+/* ==========================================
    AOS ANIMATIONS
    ========================================== */
 
@@ -704,6 +894,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMarketTicker();
   initHeroCanvas();
+  initSculpture3D();
+  initStickyStackCards();
   initHeroAmbientParallax();
   initCursor();
   initHeaderAndNav();

@@ -63,8 +63,8 @@
         <span class="ticker-divider">&bull;</span>
         <span class="ticker-stat">
           <span class="sym">IHSG (IDX)</span>
-          <span class="val" id="tickerIhsg">7,342.10</span>
-          <span class="chg up" id="chgIhsg">+0.42%</span>
+          <span class="val" id="tickerIhsg">7,142.10</span>
+          <span class="chg up" id="chgIhsg">+0.22%</span>
         </span>
         <span class="ticker-divider">&bull;</span>
         <span class="ticker-stat">
@@ -199,6 +199,15 @@
       </div>
 
       <div class="hero-right" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+        <!-- Interactive 3D Wireframe Sculpture Canvas (Cosmos Studio inspired) -->
+        <div class="sculpture-container" id="sculptureContainer" aria-label="Interactive 3D Geometric Artifact">
+          <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
+          <div class="sculpture-badge">
+            <span class="sculpture-dot"></span>
+            <span>THREE.JS ARCHITECTURAL MESH &middot; INTERACTIVE</span>
+          </div>
+        </div>
+
         <div class="profile-card">
           <div class="profile-card-header">
             <div class="terminal-dots" aria-hidden="true">
@@ -245,11 +254,13 @@
         <p class="section-subtitle">Real software built with performance, security, and architectural rigor.</p>
       </div>
 
-      <!-- Flagship Spotlight 1: NativeCopy -->
-      <div class="flagship-card" data-aos="fade-up">
-        <div class="flagship-badge">
-          <i class="fas fa-microchip"></i> Flagship Developer Tooling
-        </div>
+      <!-- Flagship Showcase Cards in Sticky Stack Architecture -->
+      <div class="projects-stack-container">
+        <!-- Flagship Spotlight 1: NativeCopy -->
+        <div class="flagship-card sticky-stack-card" data-card-idx="0" data-aos="fade-up">
+          <div class="flagship-badge">
+            <i class="fas fa-microchip"></i> Flagship Developer Tooling &middot; Stack 01
+          </div>
         <div class="flagship-grid">
           <div class="flagship-info">
             <div class="flagship-header">
@@ -325,11 +336,11 @@
         </div>
       </div>
 
-      <!-- Flagship Spotlight 2: SPADA Auto-Presence Bot -->
-      <div class="flagship-card" data-aos="fade-up" style="margin-top: 24px;">
-        <div class="flagship-badge">
-          <i class="fas fa-robot"></i> Cloud Automation & Resilient Bot Architecture
-        </div>
+        <!-- Flagship Spotlight 2: SPADA Auto-Presence Bot -->
+        <div class="flagship-card sticky-stack-card" data-card-idx="1" data-aos="fade-up" style="margin-top: 36px;">
+          <div class="flagship-badge">
+            <i class="fas fa-robot"></i> Cloud Automation & Resilient Bot Architecture &middot; Stack 02
+          </div>
         <div class="flagship-grid">
           <div class="flagship-info">
             <div class="flagship-header">
@@ -398,6 +409,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <!-- Filter Controls for Secondary Matrix -->
@@ -1085,6 +1097,7 @@
   </button>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEeFTHJFtbOROIfPAVp7Ueg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
 </body>
