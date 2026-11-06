@@ -112,12 +112,13 @@ function initMarketTicker() {
     }
   }
 
-  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Tracking (Closing 6 Nov: 7,383.86, -1.44%)
-  let ihsgBase = 7383.86;
+  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Tracking (6 Nov: 4,931.39, -1.97%, Prev Close: 5,030.26)
+  let ihsgBase = 4931.39;
+  const ihsgPrevClose = 5030.26;
   function updateIhsg() {
-    const delta = (Math.random() - 0.52) * 1.8;
-    ihsgBase = Math.max(7340, Math.min(7430, ihsgBase + delta));
-    const chgPct = (((ihsgBase - 7491.92) / 7491.92) * 100).toFixed(2);
+    const delta = (Math.random() - 0.52) * 0.6;
+    ihsgBase = Math.max(4925.10, Math.min(4960.00, ihsgBase + delta));
+    const chgPct = (((ihsgBase - ihsgPrevClose) / ihsgPrevClose) * 100).toFixed(2);
     const isUp = parseFloat(chgPct) >= 0;
 
     if (ihsgEl) ihsgEl.textContent = ihsgBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
