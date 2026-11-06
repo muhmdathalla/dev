@@ -112,15 +112,15 @@ function initMarketTicker() {
     }
   }
 
-  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Tracking
-  let ihsgBase = 7142.50;
+  // 4. IHSG (IDX Composite Index) Real-Time Telemetry Tracking (Closing 6 Nov: 7,383.86, -1.44%)
+  let ihsgBase = 7383.86;
   function updateIhsg() {
-    const delta = (Math.random() - 0.48) * 1.5;
-    ihsgBase = Math.max(7080, Math.min(7190, ihsgBase + delta));
-    const chgPct = (((ihsgBase - 7126.80) / 7126.80) * 100).toFixed(2);
+    const delta = (Math.random() - 0.52) * 1.8;
+    ihsgBase = Math.max(7340, Math.min(7430, ihsgBase + delta));
+    const chgPct = (((ihsgBase - 7491.92) / 7491.92) * 100).toFixed(2);
     const isUp = parseFloat(chgPct) >= 0;
 
-    if (ihsgEl) ihsgEl.textContent = ihsgBase.toFixed(2);
+    if (ihsgEl) ihsgEl.textContent = ihsgBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     if (chgIhsgEl) {
       chgIhsgEl.textContent = `${isUp ? '+' : ''}${chgPct}%`;
       chgIhsgEl.className = `chg ${isUp ? 'up' : 'down'}`;
@@ -872,6 +872,82 @@ function initStickyStackCards() {
 }
 
 /* ==========================================
+   APPLE MUSIC EMBED (SECURE & MONOCHROMATIC)
+   ========================================== */
+
+function sanitizeAppleMusicUrl(input) {
+  if (!input || typeof input !== 'string') return null;
+  const trimmed = input.trim();
+  try {
+    const url = new URL(trimmed);
+    if (url.protocol !== 'https:') return null;
+    if (!['music.apple.com', 'embed.music.apple.com'].includes(url.hostname)) {
+      return null;
+    }
+    const embedUrl = trimmed
+      .replace('https://music.apple.com/', 'https://embed.music.apple.com/')
+      .replace('https://embed.music.apple.com/embed/', 'https://embed.music.apple.com/');
+    const embedParsed = new URL(embedUrl);
+    if (/[<>"'`\\]/.test(embedParsed.pathname)) return null;
+    return embedParsed.href;
+  } catch {
+    return null;
+  }
+}
+
+function updateAppleMusicEmbed() {
+  const input = document.getElementById('appleMusicInput');
+  const embed = document.getElementById('appleMusicEmbed');
+  if (!input || !embed) return;
+
+  const rawValue = input.value.trim();
+  if (!rawValue) {
+    showMusicError('Please paste an Apple Music track or playlist link.');
+    return;
+  }
+
+  const safeUrl = sanitizeAppleMusicUrl(rawValue);
+  if (!safeUrl) {
+    showMusicError('Invalid link. Please paste a valid music.apple.com URL.');
+    input.focus();
+    return;
+  }
+
+  embed.src = safeUrl;
+  clearMusicError();
+}
+
+function showMusicError(msg) {
+  let errEl = document.getElementById('musicError');
+  if (!errEl) {
+    errEl = document.createElement('p');
+    errEl.id = 'musicError';
+    errEl.setAttribute('role', 'alert');
+    errEl.style.cssText = 'color: var(--text-secondary); font-size: 0.78rem; font-family: var(--font-mono); margin-top: 8px;';
+    const hint = document.querySelector('.music-hint');
+    if (hint) hint.after(errEl);
+  }
+  errEl.textContent = msg;
+}
+
+function clearMusicError() {
+  const errEl = document.getElementById('musicError');
+  if (errEl) errEl.remove();
+}
+
+function initAppleMusic() {
+  const musicInput = document.getElementById('appleMusicInput');
+  if (musicInput) {
+    musicInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        updateAppleMusicEmbed();
+      }
+    });
+  }
+}
+
+/* ==========================================
    AOS ANIMATIONS
    ========================================== */
 
@@ -900,5 +976,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initClipboard();
   initBackToTop();
+  initAppleMusic();
   initAOS();
 });
