@@ -36,7 +36,8 @@
   <!-- AOS Animation -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Main Style Sheet with Cache Buster -->
+  <link rel="stylesheet" href="style.css?v=3.2" />
 </head>
 <body>
 
@@ -141,7 +142,7 @@
   <!-- ===== HERO SECTION (COSMOS STUDIO EDITORIAL TYPOGRAPHY & INTEGRATED 3D) ===== -->
   <section id="home" class="section hero-editorial-section">
     <!-- Ambient Animated Background with Running Particles Canvas -->
-    <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1;"></canvas>
 
     <div class="hero-editorial-inner">
       <!-- Top Architectural Status Line -->
@@ -1023,6 +1024,6 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEeFTHJFtbOROIfPAVp7Ueg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=3.2"></script>
 </body>
 </html>
