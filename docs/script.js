@@ -191,7 +191,8 @@ function initHeroCanvas() {
   function render() {
     ctx.clearRect(0, 0, width, height);
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const baseColor = isDark ? '59, 130, 246' : '37, 99, 235';
+    // Strict monochromatic particle aesthetic (B&W subtle nodes)
+    const baseColor = isDark ? '255, 255, 255' : '15, 15, 15';
 
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
@@ -206,7 +207,7 @@ function initHeroCanvas() {
       // Draw particle dot
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${baseColor}, ${p.alpha * 0.7})`;
+      ctx.fillStyle = `rgba(${baseColor}, ${p.alpha * 0.45})`;
       ctx.fill();
 
       // Subtle constellation line connecting nearby nodes
@@ -219,9 +220,9 @@ function initHeroCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          const lineAlpha = (1 - dist / 110) * 0.14;
+          const lineAlpha = (1 - dist / 110) * 0.08;
           ctx.strokeStyle = `rgba(${baseColor}, ${lineAlpha})`;
-          ctx.lineWidth = 0.8;
+          ctx.lineWidth = 0.6;
           ctx.stroke();
         }
       }
@@ -235,9 +236,9 @@ function initHeroCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouseX, mouseY);
-          const mAlpha = (1 - mDist / 140) * 0.22;
+          const mAlpha = (1 - mDist / 140) * 0.15;
           ctx.strokeStyle = `rgba(${baseColor}, ${mAlpha})`;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         }
       }

@@ -1,43 +1,40 @@
-# DESIGN.md – Muhammad Athalla Bagaskara Portfolio
+# DESIGN.md – Muhammad Athalla Bagaskara Portfolio (Cosmos Studio Direction)
 
 ## 1. Identity & Purpose
-- **Subject**: Muhammad Athalla Bagaskara (alDev)
-- **Role**: Computer Science Undergraduate (UPN "Veteran" Yogyakarta), Software Engineer specializing in Full-Stack Web Architecture, Systems/Developer Tools, and Data Infrastructure.
-- **Target Audience**: Technical Recruiters, Engineering Managers, and Staff Engineers at Multinational Tech Companies (e.g., Stripe, Google, Linear, Vercel, Datadog) looking for high-autonomy engineers with proven production delivery, strong algorithmic foundations, and real international client experience.
+- **Subject**: Muhammad Athalla Bagaskara
+- **Role**: Software Engineer & Systems Architect (UPN "Veteran" Yogyakarta)
+- **Target Audience**: Technical Recruiters, Engineering Directors, and Staff Engineers at elite multinational tech companies (e.g., Linear, Stripe, Vercel, Datadog).
+- **Core Stance**: High-end editorial engineering portfolio. Zero AI-template clutter, zero generic SaaS pills, zero bright blue/purple gradients. Strict monochromatic foundation (pitch black & pure white), oversized authoritative typography, and clean asymmetric modular composition inspired by Cosmos Studio (cosmos.studio).
 
-## 2. Visual Direction & Mood
-- **Tone**: Precision Engineering, High Signal-to-Noise Ratio, Clean Architectural Clarity.
-- **Inspiration**: Linear.app, Stripe Docs, Vercel Dashboard, GitHub Universe.
-- **Themes**:
-  - Dual-Theme System: High-contrast Slate-Black (Dark Mode default) and Crisp Architectural Paper (Light Mode).
-  - Ambient Interactive Dynamics: Precision background grid with smooth floating ambient luminosity that reacts subtly to viewer coordinates.
-  - Live Telemetry Topbar: Real-time financial & market telemetry ticker (USD/IDR, IHSG / IDX Composite, BTC/USD, UTC+7 timestamp).
+## 2. Visual Direction & Mood (Inspired by Cosmos Studio)
+- **Aesthetic**: Minimalist Industrial Brutalism meets High-End Editorial Tech.
+- **Palette (Strict Black & White / Monochromatic)**:
+  - **Dark Mode (Default)**:
+    - Base: `#080808` / `#000000`
+    - Surfaces: `#111111`, `#161616`
+    - Borders: `#222222`, `#2e2e2e`
+    - Text Primary: `#ffffff`
+    - Text Secondary: `#a1a1aa`
+    - Text Muted: `#71717a`
+    - Accent: `#ffffff` (White accent, no generic saturated blues or neon purples)
+  - **Light Mode**:
+    - Base: `#ffffff`
+    - Surfaces: `#f4f4f5`, `#fafafa`
+    - Borders: `#e4e4e7`, `#d4d4d8`
+    - Text Primary: `#09090b`
+    - Text Secondary: `#52525b`
+    - Text Muted: `#a1a1aa`
+    - Accent: `#09090b`
+- **Typography**:
+  - Display / Headlines: Modern editorial grotesque / geometric sans with tight tracking (`-0.03em` to `-0.05em`) and uppercase architectural labels.
+  - Data / Telemetry: Strict monospace (`JetBrains Mono`) for real-time tickers and technical specs.
+  - Body: Neutral, highly readable contemporary sans-serif.
 
-## 3. Typography & Palette
-- **Primary Typography**: 'DM Sans' for clean, readable body and section titles; 'JetBrains Mono' for system metadata, telemetry ticker, and CLI snippets; 'Syne' for headline accents.
-- **Palette (Dark Mode)**:
-  - Background Base: `#090a0f`
-  - Surface Card / Panel: `#11141f`
-  - Surface Elevated / Hover: `#161a29`
-  - Border Subdued: `#1e2333`
-  - Border Medium: `#2a3147`
-  - Text Primary: `#f3f4f6`
-  - Text Secondary: `#9ca3af`
-  - Text Muted: `#6b7280`
-  - Accent Primary: `#3b82f6`
-  - Accent Success: `#10b981`
-- **Palette (Light Mode)**:
-  - Background Base: `#f8fafc`
-  - Surface Card / Panel: `#ffffff`
-  - Surface Elevated / Hover: `#f1f5f9`
-  - Border Subdued: `#e2e8f0`
-  - Border Medium: `#cbd5e1`
-  - Text Primary: `#0f172a`
-  - Text Secondary: `#475569`
-  - Text Muted: `#64748b`
-  - Accent Primary: `#2563eb`
-
-## 4. Anti-Slop Dials
-- **ENERGY**: 2 (Confident, measured, highly legible engineering showcase).
-- **RHYTHM**: 3 (Distinct section compositions: live telemetry ticker -> ambient hero -> flagship architectural spotlight -> interactive project matrix -> timeline telemetry -> verified credentials -> interactive live engineering terminal -> direct contact).
-- **MOTION**: 2 (Subtle, purposeful transitions; smooth ambient float; respects `prefers-reduced-motion`).
+## 3. Composition & Layout
+- **Hero**: Massive statement headline, generous whitespace, understated metadata badges, and a whisper-thin monochromatic particle / grid runner that sits quietly in the background without being loud.
+- **Telemetry Bar**: Ultra-sleek, monochromatic ticker at the very top (USD/IDR, IHSG, BTC, Live UTC+7 Clock) rendered with strict typographic discipline.
+- **Projects**: Editorial bento / asymmetric layout with large index numbers (`01`, `02`, `03`), tech stack tags, and live metrics rather than generic cards.
+- **Anti-Slop Dials**:
+  - ENERGY: 2 (Restrained, confident, bespoke, adult)
+  - RHYTHM: 3 (Editorial pacing, high contrast scale, deliberate whitespace)
+  - MOTION: 1 (Subtle, purposeful, cinematic; strictly respecting user preferences)
