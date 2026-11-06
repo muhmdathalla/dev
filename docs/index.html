@@ -91,10 +91,9 @@
 
       <nav id="mainNav" role="navigation" aria-label="Main navigation">
         <a href="#home" class="nav-link active" aria-current="page">Overview</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Stack</a>
-        <a href="#console" class="nav-link">Terminal</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#experience" class="nav-link">Background</a>
+        <a href="#skills" class="nav-link">Capabilities</a>
         <a href="#contact" class="nav-link">Contact</a>
         <div class="nav-indicator" aria-hidden="true"></div>
       </nav>
@@ -120,10 +119,9 @@
   <!-- Mobile Navigation Drawer -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#home" class="mobile-nav-link">Overview</a>
-    <a href="#projects" class="mobile-nav-link">Projects</a>
-    <a href="#experience" class="mobile-nav-link">Experience</a>
-    <a href="#skills" class="mobile-nav-link">Tech Stack</a>
-    <a href="#console" class="mobile-nav-link">Terminal</a>
+    <a href="#projects" class="mobile-nav-link">Work</a>
+    <a href="#experience" class="mobile-nav-link">Background</a>
+    <a href="#skills" class="mobile-nav-link">Capabilities</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <div class="mobile-menu-actions">
       <button class="theme-toggle" id="mobileThemeToggle" style="width:100%; justify-content:center; padding:10px; border-radius:8px; border:1px solid var(--border-medium); margin-bottom:10px;">
@@ -136,433 +134,317 @@
     </div>
   </div>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section id="home" class="section hero-section">
+  <!-- ===== HERO SECTION (COSMOS STUDIO EDITORIAL TYPOGRAPHY & INTEGRATED 3D) ===== -->
+  <section id="home" class="section hero-editorial-section">
     <!-- Ambient Animated Background with Running Particles Canvas -->
     <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-bg-grid" aria-hidden="true"></div>
-    <div class="hero-ambient-glow glow-1" id="glow1" aria-hidden="true"></div>
-    <div class="hero-ambient-glow glow-2" id="glow2" aria-hidden="true"></div>
 
-    <div class="hero-inner">
-      <div class="hero-left" data-aos="fade-up" data-aos-duration="700">
-        <div class="status-indicator">
-          <span class="status-pulse" aria-hidden="true"></span>
-          <span class="status-text">Available for Software Engineering Internships & International Roles</span>
+    <div class="hero-editorial-inner">
+      <!-- Top Architectural Status Line -->
+      <div class="editorial-status-bar" data-aos="fade-up">
+        <div class="editorial-badge">
+          <span class="editorial-pulse"></span>
+          <span>AVAILABLE &middot; SOFTWARE SYSTEMS & FULL-STACK ENG &middot; 2026/2027</span>
         </div>
+        <div class="editorial-coords">
+          <span>YOGYAKARTA, ID [UTC+7]</span>
+          <span class="sep">&bull;</span>
+          <span>UPN "VETERAN" YOGYAKARTA</span>
+        </div>
+      </div>
 
-        <h1 class="hero-title">
-          Muhammad Athalla <span class="accent-title">Bagaskara</span>
+      <!-- Main Massive Statement Headline -->
+      <div class="editorial-hero-statement" data-aos="fade-up" data-aos-delay="100">
+        <h1 class="statement-display">
+          MUHAMMAD ATHALLA<br>
+          <span class="statement-muted">BAGASKARA &mdash; SYSTEMS BUILDER.</span>
         </h1>
+      </div>
 
-        <div class="hero-role-bar">
-          <span class="role-pill"><i class="fas fa-terminal"></i> Systems & Developer Tools</span>
-          <span class="role-pill"><i class="fas fa-code-branch"></i> Full-Stack Web Architecture</span>
-          <span class="role-pill"><i class="fas fa-database"></i> Data Pipelines & Automation</span>
+      <!-- Asymmetrical Editorial Sub-Grid -->
+      <div class="editorial-hero-grid" data-aos="fade-up" data-aos-delay="150">
+        <div class="editorial-bio-block">
+          <p class="editorial-lead">
+            Computer science student and software engineer focusing on high-throughput web architecture, developer tooling, and automated data pipelines. National competitor in <strong>GEMASTIK XVIII</strong>. Proven track record delivering production contracts for engineering teams across New York, Singapore, and Australia.
+          </p>
+
+          <div class="editorial-taxonomy-row">
+            <span class="editorial-tax-item">01 / Systems Tooling</span>
+            <span class="editorial-tax-item">02 / Distributed Web</span>
+            <span class="editorial-tax-item">03 / Data Engineering</span>
+          </div>
+
+          <div class="editorial-actions-row">
+            <a href="#projects" class="btn-editorial-solid">
+              <span>Selected Works</span>
+              <i class="fas fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-editorial-outline">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              <span>Curriculum Vitae</span>
+            </a>
+            <a href="https://github.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
 
-        <p class="hero-bio">
-          Computer Science undergraduate at <strong>UPN "Veteran" Yogyakarta</strong> specializing in high-throughput web systems, developer tooling, and automated workflows. Delivered production code for international contracts across New York, Singapore, and Australia. Competitor in <strong>GEMASTIK XVIII</strong> National Competitive Programming.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary">
-            <span>Explore Engineering Work</span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-          <a href="Muhammad_Athalla_Bagaskara_CV.pdf" download class="btn-secondary">
-            <i class="fas fa-download" aria-hidden="true"></i>
-            <span>Resume (PDF)</span>
-          </a>
-          <a href="https://github.com/muhmdathalla" target="_blank" rel="noopener noreferrer" class="btn-ghost">
-            <i class="fab fa-github" aria-hidden="true"></i>
-            <span>GitHub</span>
-          </a>
-        </div>
-
-        <div class="telemetry-bar">
-          <div class="telemetry-item">
-            <span class="telemetry-value">GEMASTIK XVIII</span>
-            <span class="telemetry-label">Competitive Programming</span>
-          </div>
-          <div class="telemetry-sep" aria-hidden="true"></div>
-          <div class="telemetry-item">
-            <span class="telemetry-value">International</span>
-            <span class="telemetry-label">Contracts Delivered (US, SG, AU)</span>
-          </div>
-          <div class="telemetry-sep" aria-hidden="true"></div>
-          <div class="telemetry-item">
-            <span class="telemetry-value">8+ Verified</span>
-            <span class="telemetry-label">Dicoding & HackerRank Credentials</span>
+        <!-- Organic Floating 3D Sculpture & Architectural Specs -->
+        <div class="editorial-visual-block">
+          <div class="sculpture-organic-wrap" id="sculptureContainer">
+            <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
+            <div class="sculpture-caption">
+              <span class="caption-index">[3D MESH]</span>
+              <span>INTERACTIVE WEBLOGIC MESH &middot; DRAG TO ROTATE</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="hero-right" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
-        <!-- Interactive 3D Wireframe Sculpture Canvas (Cosmos Studio inspired) -->
-        <div class="sculpture-container" id="sculptureContainer" aria-label="Interactive 3D Geometric Artifact">
-          <canvas id="sculptureCanvas" class="sculpture-canvas"></canvas>
-          <div class="sculpture-badge">
-            <span class="sculpture-dot"></span>
-            <span>THREE.JS ARCHITECTURAL MESH &middot; INTERACTIVE</span>
-          </div>
+      <!-- Full-Width Horizontal Metric Ledger (Anti-Card) -->
+      <div class="editorial-ledger" data-aos="fade-up" data-aos-delay="200">
+        <div class="ledger-cell">
+          <span class="ledger-index">01</span>
+          <span class="ledger-value">GEMASTIK XVIII</span>
+          <span class="ledger-label">National Competitive Programming Finalist</span>
         </div>
-
-        <div class="profile-card">
-          <div class="profile-card-header">
-            <div class="terminal-dots" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="terminal-tag">athalla@upnvy:~/profile</span>
-          </div>
-          <div class="profile-card-body">
-            <img src="PP.jpg" alt="Muhammad Athalla Bagaskara – Profile" class="profile-photo" />
-            <div class="profile-meta">
-              <div class="meta-row">
-                <span class="meta-key">Degree:</span>
-                <span class="meta-val">B.Tech in Computer Science</span>
-              </div>
-              <div class="meta-row">
-                <span class="meta-key">Institution:</span>
-                <span class="meta-val">UPN "Veteran" Yogyakarta</span>
-              </div>
-              <div class="meta-row">
-                <span class="meta-key">Focus:</span>
-                <span class="meta-val">Full-Stack, Distributed & Data</span>
-              </div>
-              <div class="meta-row">
-                <span class="meta-key">Location:</span>
-                <span class="meta-val">Yogyakarta, Indonesia (UTC+7)</span>
-              </div>
-              <div class="meta-row">
-                <span class="meta-key">Status:</span>
-                <span class="meta-val status-val"><i class="fas fa-circle-check"></i> Open to Relocation / Remote</span>
-              </div>
-            </div>
-          </div>
+        <div class="ledger-cell">
+          <span class="ledger-index">02</span>
+          <span class="ledger-value">3 Continents</span>
+          <span class="ledger-label">Contracts Delivered across US, SG & AU</span>
+        </div>
+        <div class="ledger-cell">
+          <span class="ledger-index">03</span>
+          <span class="ledger-value">8+ Certified</span>
+          <span class="ledger-label">HackerRank & Dicoding Technical Registries</span>
+        </div>
+        <div class="ledger-cell">
+          <span class="ledger-index">04</span>
+          <span class="ledger-value">B.Tech CS</span>
+          <span class="ledger-label">UPN "Veteran" Yogyakarta &middot; 2024-2028</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects" class="section">
+  <!-- ===== PROJECTS SECTION (COSMOS STUDIO EDITORIAL WORK LEDGER) ===== -->
+  <section id="projects" class="section editorial-projects-section">
     <div class="section-inner">
-      <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">// 01 &middot; SYSTEM SHOWCASE</div>
-        <h2 class="section-title">Engineered Systems & Production Projects</h2>
-        <p class="section-subtitle">Real software built with performance, security, and architectural rigor.</p>
+      <div class="section-header-editorial" data-aos="fade-up">
+        <div class="header-pre-editorial">// SELECTED WORKS &middot; ARCHITECTURAL LEDGER</div>
+        <h2 class="section-title-editorial">Production Engineering &amp; Distributed Systems</h2>
+        <p class="section-subtitle-editorial">Systems deployed in production, high-throughput developer utilities, and algorithmic foundations.</p>
       </div>
 
-      <!-- Flagship Showcase Cards in Sticky Stack Architecture -->
-      <div class="projects-stack-container">
-        <!-- Flagship Spotlight 1: NativeCopy -->
-        <div class="flagship-card sticky-stack-card" data-card-idx="0" data-aos="fade-up">
-          <div class="flagship-badge">
-            <i class="fas fa-microchip"></i> Flagship Developer Tooling &middot; Stack 01
+      <!-- Editorial Master Works List (Anti-Slop: No generic copy-paste cards) -->
+      <div class="editorial-works-list">
+
+        <!-- 01: NativeCopy -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">01</span>
+            <span class="work-type">SYSTEMS TOOL</span>
           </div>
-        <div class="flagship-grid">
-          <div class="flagship-info">
-            <div class="flagship-header">
-              <h3>NativeCopy</h3>
-              <span class="flagship-version">v1.2 &middot; Production Utility</span>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">NativeCopy &mdash; Cross-Device Developer Bridge</h3>
+              <span class="work-year">2026 &middot; Production</span>
             </div>
-            <p class="flagship-desc">
-              High-speed cross-device developer bridge and live code injection utility. Enables engineers to stream keystrokes directly into VS Code from mobile hardware, inject files into workspace directories, and drive OS cursor gestures using real-time MediaPipe AI Computer Vision.
+            <p class="work-description">
+              High-speed developer bridge enabling real-time keystroke streaming from mobile devices directly into active VS Code editor instances via Server-Sent Events (SSE). Incorporates MediaPipe AI computer-vision pipelines for sub-millisecond touchless OS cursor navigation.
             </p>
-            <div class="flagship-architecture">
-              <div class="arch-item">
-                <i class="fas fa-arrows-split-up-and-left"></i>
-                <div>
-                  <strong>Server-Sent Events (SSE)</strong>
-                  <span>Low-latency unidirectional real-time data pipe from mobile to editor host.</span>
-                </div>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>VS Code API</span>
+                <span>MediaPipe AI</span>
+                <span>SSE Protocol</span>
               </div>
-              <div class="arch-item">
-                <i class="fas fa-eye"></i>
-                <div>
-                  <strong>MediaPipe Vision Pipeline</strong>
-                  <span>Sub-millisecond landmark tracking for touchless cursor navigation.</span>
-                </div>
+              <div class="work-links">
+                <a href="https://github.com/muhmdathalla/nativecopy" target="_blank" rel="noopener noreferrer" class="link-editorial">
+                  <span>Repository</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/muhmdathalla/nativecopy#readme" target="_blank" rel="noopener noreferrer" class="link-editorial">
+                  <span>Architecture</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
-              <div class="arch-item">
-                <i class="fas fa-puzzle-piece"></i>
-                <div>
-                  <strong>VS Code Extension Engine</strong>
-                  <span>Native workspace API integration with zero external daemon overhead.</span>
-                </div>
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span>TypeScript</span>
-              <span>Python</span>
-              <span>VS Code API</span>
-              <span>MediaPipe AI</span>
-              <span>SSE</span>
-              <span>WebSockets</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/muhmdathalla/nativecopy" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
-                <i class="fab fa-github"></i> Repository
-              </a>
-              <a href="https://github.com/muhmdathalla/nativecopy#readme" target="_blank" rel="noopener noreferrer" class="btn-secondary-sm">
-                <i class="fas fa-book"></i> Architecture Docs
-              </a>
             </div>
           </div>
-          <div class="flagship-visual">
-            <div class="spec-panel">
-              <div class="spec-panel-header">
-                <span>System Telemetry</span>
-                <span class="live-dot"></span>
-              </div>
-              <div class="spec-code">
-<span class="c-dim">// NativeCopy Stream Controller</span>
-<span class="c-keyword">interface</span> <span class="c-type">DeviceBridge</span> {
-  sessionId: <span class="c-type">string</span>;
-  transport: <span class="c-string">'SSE'</span> | <span class="c-string">'WS'</span>;
-  latencyAvg: <span class="c-number">12.4</span>; <span class="c-dim">// ms</span>
-  visionTracker: <span class="c-string">'MediaPipe HandLandmarks'</span>;
-  injectionTarget: <span class="c-string">'VSCode.activeTextEditor'</span>;
-}
+        </article>
 
-<span class="c-keyword">async function</span> <span class="c-fn">dispatchStream</span>(payload) {
-  <span class="c-keyword">const</span> buffer = Buffer.<span class="c-fn">from</span>(payload);
-  <span class="c-keyword">await</span> editorSocket.<span class="c-fn">emit</span>(<span class="c-string">'inject'</span>, buffer);
-}
-              </div>
-            </div>
+        <!-- 02: SPADA Presence -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">02</span>
+            <span class="work-type">AUTOMATION & BOT</span>
           </div>
-        </div>
-      </div>
-
-        <!-- Flagship Spotlight 2: SPADA Auto-Presence Bot -->
-        <div class="flagship-card sticky-stack-card" data-card-idx="1" data-aos="fade-up" style="margin-top: 36px;">
-          <div class="flagship-badge">
-            <i class="fas fa-robot"></i> Cloud Automation & Resilient Bot Architecture &middot; Stack 02
-          </div>
-        <div class="flagship-grid">
-          <div class="flagship-info">
-            <div class="flagship-header">
-              <h3>SPADA Auto-Presence Engine</h3>
-              <span class="flagship-version">CI/CD Automated Orchestration</span>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">SPADA Presence &mdash; Autonomous University Attendance Engine</h3>
+              <span class="work-year">2026 &middot; CI/CD Cron</span>
             </div>
-            <p class="flagship-desc">
-              Autonomous university attendance system for SPADA UPN "Veteran" Yogyakarta. Orchestrates scheduled headless browser workflows with automated credential authentication, multi-course schedule tracking, photographic verification capture, and instant Telegram Bot dispatch.
+            <p class="work-description">
+              Resilient headless browser workflow executing scheduled university portal authentication, multi-course schedule tracking, and photographic verification audit captures with instant Telegram Bot webhook dispatches.
             </p>
-            <div class="flagship-architecture">
-              <div class="arch-item">
-                <i class="fas fa-calendar-check"></i>
-                <div>
-                  <strong>GitHub Actions Cron Pipeline</strong>
-                  <span>Zero-cost 24/7 cloud cron execution resilient to intermittent network failures.</span>
-                </div>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>Python</span>
+                <span>Playwright</span>
+                <span>GitHub Actions Cron</span>
+                <span>Telegram API</span>
               </div>
-              <div class="arch-item">
-                <i class="fas fa-camera"></i>
-                <div>
-                  <strong>Headless Browser & Screen Auditing</strong>
-                  <span>Playwright engine simulates human interactions and captures proof artifacts.</span>
-                </div>
-              </div>
-              <div class="arch-item">
-                <i class="fab fa-telegram"></i>
-                <div>
-                  <strong>Telegram Bot Webhook Dispatch</strong>
-                  <span>Push notification alerts with real-time audit logs and proof photos.</span>
-                </div>
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span>Python</span>
-              <span>Playwright</span>
-              <span>Telegram Bot API</span>
-              <span>GitHub Actions</span>
-              <span>Cron Daemon</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/muhmdathalla/spada-presence" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
-                <i class="fab fa-github"></i> Repository
-              </a>
-            </div>
-          </div>
-          <div class="flagship-visual">
-            <div class="spec-panel">
-              <div class="spec-panel-header">
-                <span>Workflow Automation Matrix</span>
-                <span class="live-dot"></span>
-              </div>
-              <div class="spec-code">
-<span class="c-dim"># Automated Schedule Pipeline</span>
-<span class="c-keyword">from</span> playwright.async_api <span class="c-keyword">import</span> async_playwright
-<span class="c-keyword">import</span> telegram_notifier
-
-<span class="c-keyword">async def</span> <span class="c-fn">execute_presence_flow</span>(session_cfg):
-  <span class="c-keyword">async with</span> async_playwright() <span class="c-keyword">as</span> p:
-    browser = <span class="c-keyword">await</span> p.chromium.<span class="c-fn">launch</span>(headless=<span class="c-keyword">True</span>)
-    page = <span class="c-keyword">await</span> browser.<span class="c-fn">new_page</span>()
-    <span class="c-keyword">await</span> page.<span class="c-fn">goto</span>(session_cfg.target_url)
-    <span class="c-keyword">await</span> page.<span class="c-fn">click</span>(<span class="c-string">"#btn-submit-attendance"</span>)
-    proof_img = <span class="c-keyword">await</span> page.<span class="c-fn">screenshot</span>()
-    <span class="c-keyword">await</span> telegram_notifier.<span class="c-fn">send_audit</span>(proof_img)
+              <div class="work-links">
+                <a href="https://github.com/muhmdathalla/spada-presence" target="_blank" rel="noopener noreferrer" class="link-editorial">
+                  <span>Repository</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
+        </article>
 
-      <!-- Filter Controls for Secondary Matrix -->
-      <div class="filter-wrapper" data-aos="fade-up">
-        <span class="filter-label">Filter Projects:</span>
-        <div class="filter-group" role="tablist">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Systems (7)</button>
-          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web & E-Commerce</button>
-          <button class="filter-btn" data-filter="data" role="tab" aria-selected="false">Data & Algorithms</button>
-        </div>
-      </div>
-
-      <!-- Project Matrix Grid -->
-      <div class="projects-matrix" id="projectsMatrix">
-
-        <!-- Joe Coffee -->
-        <article class="project-matrix-card" data-category="web" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-mug-hot"></i></div>
-            <span class="matrix-pill">Contract &middot; New York</span>
+        <!-- 03: Joe Coffee -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">03</span>
+            <span class="work-type">CONTRACT &middot; US</span>
           </div>
-          <h3>Joe Coffee E-Commerce Portal</h3>
-          <p>Maintained and optimized storefront checkout pipelines and coffee subscription flows for New York-based specialty coffee company. Resolved mobile responsive rendering bottlenecks and streamlined customer retention journeys.</p>
-          <div class="tech-tags">
-            <span>E-Commerce UX</span>
-            <span>JavaScript</span>
-            <span>Mobile UI</span>
-            <span>CMS Engineering</span>
-          </div>
-          <div class="matrix-card-footer">
-            <span class="matrix-status"><i class="fas fa-check-circle"></i> International Production Deployment</span>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">Joe Coffee Company &mdash; E-Commerce Web Infrastructure</h3>
+              <span class="work-year">2026 &middot; New York, US</span>
+            </div>
+            <p class="work-description">
+              Maintained checkout pipelines and subscription onboarding flows for a prominent New York specialty coffee brand. Resolved mobile responsive rendering bottlenecks and boosted conversion funnel retention.
+            </p>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>E-Commerce UX</span>
+                <span>JavaScript</span>
+                <span>Checkout Pipelines</span>
+                <span>Mobile UI</span>
+              </div>
+              <div class="work-links">
+                <span class="link-editorial-status"><i class="fas fa-check-circle"></i> International Production Deployment</span>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- Dutch Colony Singapore -->
-        <article class="project-matrix-card" data-category="web" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-store"></i></div>
-            <span class="matrix-pill">Client &middot; Singapore</span>
+        <!-- 04: Dutch Colony Singapore -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">04</span>
+            <span class="work-type">CLIENT &middot; SG</span>
           </div>
-          <h3>Dutch Colony Singapore Portal</h3>
-          <p>Engineered performant, modular UI components using React.js and restructured SQL query schemas for an international Singapore client, driving measurable improvements in Core Web Vitals and technical SEO ranking.</p>
-          <div class="tech-tags">
-            <span>React.js</span>
-            <span>Database Optimization</span>
-            <span>Core Web Vitals</span>
-            <span>Technical SEO</span>
-          </div>
-          <div class="matrix-card-footer">
-            <span class="matrix-status"><i class="fas fa-check-circle"></i> Production Delivery</span>
-          </div>
-        </article>
-
-        <!-- PerpusPintar Smart Library -->
-        <article class="project-matrix-card" data-category="web" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-book-bookmark"></i></div>
-            <span class="matrix-pill">Full-Stack System</span>
-          </div>
-          <h3>"PerpusPintar" Smart Library</h3>
-          <p>Full-stack library information management system with catalog indexing, membership role authorization, borrowing transaction state management, and real-time inventory search deployed live on production infrastructure.</p>
-          <div class="tech-tags">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Tailwind CSS</span>
-            <span>REST API</span>
-          </div>
-          <div class="matrix-card-footer">
-            <a href="https://perpuspintar.soetoredjo.com/" target="_blank" rel="noopener noreferrer" class="matrix-link">
-              <span>Live System</span> <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">Dutch Colony Coffee &mdash; Singapore Digital Portal</h3>
+              <span class="work-year">2026 &middot; Singapore</span>
+            </div>
+            <p class="work-description">
+              Engineered modular, high-speed frontend systems using React.js and restructured relational database query schemas, driving measurable enhancements in Core Web Vitals and technical SEO rankings.
+            </p>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>React.js</span>
+                <span>Database Tuning</span>
+                <span>Core Web Vitals</span>
+                <span>SEO Architecture</span>
+              </div>
+              <div class="work-links">
+                <span class="link-editorial-status"><i class="fas fa-check-circle"></i> Verified Production Delivery</span>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- Soetoredjo Family Portal -->
-        <article class="project-matrix-card" data-category="web" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-globe"></i></div>
-            <span class="matrix-pill">CMS Engineering</span>
+        <!-- 05: Johnson's Algorithm in C -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">05</span>
+            <span class="work-type">ALGORITHMS & C</span>
           </div>
-          <h3>Soetoredjo Enterprise Family Portal</h3>
-          <p>Custom relational CMS platform supporting member directories, multi-tier authentication, dynamic content publication, and automated database backups with high reliability.</p>
-          <div class="tech-tags">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Vanilla JS</span>
-            <span>Security Architecture</span>
-          </div>
-          <div class="matrix-card-footer">
-            <a href="http://soetoredjo.com" target="_blank" rel="noopener noreferrer" class="matrix-link">
-              <span>Live Portal</span> <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Johnson's Algorithm in C -->
-        <article class="project-matrix-card" data-category="data" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-route"></i></div>
-            <span class="matrix-pill">Algorithms & Graph Theory</span>
-          </div>
-          <h3>Yogyakarta Routes – Johnson's Algorithm</h3>
-          <p>C-based implementation of Johnson's all-pairs shortest paths algorithm for sparse geographic graphs across Yogyakarta sub-districts, combining Bellman-Ford reweighting with Dijkstra priority queues.</p>
-          <div class="tech-tags">
-            <span>C</span>
-            <span>Graph Theory</span>
-            <span>Dijkstra</span>
-            <span>Bellman-Ford</span>
-          </div>
-          <div class="matrix-card-footer">
-            <a href="johnson.c" download class="matrix-link">
-              <i class="fas fa-download"></i> Download Source (.c)
-            </a>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">Johnson's Algorithm &mdash; Sparse Graph Routing Engine</h3>
+              <span class="work-year">2025 &middot; Core C</span>
+            </div>
+            <p class="work-description">
+              High-performance C implementation of Johnson's all-pairs shortest paths algorithm for geographic networks across Yogyakarta. Combines Bellman-Ford reweighting with Dijkstra binary heaps to eliminate negative weight cycles.
+            </p>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>C (Pure)</span>
+                <span>Graph Theory</span>
+                <span>Bellman-Ford</span>
+                <span>Dijkstra Heap</span>
+              </div>
+              <div class="work-links">
+                <a href="johnson.c" download class="link-editorial">
+                  <span>Source Code (.c)</span> <i class="fas fa-download"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- NDVI Magelang Satellite Analysis -->
-        <article class="project-matrix-card" data-category="data" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-satellite"></i></div>
-            <span class="matrix-pill">Geospatial Analysis</span>
+        <!-- 06: PerpusPintar Smart Library -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">06</span>
+            <span class="work-type">FULL-STACK APP</span>
           </div>
-          <h3>NDVI Magelang Satellite Modeling</h3>
-          <p>Developed geospatial processing pipelines on Google Earth Engine to compute Normalized Difference Vegetation Index (NDVI) models from multi-spectral satellite imagery, generating actionable land ecological telemetry.</p>
-          <div class="tech-tags">
-            <span>Google Earth Engine</span>
-            <span>JavaScript</span>
-            <span>Raster Processing</span>
-            <span>GIS</span>
-          </div>
-          <div class="matrix-card-footer">
-            <span class="matrix-status"><i class="fas fa-chart-area"></i> Geospatial Telemetry Model</span>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">PerpusPintar &mdash; Information Architecture & Management System</h3>
+              <span class="work-year">2025 &middot; Live Production</span>
+            </div>
+            <p class="work-description">
+              Relational library information management platform supporting membership role authorization, catalog indexing, and real-time borrowing transaction state machines deployed on live infrastructure.
+            </p>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Tailwind CSS</span>
+                <span>REST API</span>
+              </div>
+              <div class="work-links">
+                <a href="https://perpuspintar.soetoredjo.com/" target="_blank" rel="noopener noreferrer" class="link-editorial">
+                  <span>Live System</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- Library System CLI in C++ -->
-        <article class="project-matrix-card" data-category="data" data-aos="fade-up">
-          <div class="matrix-card-top">
-            <div class="matrix-card-icon"><i class="fas fa-code"></i></div>
-            <span class="matrix-pill">Systems & Data Structures</span>
+        <!-- 07: Google Earth Engine NDVI Satellite Telemetry -->
+        <article class="work-row" data-aos="fade-up">
+          <div class="work-index-col">
+            <span class="work-num">07</span>
+            <span class="work-type">GEOSPATIAL DATA</span>
           </div>
-          <h3>High-Performance Library CLI in C++</h3>
-          <p>CLI application implementing custom binary search trees, file-stream persistence, and memory-safe sorting algorithms to process library transactions with zero external libraries.</p>
-          <div class="tech-tags">
-            <span>C++</span>
-            <span>Data Structures</span>
-            <span>Memory Management</span>
-            <span>File I/O</span>
-          </div>
-          <div class="matrix-card-footer">
-            <a href="ProjectPerpusFix.cpp" download class="matrix-link">
-              <i class="fas fa-download"></i> Download Source (.cpp)
-            </a>
+          <div class="work-body-col">
+            <div class="work-headline-row">
+              <h3 class="work-title">NDVI Satellite Modeling &mdash; Geospatial Telemetry Pipeline</h3>
+              <span class="work-year">2025 &middot; Earth Engine</span>
+            </div>
+            <p class="work-description">
+              Geospatial computation pipelines on Google Earth Engine computing Normalized Difference Vegetation Index (NDVI) models from multi-spectral satellite raster bands to produce verifiable environmental telemetry.
+            </p>
+            <div class="work-meta-row">
+              <div class="work-tags">
+                <span>Google Earth Engine</span>
+                <span>JavaScript</span>
+                <span>Raster Processing</span>
+                <span>GIS Analytics</span>
+              </div>
+              <div class="work-links">
+                <span class="link-editorial-status"><i class="fas fa-satellite"></i> Geospatial Telemetry Model</span>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -922,51 +804,6 @@
             <span class="skill-badge"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" /> GitHub Actions CI/CD</span>
             <span class="skill-badge"><img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="" /> Playwright Automation</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INTERACTIVE DEVELOPER CONSOLE ===== -->
-  <section id="console" class="section section-alt">
-    <div class="section-inner">
-      <div class="section-header" data-aos="fade-up">
-        <div class="header-pre">// 04 &middot; LIVE INTERACTIVE TERMINAL</div>
-        <h2 class="section-title">Developer Console & Algorithms Playground</h2>
-        <p class="section-subtitle">Test system commands, inspect benchmarks, and run an interactive Johnson's graph algorithm simulation.</p>
-      </div>
-
-      <div class="terminal-container" data-aos="fade-up">
-        <div class="terminal-window">
-          <div class="term-header">
-            <div class="term-controls" aria-hidden="true">
-              <span class="ctrl-red"></span>
-              <span class="ctrl-yellow"></span>
-              <span class="ctrl-green"></span>
-            </div>
-            <div class="term-title">athalla@engineering-console: ~ (zsh)</div>
-            <div class="term-status"><i class="fas fa-circle-dot"></i> LIVE</div>
-          </div>
-          <div class="term-body" id="termBody">
-            <div class="term-output" id="termOutput">
-              <p class="term-line term-welcome">Muhammad Athalla Bagaskara Engineering Console [Version 2.4.0-prod]</p>
-              <p class="term-line term-welcome">Type <span class="term-highlight">help</span> to view available system commands or <span class="term-highlight">run johnson</span> to simulate graph routing.</p>
-              <p class="term-line">&nbsp;</p>
-            </div>
-            <div class="term-input-row">
-              <span class="term-prompt">athalla@upnvy:~$</span>
-              <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" aria-label="Terminal command input" placeholder="type a command (e.g. help, stack, run johnson)..." />
-            </div>
-          </div>
-        </div>
-        <div class="term-hints">
-          <span>Quick Commands:</span>
-          <button class="term-hint-btn" onclick="execQuickCmd('help')">help</button>
-          <button class="term-hint-btn" onclick="execQuickCmd('whoami')">whoami</button>
-          <button class="term-hint-btn" onclick="execQuickCmd('run johnson')">run johnson</button>
-          <button class="term-hint-btn" onclick="execQuickCmd('stack')">stack</button>
-          <button class="term-hint-btn" onclick="execQuickCmd('contact')">contact</button>
-          <button class="term-hint-btn" onclick="execQuickCmd('clear')">clear</button>
         </div>
       </div>
     </div>

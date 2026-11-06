@@ -895,13 +895,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMarketTicker();
   initHeroCanvas();
   initSculpture3D();
-  initStickyStackCards();
-  initHeroAmbientParallax();
   initCursor();
   initHeaderAndNav();
   initMobileMenu();
-  initProjectFilter();
-  initTerminal();
   initClipboard();
   initBackToTop();
   initAOS();
