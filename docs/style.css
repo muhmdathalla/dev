@@ -2,7 +2,7 @@
    MUHAMMAD ATHALLA BAGASKARA – PORTFOLIO CSS
    Cosmos Studio Minimalist Monochromatic Aesthetic
    Pure High-Contrast B&W Architecture | Real-Time Telemetry
-   Bespoke Editorial Composition (Anti-Slop Compliant)
+   High-Performance Editorial Systems Architecture
    ============================================= */
 
 /* === DESIGN TOKENS (DARK THEME DEFAULT - DEEP CHARCOAL / PITCH BLACK) === */
@@ -765,23 +765,13 @@ nav {
   gap: 12px;
 }
 
-.terminal-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.terminal-dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--border-medium);
-}
-
-.terminal-tag {
+.profile-card-title {
   font-family: var(--font-mono);
   font-size: 0.70rem;
+  font-weight: 600;
   color: var(--text-muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .profile-view-toggle {
