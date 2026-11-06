@@ -690,8 +690,8 @@ function initSculpture3D() {
   const canvas = document.getElementById('sculptureCanvas');
   if (!container || !canvas || typeof THREE === 'undefined') return;
 
-  const width = container.clientWidth;
-  const height = container.clientHeight;
+  const width = container.clientWidth || 360;
+  const height = container.clientHeight || 340;
 
   // Scene & Camera
   const scene = new THREE.Scene();
@@ -815,8 +815,8 @@ function initSculpture3D() {
   // Resize handler
   window.addEventListener('resize', () => {
     if (!container.parentElement) return;
-    const w = container.clientWidth;
-    const h = container.clientHeight;
+    const w = container.clientWidth || 360;
+    const h = container.clientHeight || 340;
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
@@ -953,6 +953,7 @@ function initAppleMusic() {
 
 function initAOS() {
   if (typeof AOS !== 'undefined') {
+    document.body.classList.add('aos-ready');
     AOS.init({
       duration: 650,
       once: true,
@@ -967,15 +968,23 @@ function initAOS() {
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initMarketTicker();
-  initHeroCanvas();
-  initSculpture3D();
-  initCursor();
-  initHeaderAndNav();
-  initMobileMenu();
-  initClipboard();
-  initBackToTop();
-  initAppleMusic();
-  initAOS();
+  const safeInit = (fn, name) => {
+    try {
+      fn();
+    } catch (e) {
+      console.warn(`[Bootstrap] Error initializing ${name}:`, e);
+    }
+  };
+
+  safeInit(initTheme, 'Theme');
+  safeInit(initMarketTicker, 'MarketTicker');
+  safeInit(initHeroCanvas, 'HeroCanvas');
+  safeInit(initSculpture3D, 'Sculpture3D');
+  safeInit(initCursor, 'Cursor');
+  safeInit(initHeaderAndNav, 'HeaderAndNav');
+  safeInit(initMobileMenu, 'MobileMenu');
+  safeInit(initClipboard, 'Clipboard');
+  safeInit(initBackToTop, 'BackToTop');
+  safeInit(initAppleMusic, 'AppleMusic');
+  safeInit(initAOS, 'AOS');
 });
