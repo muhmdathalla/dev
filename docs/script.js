@@ -356,7 +356,7 @@ function initSkillTilt() {
 
 
 /* ==========================================
-   THEME ENGINE (DARK / LIGHT B&W)
+   THEME ENGINE (STRICT B&W MONOCHROME)
    ========================================== */
 
 function initThemeToggle() {
@@ -365,10 +365,10 @@ function initThemeToggle() {
   const root = document.documentElement;
   const body = document.body;
 
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  applyTheme(savedTheme);
+  const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(savedTheme, false);
 
-  function applyTheme(theme) {
+  function applyTheme(theme, animate = true) {
     root.setAttribute('data-theme', theme);
     if (body) body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -376,17 +376,21 @@ function initThemeToggle() {
     if (icon) {
       if (theme === 'light') {
         icon.className = 'fas fa-sun';
+        if (toggleBtn) toggleBtn.setAttribute('title', 'Ganti ke Tema Gelap (Dark Mode)');
       } else {
         icon.className = 'fas fa-moon';
+        if (toggleBtn) toggleBtn.setAttribute('title', 'Ganti ke Tema Terang (Light Mode)');
       }
     }
+
+    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
   }
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       const current = root.getAttribute('data-theme') || 'dark';
       const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
+      applyTheme(next, true);
     });
   }
 }
@@ -401,6 +405,17 @@ function initMarketTelemetry() {
   const ihsgEl = document.getElementById('tickerIhsg');
   const chgIhsgEl = document.getElementById('chgIhsg');
   const clockEl = document.getElementById('tickerClock');
+
+  function triggerTickFlash(el, isUp) {
+    if (!el) return;
+    const cls = isUp ? 'ticker-flash-up' : 'ticker-flash-down';
+    el.classList.remove('ticker-flash-up', 'ticker-flash-down');
+    void el.offsetWidth; // Force reflow
+    el.classList.add(cls);
+    setTimeout(() => {
+      el.classList.remove(cls);
+    }, 900);
+  }
 
   // Live UTC+7 WIB Digital Clock
   function updateClock() {
@@ -419,6 +434,7 @@ function initMarketTelemetry() {
   setInterval(updateClock, 1000);
 
   // Live USD/IDR Fetch
+  let prevUsdRate = 15845;
   async function fetchUsdIdr() {
     try {
       const res = await fetch('https://open.er-api.com/v6/latest/USD');
@@ -427,30 +443,39 @@ function initMarketTelemetry() {
       if (data && data.rates && data.rates.IDR) {
         const rate = Math.round(data.rates.IDR);
         const formatted = new Intl.NumberFormat('id-ID').format(rate);
-        if (usdEl) usdEl.textContent = `Rp ${formatted}`;
-        if (chgUsdEl) {
-          chgUsdEl.textContent = '+0.08%';
-          chgUsdEl.className = 'ticker-chg up';
+        const isUp = rate >= prevUsdRate;
+        if (usdEl) {
+          usdEl.textContent = `Rp ${formatted}`;
+          triggerTickFlash(usdEl, isUp);
         }
+        if (chgUsdEl) {
+          chgUsdEl.textContent = isUp ? '+0.08%' : '-0.04%';
+          chgUsdEl.className = `ticker-chg ${isUp ? 'up' : 'down'}`;
+        }
+        prevUsdRate = rate;
       }
     } catch {
       // Keep solid fallback from HTML
     }
   }
 
-  // IHSG Telemetry Tracker (Calibrated to 6 Nov market level: 4,931.39, -1.97%)
+  // IHSG Telemetry Tracker
   let ihsgBase = 4931.39;
   const ihsgPrevClose = 5030.26;
   function updateIhsg() {
-    const delta = (Math.random() - 0.52) * 0.6;
+    const delta = (Math.random() - 0.51) * 0.7;
+    const prevBase = ihsgBase;
     ihsgBase = Math.max(4925.10, Math.min(4960.00, ihsgBase + delta));
     const chgPct = (((ihsgBase - ihsgPrevClose) / ihsgPrevClose) * 100).toFixed(2);
-    const isUp = parseFloat(chgPct) >= 0;
+    const isUp = ihsgBase >= prevBase;
 
-    if (ihsgEl) ihsgEl.textContent = ihsgBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (ihsgEl) {
+      ihsgEl.textContent = ihsgBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      triggerTickFlash(ihsgEl, isUp);
+    }
     if (chgIhsgEl) {
-      chgIhsgEl.textContent = `${isUp ? '+' : ''}${chgPct}%`;
-      chgIhsgEl.className = `ticker-chg ${isUp ? 'up' : 'down'}`;
+      chgIhsgEl.textContent = `${parseFloat(chgPct) >= 0 ? '+' : ''}${chgPct}%`;
+      chgIhsgEl.className = `ticker-chg ${parseFloat(chgPct) >= 0 ? 'up' : 'down'}`;
     }
   }
 
@@ -534,27 +559,60 @@ function initWeatherWidget() {
     return { label: 'Cerah Berawan', icon: 'fa-cloud-sun', type: 'cloud' };
   }
 
-  // Update Visual Scene Art
-  function updateSceneArt(type) {
+  // Update Visual Scene Art with Rich Interactive Animations
+  function updateSceneArt(type, isDay = true) {
     if (!animArt) return;
-    if (type === 'rain' || type === 'storm') {
+    if (type === 'rain') {
       animArt.innerHTML = `
-        <div class="anim-cloud" style="background:#94a3b8;"></div>
-        <div class="anim-rain">
-          <div class="rain-drop" style="left:4px;"></div>
-          <div class="rain-drop" style="left:16px;"></div>
-          <div class="rain-drop" style="left:28px;"></div>
+        <div class="anim-cloud-layer2"></div>
+        <div class="anim-cloud-layer1"></div>
+        <div class="anim-rain-wrap">
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
         </div>
       `;
-    } else if (type === 'sun') {
+    } else if (type === 'storm') {
       animArt.innerHTML = `
-        <div class="anim-sun" style="width:30px; height:30px; top:8px; right:15px;"></div>
+        <div class="anim-cloud-layer2"></div>
+        <div class="anim-cloud-layer1" style="background:#64748b;"></div>
+        <div class="anim-lightning"><i class="fas fa-bolt"></i></div>
+        <div class="anim-rain-wrap">
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
+          <div class="rain-streak"></div>
+        </div>
+      `;
+    } else if (type === 'sun' || (type === 'cloud' && isDay)) {
+      if (type === 'sun') {
+        animArt.innerHTML = `
+          <div class="anim-sun-wrap">
+            <div class="anim-sun-rays"></div>
+            <div class="anim-sun-core"></div>
+          </div>
+        `;
+      } else {
+        animArt.innerHTML = `
+          <div class="anim-sun-wrap" style="transform: scale(0.68) translate(-12px, -8px);">
+            <div class="anim-sun-core"></div>
+          </div>
+          <div class="anim-cloud-layer2"></div>
+          <div class="anim-cloud-layer1"></div>
+        `;
+      }
+    } else if (!isDay || type === 'night') {
+      animArt.innerHTML = `
+        <div class="anim-moon"></div>
+        <div class="anim-star"></div>
+        <div class="anim-star"></div>
+        <div class="anim-star"></div>
       `;
     } else {
       animArt.innerHTML = `
-        <div class="anim-sun"></div>
-        <div class="anim-cloud"></div>
-        <div class="anim-rain"></div>
+        <div class="anim-cloud-layer2"></div>
+        <div class="anim-cloud-layer1"></div>
       `;
     }
   }
@@ -586,7 +644,7 @@ function initWeatherWidget() {
       const now = new Date();
       if (updatedTime) updatedTime.textContent = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
 
-      updateSceneArt(weatherInfo.type);
+      updateSceneArt(weatherInfo.type, isDay);
     } catch {
       // Fallback kept gracefully
     }
@@ -662,4 +720,6 @@ document.addEventListener('DOMContentLoaded', () => {
   safeRun(initFooterYear);
   safeRun(initAOS);
   safeRun(initSkillTilt);
+  safeRun(initScrollProgress);
+  safeRun(initCardTilt);
 });
