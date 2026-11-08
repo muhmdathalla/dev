@@ -1,0 +1,28 @@
+{
+  "name": "athalla-dev-portfolio",
+  "version": "2.5.0",
+  "private": true,
+  "description": "Muhammad Athalla Bagaskara – Software Engineer & Frontend Systems Portfolio built with React & TypeScript",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "frontend-engineering",
+    "portfolio",
+    "developer-tools"
+  ],
+  "author": "Muhammad Athalla Bagaskara <iamathaalla@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  }
+}
